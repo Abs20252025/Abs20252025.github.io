@@ -1,0 +1,178 @@
+/* Estilo general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease, filter 0.3s ease; /* Animación suave */
+}
+
+
+
+.contenedor-footer .h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #096c13;
+    padding-bottom: 5px;
+    color: white;
+}
+
+/* Contenedor principal del footer */
+.contenedor-footer {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo */
+    gap: 20px; /* Espaciado entre columnas */
+    width: 100%;
+    padding: 20px;
+    background-color: black;
+    border-top: 3px solid #c14545;
+}
+
+.contenedor-footer-all {
+    background-color: #f1f1f1; /* Color de fondo externo opcional */
+}
+
+.columna1, .columna2, .columna3 {
+    padding: 20px;
+}
+
+/* Estilo para las filas */
+.fila {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Espaciado entre filas */
+}
+
+.fila img {
+    margin-right: 15px; /* Espaciado entre el icono y el texto */
+    filter: invert(38%) sepia(79%) saturate(3679%) hue-rotate(335deg) brightness(100%) contrast(92%);
+    transition: filter 0.3s ease; /* Transición suave */
+}
+
+.fila label {
+    color: white;
+    font-size: 16px;
+    line-height: 1.5; /* Mejora la legibilidad */
+}
+
+.columna2 .fila .absLogoFooter{
+    align-items: center;    /* Centra verticalmente */
+    filter: none !important;
+    margin-left: 115px;
+}
+
+
+
+
+
+.logoredes {
+    margin: 10px;
+}
+
+.logoredes:hover {
+    filter: invert(13%) sepia(81%) saturate(7056%) hue-rotate(359deg) brightness(99%) contrast(112%);
+}
+
+/* Estilo para las columnas */
+.columna1 h2, .columna2 h2, .columna3 h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ddddc3;
+    border-bottom: 2px solid #c14545;
+    padding-bottom: 5px;
+}
+
+.descriptionAbs {
+    text-align: justify;
+    line-height: 1.5; /* Espaciado entre líneas */
+    font-size: 16px;
+    color: white;
+}
+
+/* Estilo para enlaces y lista */
+.columna3 .fila2 ul li {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    list-style: none;
+}
+
+.columna3 .fila2 ul li a {
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    transition: color 0.3s ease;
+}
+
+.columna3 .fila2 ul li a:hover {
+    color: #00ff40;
+    border-bottom: 1px solid #096c13;
+}
+
+li img {
+    margin-right: 10px;
+    filter: invert(13%) sepia(81%) saturate(7056%) hue-rotate(359deg) brightness(99%) contrast(112%);
+}
+
+/* Redes sociales */
+.filaRedes img {
+    margin: 10px;
+    width: 46px;
+    height: 46px;
+    filter: invert(38%) sepia(79%) saturate(3679%) hue-rotate(335deg) brightness(100%) contrast(92%);
+    transition: filter 0.3s ease;
+}
+
+.filaRedes a {
+    margin-left: 12px;
+}
+
+.filaRedes img:hover {
+    filter: invert(13%) sepia(81%) saturate(7056%) hue-rotate(359deg) brightness(99%) contrast(112%);
+}
+
+/* Copyright */
+.contenedor-copyright {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contenedor-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .columna1, .columna2, .columna3 {
+        padding: 10px;
+    }
+
+    .fila label {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .fila img {
+        margin-left: 0;
+    }
+
+    .filaRedes img {
+        margin-left: 0;
+    }
+
+    .fila2 ul li a {
+        justify-content: center;
+    }
+}
