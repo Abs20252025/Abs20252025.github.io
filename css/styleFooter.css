@@ -25,7 +25,6 @@ a {
 
 /* Contenedor principal del footer */
 .contenedor-footer {
-    height: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo */
     gap: 20px; /* Espaciado entre columnas */
@@ -215,3 +214,4 @@ li img {
         border-radius: 15px; /* Bordes redondeados */
     }
 }
+
