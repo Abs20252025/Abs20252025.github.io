@@ -292,6 +292,7 @@ a{
 
 .Abs-Servicios {
   display: flex;
+  justify-content: center; /* Centra los elementos en la pantalla */
 }
 
 .Abs-Recarga{
@@ -314,6 +315,12 @@ a{
   border-radius: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.36);
 }
+
+.Abs-Recarga img:hover{
+  background-color: #ff0000;
+}
+
+
 
 .Abs-Recarga .Parrafo-Servicio-Mantenimiento {
   color: #f1f1f1;
@@ -356,4 +363,40 @@ a{
   .toggle-menu {
       display: block;
   }
+
+  .Abs-Servicios {
+    flex-direction: column; /* Cambia a una columna */
+    align-items: center; /* Centra las tarjetas horizontalmente */
+  }
+
+  .Abs-Recarga {
+    width: 85%; /* Ocupa el 90% del ancho de la pantalla */
+    max-width: 400px; /* Tamaño máximo fijo */
+    margin: 10px auto; /* Espaciado entre las tarjetas y centrado */
+    border-radius: 10px; /* Mantén los bordes redondeados */
+    padding: 15px; /* Espacio interno */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    height: auto;
+  }
+
+  .Abs-Recarga img {
+    width: 100px; /* Tamaño más pequeño para móviles */
+    height: 130px; /* Mantiene proporción */
+    margin-bottom: 15px; /* Espacio entre la imagen y el texto */
+  }
+
+  .Parrafo-Servicio-Mantenimiento {
+    text-align: center; /* Centra el texto */
+  }
+
+  .Parrafo-Servicio-Mantenimiento h3 {
+    font-size: 18px; /* Tamaño del título */
+    margin: 10px 0;
+  }
+
+  .Parrafo-Servicio-Mantenimiento label {
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    line-height: 1.4; /* Mejora la legibilidad */
+  }
 }
+
