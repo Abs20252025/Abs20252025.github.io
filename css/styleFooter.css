@@ -39,6 +39,12 @@ a {
     background-color: #f1f1f1; /* Color de fondo externo opcional */
 }
 
+.columna1 .fila{
+    display: flex;
+    justify-content: center;  /* Centra el contenido de la fila horizontalmente */
+    align-items: center; 
+}
+
 .columna1, .columna2, .columna3 {
     padding: 20px;
 }
@@ -62,15 +68,10 @@ a {
     line-height: 1.5; /* Mejora la legibilidad */
 }
 
-.columna2 .fila .absLogoFooter{
+.columna1 .fila .absLogoFooter{
     align-items: center;    /* Centra verticalmente */
     filter: none !important;
-    margin-left: 115px;
 }
-
-
-
-
 
 .logoredes {
     margin: 10px;
@@ -137,31 +138,38 @@ li img {
     filter: invert(13%) sepia(81%) saturate(7056%) hue-rotate(359deg) brightness(99%) contrast(112%);
 }
 
-/* Copyright */
-.contenedor-copyright {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 14px;
-}
-
-/* Responsive Design */
+/* Responsivo para móviles */
 @media (max-width: 768px) {
+
     .contenedor-footer {
-        display: flex;
-        flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    .columna1, .columna2, .columna3 {
-        padding: 10px;
+    .columna1{
+        padding: 5px 10px 5px 10px;
+    }
+
+    .columna2{
+        padding: 5px 10px 5px 10px;
+    }
+    .columna3{
+        padding: 5px 10px 5px 10px;
+    }
+
+    /* Ajustar el estilo para el correo */
+    .columna2 .fila label {
+        font-size: 14px;  /* Reducir el tamaño de la fuente en pantallas móviles */
+        text-align: justify;
+    }
+
+    .fila{
+        margin-bottom: 0px;
     }
 
     .fila label {
         margin-left: 0;
-        margin-top: 10px;
+        margin-top: 5px;
     }
 
     .fila img {
@@ -175,4 +183,18 @@ li img {
     .fila2 ul li a {
         justify-content: center;
     }
+
+    /* Modificar el tamaño de la imagen del logo y la imagen del mapa para que se ajusten mejor en móviles */
+    .absLogoFooter {
+        width: auto;
+        height: 150px;
+        margin-left: 0;
+        filter: none !important;
+    }
+
+    iframe {
+        width: 100%; /* Ajustar mapa al 100% del contenedor */
+        height: 250px; /* Reducir el tamaño del mapa */
+    }
 }
+
