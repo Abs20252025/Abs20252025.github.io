@@ -33,6 +33,7 @@ a {
     padding: 20px;
     background-color: black;
     border-top: 3px solid #c14545;
+    height: auto;
 }
 
 .contenedor-footer-all {
@@ -157,8 +158,23 @@ li img {
         padding: 5px 10px 5px 10px;
     }
 
-    /* Ajustar el estilo para el correo */
+    .columna1 h2, .columna2 h2, .columna3 h2 {
+        margin-bottom: 10px; 
+        color: #ddddc3;
+        border-bottom: 2px solid #c14545;
+        padding-bottom: 5px;
+    }
+
+    .columna1 .fila label {
+        font-size: 14px;  /* Reducir el tamaño de la fuente en pantallas móviles */
+        text-align: justify;
+    }
     .columna2 .fila label {
+        font-size: 14px;  /* Reducir el tamaño de la fuente en pantallas móviles */
+        text-align: justify;
+    }
+
+    .columna3 .fila label {
         font-size: 14px;  /* Reducir el tamaño de la fuente en pantallas móviles */
         text-align: justify;
     }
@@ -195,6 +211,7 @@ li img {
     iframe {
         width: 100%; /* Ajustar mapa al 100% del contenedor */
         height: 250px; /* Reducir el tamaño del mapa */
+        border: 0;
+        border-radius: 15px; /* Bordes redondeados */
     }
 }
-
