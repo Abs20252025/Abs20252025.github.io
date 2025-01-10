@@ -207,7 +207,18 @@ a{
 }
 
 .Abs-Inicio{
-  width: 450px;
+  padding: 10px;
+  width: 480px;
+  border: none; /* Sin borde */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Sombra suave y difusa */
+  border-radius: 10px; /* Bordes redondeados */
+  transition: box-shadow 0.3s ease; /* Efecto suave al pasar el ratón */
+  background: transparent; /* Fondo transparente */ 
+}
+
+.Abs-Inicio:hover {
+  transform: scale(1.05); /* Agranda la tarjeta al pasar el ratón */
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4); /* Sombra más notoria */
 }
 
 .Abs-Inicio h3 {
@@ -229,15 +240,16 @@ a{
 }
 
 .Equipos-Contra-Incendios-Inicio {
-  background-image: url('../img/extinguishers\ 2.jpg'); /* Ruta de tu imagen */
+  background-image: url('../img/fondoExtintores.webp'); /*e tu imagen */
   background-size: cover; /* Escala la imagen para cubrir todo el contenedor */
   background-position: center; /* Centra la imagen */
-  height: 600px; /* Altura del contenedor */
+  height: auto; /* Altura del contenedor */
   display: flex; /* Para centrar el contenido */
   justify-content: center; /* Centrar horizontalmente */
   align-items: center; /* Centrar verticalmente */
   position: relative; /* Necesario para el overlay */
   gap: 55px;
+  padding: 30px;
 }
 
 .Equipos-Contra-Incendios-Inicio::before {
@@ -306,8 +318,8 @@ a{
     align-items: center; /* Centra la imagen y el texto verticalmente */
     margin-left: 12px;
     margin-right: 12px;
-    width: 480px;
-    height: 320px;
+    width: 100%;  /* Imagen a 100% del contenedor */
+    height: auto;
     padding: 16px 23px;
 }
 
@@ -363,6 +375,47 @@ a{
   .toggle-menu {
       display: block;
   }
+
+  .Equipos-Contra-Incendios-Inicio {
+    display: flex;
+    flex-direction: column; /* Apilamos el contenido y la imagen */
+    align-items: center; /* Centramos los elementos */
+}
+.Abs-Inicio {
+    width: 100%; /* Asegura que ocupe todo el ancho de la pantalla en móviles */
+    padding: 15px;
+}
+
+.Abs-Inicio:hover {
+    transform: scale(1.03); /* Menos zoom para pantallas pequeñas */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra más suave */
+}
+
+.Abs-Inicio h3 {
+    font-size: 18px; /* Tamaño más pequeño para móviles */
+}
+
+.Abs-Inicio h1 {
+    font-size: 24px; /* Tamaño más pequeño para móviles */
+}
+
+.Abs-Inicio p {
+    font-size: 16px; /* Tamaño más pequeño para móviles */
+}
+
+.Abs-Cotiza a {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.imgInicio img {
+  width: 100%;  /* Imagen a 100% del contenedor */
+  height: auto;
+}
+
+
+  /*MEJORES SERVICIOSSS */
 
   .Abs-Servicios {
     flex-direction: column; /* Cambia a una columna */
