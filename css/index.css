@@ -71,6 +71,7 @@ header {
 }
 
 .Abs-Cotiza a {
+  width: 100%;
   margin-left: 35px;
   margin-right: 35px;
   border: 2px solid #cc0000; /* Borde rojo */
@@ -452,4 +453,5 @@ a{
     line-height: 1.4; /* Mejora la legibilidad */
   }
 }
+
 
