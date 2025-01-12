@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto Condensed", Sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -71,7 +71,6 @@ header {
 }
 
 .Abs-Cotiza a {
-  width: 100%;
   margin-left: 35px;
   margin-right: 35px;
   border: 2px solid #cc0000; /* Borde rojo */
@@ -137,6 +136,8 @@ a{
 .Abs-Cotiza{
   display: flex;
 }
+
+
 
 
 
@@ -342,12 +343,93 @@ a{
   justify-content: flex-start;
 }
 .Parrafo-Servicio-Mantenimiento h3{
-  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .Parrafo-Servicio-Mantenimiento label{
   font-size: 19px;
-  margin-top: 5px;
   line-height: 1.2;
+}
+
+.Abs-Equipos-Contra-Incendios-Mantenimiento-Venta-Instalacion {
+  background-color: whitesmoke; /* Fondo rojo */
+  border-top: 3px solid #c14545; /* Borde superior */
+  position: relative; /* Necesario para el filtro */
+  display: flex;
+  flex-direction: column; /* Apila los elementos verticalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+  height: auto;
+}
+
+.Abs-Equipos-Contra-Incendios-Mantenimiento-Venta-Instalacion h2 {
+  color: white;
+  font-size: 32px;
+  line-height: 38px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  text-align: center; /* Centra el texto */
+  border-bottom: 3px solid #c14545;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: black;
+  width: 100%; /* Asegura que el h2 ocupe todo el ancho */
+}
+
+.Abs-Contenido-Venta-Instalacion{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 5rem;
+  width: 100%;
+}
+
+.imgMantenimiento-Venta-Instalacion{
+  height: auto;
+}
+
+.Abs-Manenimiento-Venta-Instalacion{
+  width: 580px;
+}
+
+.Abs-Manenimiento-Venta-Instalacion h3{
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 28px;
+  color: #d42626;
+}
+
+.Abs-Manenimiento-Venta-Instalacion .Elegir-Abs{
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.Abs-Beneficios span {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.Abs-Homologacion {
+  margin-top: 15px;
+  color: #d42626;
+  display: flex;
+  align-items: center;  /* Alinea verticalmente */
+  justify-content: center;  /* Alinea horizontalmente */
+  font-weight: bold;
+}
+.Abs-Homologacion img{
+  border-radius: 15px;
+  padding: 5px 10px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 62%;
+  height: auto;
+}
+
+.Abs-Homologacion label {
+  margin-right: 10px; /* Espacio entre el label y la imagen */
 }
 
 
@@ -452,6 +534,64 @@ a{
     font-size: 14px; /* Ajusta el tamaño del texto */
     line-height: 1.4; /* Mejora la legibilidad */
   }
+
+ 
+
+  .Abs-Contenido-Venta-Instalacion {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    gap: 20px; /* Reduce el espacio entre los elementos */
+  }
+
+  .Abs-Manenimiento-Venta-Instalacion {
+    width: 100%; /* Asegura que ocupe todo el ancho */
+  }
+
+  .imgMantenimiento-Venta-Instalacion img {
+    width: 100%; /* Asegura que la imagen se adapte al contenedor */
+    height: auto; /* Mantén la proporción de la imagen */
+  }
+
+  .Abs-Recarga {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    padding: 10px; /* Reduce el espacio interior */
+    margin: 10px 0; /* Reduce el margen */
+    width: 85%;
+  }
+
+  .Abs-Recarga img {
+    width: 100%; /* Imagen al ancho completo */
+    margin-bottom: 10px; /* Espacio inferior entre la imagen y el contenido */
+  }
+
+  .Equipos-Contra-Incendios-Inicio {
+    flex-direction: column; /* Apila la imagen y el contenido */
+    padding: 15px;
+    gap: 15px; /* Reduce el espacio entre elementos */
+  }
+
+  .Abs-Manenimiento-Venta-Instalacion h3{
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .Abs-Manenimiento-Venta-Instalacion p{
+    text-align: justify;
+    font-size: 1rem;
+  }
+  .Abs-Manenimiento-Venta-Instalacion .Elegir-Abs{
+    font-size: 1.5rem;
+  }
+
+  .Abs-Homologacion{
+    flex-direction: column;
+  }
+
+  .Abs-Homologacion label{
+    font-size: 1.4rem;
+  }
+
+  .Abs-Homologacion img {
+    width: 80%; /* Reduce el tamaño de la imagen */
+  }
+
 }
-
-

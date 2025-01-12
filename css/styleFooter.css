@@ -138,6 +138,11 @@ li img {
     filter: invert(13%) sepia(81%) saturate(7056%) hue-rotate(359deg) brightness(99%) contrast(112%);
 }
 
+iframe{
+    border: 0;
+    border-radius: 15px;
+}
+
 /* Responsivo para móviles */
 @media (max-width: 768px) {
 
@@ -165,16 +170,16 @@ li img {
     }
 
     .columna1 .fila label {
-        font-size: 14px;  /* Reducir el tamaño de la fuente en pantallas móviles */
+        font-size: 1rem;
         text-align: justify;
     }
     .columna2 .fila label {
-        font-size: 14px;  /* Reducir el tamaño de la fuente en pantallas móviles */
+        font-size: 0.84rem;
         text-align: justify;
     }
 
     .columna3 .fila label {
-        font-size: 14px;  /* Reducir el tamaño de la fuente en pantallas móviles */
+        font-size: 0.84rem;
         text-align: justify;
     }
 
