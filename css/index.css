@@ -402,6 +402,10 @@ a{
   color: #d42626;
 }
 
+.Abs-Manenimiento-Venta-Instalacion{
+  text-align: justify;
+}
+
 .Abs-Manenimiento-Venta-Instalacion .Elegir-Abs{
   margin-top: 10px;
   font-size: 15px;
