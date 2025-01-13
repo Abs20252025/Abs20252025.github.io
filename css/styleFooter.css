@@ -192,8 +192,17 @@ iframe{
         margin-top: 5px;
     }
 
+    .columna1 .fila .absLogoFooter {
+        align-items: center;
+        filter: none !important;
+        width: auto;
+        height: 8rem;
+    }
+
     .fila img {
         margin-left: 0;
+        width: auto;
+        height: 2rem;
     }
 
     .filaRedes img {
@@ -219,4 +228,3 @@ iframe{
         border-radius: 15px; /* Bordes redondeados */
     }
 }
-

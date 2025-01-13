@@ -409,6 +409,8 @@ a{
 .Abs-Beneficios span {
   margin-top: 10px;
   display: inline-block;
+  text-align: justify;
+  font-size: 0.9rem;
 }
 
 .Abs-Homologacion {
@@ -535,7 +537,11 @@ a{
     line-height: 1.4; /* Mejora la legibilidad */
   }
 
- 
+  .Abs-Equipos-Contra-Incendios-Mantenimiento-Venta-Instalacion h2 {
+    font-size: 1.8rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
 
   .Abs-Contenido-Venta-Instalacion {
     flex-direction: column; /* Apila los elementos verticalmente */
