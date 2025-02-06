@@ -1,752 +1,790 @@
-/* General Styles */
-body {
-  font-family: "Roboto Condensed", Sans-serif;
+/* VARIABLES DE COLOR */
+:root {
+  --color-primary: #9fb821;
+  /* Azul oscuro (SILPA letras grandes) */
+  --color-secondary: #378aa9;
+  /* Verde (logos pequeños) */
+  --color-accent: #348ba8;
+  /* Azul línea grande */
+  --color-light: #9ec35f;
+  /* Verde claro línea pequeña */
+  --color-dark: #162632;
+  /* Azul muy oscuro (soluciones...) */
+  --color-white: #fff;
+  /* Blanco */
+}
+
+/* RESET BÁSICO */
+* {
   margin: 0;
   padding: 0;
-} 
+  box-sizing: border-box;
+}
 
-body header{
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+}
+
+body,
+html {
+  overflow-x: hidden;
+  /* Prevenir el scroll horizontal */
+}
+
+
+/* INICIO SILPA */
+
+.inicio-silpa {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Estilo para cada slide */
+.slider {
+  display: flex;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  /* Cada slide ocupará el 100% del ancho de la pantalla */
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Cambiar la imagen de fondo de cada slide */
+.slide:nth-child(1) {
+  background-image: url('../img/Silpa-Inicio.jpg');
+}
+
+.slide:nth-child(2) {
+  background-image: url('../img/Silpa-Inicio.jpg');
+}
+
+.slide:nth-child(3) {
+  background-image: url('../img/Silpa-Inicio.jpg');
+}
+
+/* Estilo del texto sobre el slider */
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.slide-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 4px rgb(0, 0, 0);
+}
+
+.slide-content p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.slide-content .btn-primary,
+.slide-content .btn-secondary {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 10px;
+  text-align: center;
+}
+
+.slide-content .btn-primary {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.slide-content .btn-primary:hover {
+  background-color: #007a99;
+}
+
+.slide-content .btn-secondary {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+.slide-content .btn-secondary:hover {
+  background-color: #8fb858;
+}
+
+/* SERVICIOS SILPA */
+
+section {
+  height: 100vh;
   width: 100%;
 }
 
-header {
+/* NUEVO SERVICIO */
+
+/* Ajuste en content-wave para evitar el espacio extra */
+.content-wave {
+  position: relative;
+  width: 100%;
+  height: 6.8em;
+  /* Ajusta la altura de la ola */
+  background-color: #377b52;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* Alineación al inicio */
+  padding-top: 0;
+  /* Elimina cualquier padding adicional */
+  margin: 0;
+  /* Elimina márgenes adicionales */
+  overflow: hidden;
+  /* Asegura que no haya desbordes visibles */
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #cc0000;
-  color: white;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
-  z-index: 1000;
-  transition: top 0.3s ease-in-out;
+  height: 50px;
+  background-image: url('../img/waveA.jpg');
+  background-size: cover;
+  animation: wave 10s linear infinite;
+  z-index: 1;
+  /* El wave está detrás del título */
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+@keyframes wave {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 1000px;
+  }
 }
 
-.navbar .logo a {
-  font-size: 1.5rem;
-  color: white;
+.CotizarServicio {
   text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  transition: background 0.3s ease;
+  display: inline-flex;
+  font-size: 0.8em;
+  justify-content: center;
+}
+
+.CotizarServicio:hover {
+  background-color: #8fb858;
   font-weight: bold;
 }
 
-.logo img {
-  height: 65px;
-  width: auto;
-  display: block;
-  margin-left: 30px;
-}
-
-.menu {
-  display: flex; /* Flexbox aplicado aquí para alinear los elementos en fila */
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.links img {
   align-items: center;
+  margin-right: 0px;
 }
 
-.menu > li {
-  position: relative;
-  margin: 0 10px;
-}
-
-
-.menu-item {
+.telefono-icono {
   display: flex;
-  align-items: center; /* Alinea el texto con el ícono */
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-}
-
-.arrow-icon {
-  width: 16px;
-  height: 16px;
-  margin-left: 8px; /* Espacio entre el texto y el ícono */
-  transition: transform 0.3s ease; /* Para una animación de rotación */
-}
-.phone-icon {
-  width: 16px;
-  height: 16px;
-  margin-left: 8px; /* Espacio entre el texto y el ícono */
-  transition: transform 0.3s ease; /* Para una animación de rotación */
-}
-
-.Abs-Cotiza{
-  margin-top: 14px;
-}
-
-.Abs-Cotiza a {
-  margin-left: 35px;
-  margin-right: 35px;
-  border: 2px solid #cc0000; /* Borde rojo */
-  border-radius: 20px; /* Bordes redondeados */
-  padding: 9px;
-  background-color: rgba(204, 0, 0, 0.2); /* Fondo rojo translúcido */
-  color: white; /* Color del texto */
-  text-decoration: none; /* Quitar subrayado del enlace */
-  font-weight: bold; /* Texto más destacado */
-  display: inline-flex; /* Usar flexbox para facilitar la alineación */
-  align-items: center; /* Centrar el contenido dentro del enlace */
-}
-
-.Abs-Cotiza a:hover {
-  background-color: rgb(241, 26, 26);
-  border: 2px solid rgb(241, 26, 26); 
-}
-
-.Abs-Cotiza img {
-  vertical-align: middle; /* Alinear los íconos con el texto */
-  margin-left: 5px; /* Espaciado entre el ícono y el texto */
-}
-
-.Abs-Cotiza small {
-  font-size: 12px; /* Ajusta el tamaño del texto en <small> */
-  vertical-align: middle; /* Asegura que también se alinee correctamente */
+  width: 25%;
+  height: auto;
 }
 
 
-a{
-  list-style: none;
-  text-decoration: none;
-  color: white;
-}
 
-/* Ajustar el teléfono */
-.phone-contact {
+/* Estilo de la sección de servicios */
+
+.SILPA-servicios-fila {
   display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Alinea a la izquierda */
-  margin-right: 20px; /* Añade un margen derecho para separarlo un poco de los otros elementos */
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
 }
 
-.phone-contact a {
-  text-decoration: none;
-  color: white; /* Establece el color del texto */
-  display: flex;
-  align-items: center;
-}
-
-.phone-icon {
-  width: 30px; /* Tamaño del ícono del teléfono */
-  height: 30px;
-  margin-right: 10px; /* Espacio entre el ícono y el texto */
-}
-
-.phone-text {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; /* Centra el texto verticalmente */
-}
-
-.Abs-Cotiza{
-  display: flex;
-}
-
-
-
-
-
-/* Submenú principal */
-.menu .submenu {
-  display: none;
-  position: absolute;
-  background-color: #f4f4f4;
-  color: black;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  min-width: 200px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 10;
-}
-
-/* Submenú secundario (despliegue hacia la derecha solo en "Extintores") */
-.menu .submenu .submenu {
-  display: none;
-  top: 0;
-  left: 100%; /* Se posiciona a la derecha del submenú principal */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Mostrar submenús al pasar el mouse */
-.menu > li:hover > .submenu {
-  display: block;
-}
-
-.submenu > li:hover > .submenu {
-  display: block;
-}
-
-/* Hover para rotar el ícono de la flecha */
-.menu > li:hover > .menu-item .arrow-icon {
-  transform: rotate(180deg); /* Gira el icono hacia arriba */
-}
-
-/* Alinear los elementos "Capacitaciones", "Blog", "Contacto" */
-.menu > li:last-child {
-  margin-left: auto; /* Esto empuja los últimos elementos hacia la derecha */
-}
-
-/* Opciones del submenú */
-.menu .submenu li {
-  position: relative;
-}
-
-.menu .submenu a {
-  color: black;
-  padding: 10px 15px;
-  text-decoration: none;
-  display: block;
-}
-
-.menu .submenu a:hover {
-  background-color: #ddd;
-}
-
-/* Mobile Styles */
-.toggle-menu {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-.Abs-Inicio{
-  padding: 10px;
-  width: 480px;
-  border: none; /* Sin borde */
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Sombra suave y difusa */
-  border-radius: 10px; /* Bordes redondeados */
-  transition: box-shadow 0.3s ease; /* Efecto suave al pasar el ratón */
-  background: transparent; /* Fondo transparente */ 
-}
-
-.Abs-Inicio:hover {
-  transform: scale(1.05); /* Agranda la tarjeta al pasar el ratón */
-  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4); /* Sombra más notoria */
-}
-
-.Abs-Inicio h3 {
-  font-size: 20px;
-  color: whitesmoke;
-  margin-bottom: 10px; /* Espacio debajo del h3 */
-}
-
-.Abs-Inicio h1 {
-  font-size: 30px;
-  color: whitesmoke;
-  margin-bottom: 20px; /* Espacio debajo del h1 */
-}
-
-.Abs-Inicio p {
-  font-size: 20px;
-  color: whitesmoke;
-  margin-bottom: 0; /* Sin espacio adicional debajo del párrafo */
-}
-
-.Equipos-Contra-Incendios-Inicio {
-  background-image: url('../img/fondoExtintores.webp'); /*e tu imagen */
-  background-size: cover; /* Escala la imagen para cubrir todo el contenedor */
-  background-position: center; /* Centra la imagen */
-  display: flex; /* Para centrar el contenido */
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-  position: relative; /* Necesario para el overlay */
-  gap: 55px;
-  padding: 30px;
-  height: 100%;
-}
-
-.Equipos-Contra-Incendios-Inicio::before {
-  content: ''; /* Pseudo-elemento vacío */
-  position: absolute;
-  top: 0;
-  left: 0;
+.SILPA-servicios-categoria {
+  flex: 1;
+  min-width: 300px;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
-  z-index: 1; /* Coloca el overlay detrás del contenido */
+  height: auto;
 }
 
-.Equipos-Contra-Incendios-Inicio > * {
-  position: relative; /* Coloca el contenido encima del overlay */
-  z-index: 2;
-  color: white; /* Texto blanco para destacar sobre el fondo oscuro */
+.SILPA-servicios-section {
+  background-color: var(--color-dark);
 }
 
-
-.Abs-Servicios-Mantenimiento-Sistemas-Contra-Incendios {
-  background-color: #d40203;
-  border-top: 3px solid #c14545;
-  position: relative;
-  height: 100%;
-}
-
-.Abs-Servicios-Mantenimiento-Sistemas-Contra-Incendios h2 {
-  width: 100%;
-  color: white;
-  font-size: 32px;
-  line-height: 38px;
-  padding: 15px 0;
-  text-transform: uppercase;
-  letter-spacing: 10px;
+.SILPA-servicios-titulo h2 {
+  font-size: 28px;
+  font-weight: bold;
   text-align: center;
-  border-bottom: 3px solid #c14545;
-  font-family: 'Times New Roman', Times, serif;
-  background-color: black;
+  margin-bottom: 30px;
 }
 
-.Abs-Servicios {
+.SILPA-categoria-servicio {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 30%;
+}
+
+.SILPA-categoria-servicio h3 {
+  font-size: 24px;
+  color: var(--color-dark);
+  margin-bottom: 15px;
+}
+
+.SILPA-categoria-servicio ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.SILPA-categoria-servicio li {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Estilo general de la sección */
+.SILPA-servicios-section {
+  text-align: center;
+}
+
+/* Título de la sección */
+.SILPA-servicios-titulo h2 {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 4px rgb(0, 0, 0);
+}
+
+.SILPA-servicios-titulo .SILPA-destacado {
+  color: #5dbf5e;
+  /* Color destacado */
+}
+
+/* Estilo de las categorías de servicios */
+.SILPA-servicios-categoria {
+  margin-bottom: 20px;
+}
+
+.SILPA-categoria-titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Contenedor de las tarjetas */
+.SILPA-servicios-grid {
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
-  gap: 20px;
-  margin-top: 20px;
-  width: 100%;
-  align-items: center;
   justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-.Abs-Recarga {
+/* Estilo de las tarjetas de los servicios */
+.SILPA-servicio-card {
   position: relative;
-  width: 22%; /* Cada tarjeta ocupa un tercio del contenedor */
-  height: 200px; /* Altura fija */
-  border: 3px solid #c14545;
-  border-radius: 20px;
-  overflow: hidden; /* Asegura que los elementos no salgan de la tarjeta */
-  perspective: 1000px; /* Efecto de profundidad para la rotación */
+  width: 205px;
+  height: 210px;
   background-color: white;
-  margin-left: 10px;
-  margin-right: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  perspective: 1000px;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
 }
 
-.Abs-Negocio-Icon a{
-  width: 100%;
-  height: 100%;
+.SILPA-servicio-card:hover {
+  transform: scale(1.02);
+  /* Escala la tarjeta al pasar el ratón */
 }
 
-.Abs-Negocio-Icon img{
-  width: 100%;
-  height: 100%;
-}
-
-.Abs-Negocio-Icon,
-.Abs-Servicio-Venta-Rotado {
+.SILPA-servicio-front,
+.SILPA-servicio-back {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.8s ease;
+  flex-direction: column;
 }
 
-.Abs-Negocio-Icon {
-  transform: rotateY(0deg);
-}
-
-.Abs-Servicio-Venta-Rotado {
-  transform: rotateY(180deg);
-  flex-direction: row; /* Alinea la imagen y los enlaces en fila */
-  background-color: whitesmoke;
-  color: white;
-  padding: 20px;
-}
-
-.Abs-Servicio-Venta-Rotado img {
-  padding: 6px;
-  width: 45%; /* Imagen más pequeña */
-  margin-right: 10px;
-}
-
-.Abs-Recarga:hover .Abs-Negocio-Icon {
-  transform: rotateY(180deg);
-}
-
-.Abs-Recarga:hover .Abs-Servicio-Venta-Rotado {
-  transform: rotateY(0deg);
-}
-
-.links {
-  display: flex;
-  flex-direction: column; /* Enlaces en columna */
-  gap: 10px; /* Espacio entre enlaces */
-}
-
-.links a {
-  text-decoration: none;
-  padding: 5px 10px;
-  border: 2px solid #cc0000;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-  color: black;
-}
-
-.links a:hover {
-  background-color: rgb(241, 26, 26);
-  color: white; 
-  font-weight: bold;
-}
-
-.Abs-Equipos-Contra-Incendios-Mantenimiento-Venta-Instalacion {
-  background-color: whitesmoke; /* Fondo rojo */
-  border-top: 3px solid #c14545; /* Borde superior */
-  position: relative; /* Necesario para el filtro */
-  display: flex;
-  flex-direction: column; /* Apila los elementos verticalmente */
-  justify-content: center; /* Centra los elementos verticalmente */
-  align-items: center; /* Centra los elementos horizontalmente */
-  width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
-  height: auto;
-}
-
-.Abs-Equipos-Contra-Incendios-Mantenimiento-Venta-Instalacion h2 {
-  color: white;
-  font-size: 32px;
-  line-height: 38px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  text-transform: uppercase;
-  letter-spacing: 10px;
-  text-align: center; /* Centra el texto */
-  border-bottom: 3px solid #c14545;
-  font-family: 'Times New Roman', Times, serif;
-  background-color: black;
-  width: 100%; /* Asegura que el h2 ocupe todo el ancho */
-}
-
-.Abs-Contenido-Venta-Instalacion{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  gap: 3rem;
+.SILPA-servicio-front img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.Abs-Contenido-Venta-Instalacion{
+.SILPA-servicio-front h3 {
   width: 100%;
-}
-
-.imgMantenimiento-Venta-Instalacion{
-  height: auto;
-}
-
-.Abs-Manenimiento-Venta-Instalacion{
-  width: 580px;
-}
-
-.Abs-Manenimiento-Venta-Instalacion h3{
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-size: 28px;
-  color: #d42626;
-}
-
-.Abs-Manenimiento-Venta-Instalacion{
-  text-align: justify;
-}
-
-.Abs-Manenimiento-Venta-Instalacion .Elegir-Abs{
-  margin-top: 10px;
-  font-size: 15px;
-}
-
-.Abs-Beneficios span {
-  margin-top: 10px;
-  display: inline-block;
-  text-align: justify;
-  font-size: 0.9rem;
-}
-
-.Abs-Homologacion {
-  margin-top: 15px;
-  color: #d42626;
-  display: flex;
-  align-items: center;  /* Alinea verticalmente */
-  justify-content: center;  /* Alinea horizontalmente */
-  font-weight: bold;
-}
-.Abs-Homologacion img{
-  border-radius: 15px;
-  padding: 5px 10px;
   background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 55%;
-  height: auto;
+  position: absolute;
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #007500;
+  font-weight: bold;
+  bottom: 0;
+  padding: 5px 0px;
 }
 
-.Abs-Homologacion label {
-  margin-right: 10px; /* Espacio entre el label y la imagen */
+/* Estilo del reverso de la tarjeta */
+.SILPA-servicio-back {
+  background-color: #f4f4f4;
+  padding: 20px;
+  transform: rotateY(180deg);
 }
 
-/* Contenedor general */
-.Abs-Lineas-de-Negocio {
-  background-color: rgb(56, 52, 52);
-  border-top: 3px solid #c14545;
-  text-align: center;
-  padding-bottom: 20px;
-  position: relative;
+.SILPA-servicio-card:hover .SILPA-servicio-front {
+  transform: rotateY(180deg);
+  /* Rota el frente al hacer hover */
 }
 
-.Abs-Lineas-de-Negocio h2 {
-  color: white;
-  font-size: 32px;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  background-color: black;
-  padding: 15px 0;
-  margin-bottom: 10px;
+.SILPA-servicio-card:hover .SILPA-servicio-back {
+  transform: rotateY(0deg);
+  /* Muestra el reverso */
 }
 
-/* Contenedor del slider */
-.Abs-Slider-Container {
-  position: relative;
-  height: auto;
-  width: 70%;
-  margin: 0 auto;
-  overflow: hidden; /* Oculta las diapositivas que están fuera del área visible */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.SILPA-servicio-back p {
+  font-size: 1rem;
+  text-align: justify;
+  color: #555;
+  margin-bottom: 20px;
 }
 
-/* Diapositivas */
-.Abs-Slider {
+.SILPA-servicio-links {
   display: flex;
-  transition: transform 0.5s ease-in-out; /* Animación suave */
-  width: 100%;
+  justify-content: center;
+  gap: 12px;
 }
 
-.slide {
-  flex: 0 0 100%; /* Cada slide ocupa el 100% del contenedor */
-  text-align: center;
-}
-
-.slide img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.slide p {
-  margin: 10px 0;
-  font-size: 1.2rem;
+.SILPA-ver-mas {
+  display: inline-flex;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #5dbf5e;
+  justify-content: center;
   color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  padding: 5px 5px;
+  align-items: center;
+}
+
+.SILPA-ver-mas:hover {
+  background-color: #4c9c47;
+}
+
+/* Estilo para el hover de los enlaces */
+.SILPA-servicio-links a:hover {
+  background-color: #007a99;
   font-weight: bold;
 }
 
-/* Botones de navegación */
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 20px;
-  z-index: 10;
+.SILPA-servicios-section {
+  height: auto;
 }
 
-.prev-btn {
-  left: 10px;
+/* COMO TRABAJAMOS */
+
+/* General Styles */
+.silpa-trabajo-section {
+  background-color: #333;
+  padding: 40px 15px;
+  height: auto;
 }
 
-.next-btn {
-  right: 10px;
+.silpa-container {
+  max-width: max-content;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
 }
 
-.slider-btn:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+/* Title Styles */
+.silpa-trabajo-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  color: #29bcec;
 }
 
-.full-screen {
-  height: 100vh;
-  top: 0;
-  left: 0;
+/* Description Styles */
+.silpa-trabajo-description {
+  font-size: 1.125rem;
+  color: #ffffff;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Cards Container */
+.silpa-trabajo-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 20px;
+}
+
+/* Card Styles */
+.silpa-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Centra horizontalmente */
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  /* Opcional: borde para definir el card */
+  border-radius: 10px;
+  background-color: #ceff79;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 15px rgba(206, 255, 121, 0.6);
+
+}
+
+.silpa-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 6px #c5d0ff;
+}
+
+.silpa-card:hover .silpa-card-icono {
+  filter: invert(71%) sepia(77%) saturate(711%) hue-rotate(356deg) brightness(103%) contrast(108%);
+}
+
+.silpa-card-icono {
+  width: 50%;
+  height: auto;
+  margin-bottom: 10px;
+  /* Espacio entre la imagen y el título */
+  object-fit: contain;
+}
+
+.silpa-card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.silpa-card-description {
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* BANNER CONTACTO */
+
+.bannerContacto {
+  height: auto;
+}
+
+.banner-contacto {
+  display: flex;
+  flex-wrap: wrap;
+  /* Permite que los elementos se ajusten al tamaño de la pantalla */
   width: 100%;
+  /* Ocupa todo el ancho */
+  height: 300px;
+  /* Altura fija de 300px */
+}
+
+.imagen-banner {
+  flex: 1;
+  /* La imagen ocupa 1/2 del espacio */
+  background-image: url('../img/banner2.png');
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  /* Asegura que la imagen ocupe toda la altura */
+  width: 100%;
+}
+
+.contenido-banner {
+  flex: 0.5;
+  /* Ocupa el otro 1/2 del espacio */
+  background: rgba(0, 0, 0, 0.7);
+  /* Fondo oscuro para mejor visibilidad */
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenido-banner h2 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.contenido-banner p {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.boton-contacto {
+  background-color: #ff5733;
+  color: white;
+  text-decoration: none;
+  font-size: 1.3em;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 10px;
+  width: 250px;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.boton-contacto:hover {
+  background-color: #d94420;
+  transform: scale(1.1);
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .banner-contacto {
+    flex-direction: column;
+    /* Cambia la dirección a columna en pantallas pequeñas */
+    height: auto;
+    /* Deja que la altura se ajuste al contenido */
+  }
+
+  .imagen-banner {
+    height: 200px;
+    /* Altura de imagen en pantallas pequeñas */
+  }
+
+  .contenido-banner {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1920px) {
+  .slide {
+    background-size: cover;
+    /* Mantiene la imagen bien ajustada */
+    min-height: 100vh;
+    /* Asegura que siempre ocupe la pantalla */
+  }
+
+  .slide-content h1 {
+    font-size: 4rem;
+    /* Aumenta el tamaño del título */
+  }
+
+  .slide-content p {
+    font-size: 2rem;
+    /* Aumenta el tamaño del texto */
+  }
+
+  .slide-content .btn-primary,
+  .slide-content .btn-secondary {
+    padding: 20px 40px;
+    /* Hace los botones más grandes */
+    font-size: 1.2rem;
+  }
 }
 
 
 
 @media (max-width: 768px) {
-  .menu {
-      flex-direction: column;
-      display: none;
-      width: 100%;
-      background: #cc0000;
+
+  .SILPA-ver-mas {
+    padding: 5px 5px;
   }
 
-  .menu > li {
-      text-align: center;
-      margin: 0;
+  .CotizarServicio {
+    padding: 5px 5px;
   }
 
-  .menu > li .submenu {
-      position: static;
-      box-shadow: none;
+  .silpa-header__menu {
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .menu.active {
-      display: flex;
-  }
-
-  .toggle-menu {
-      display: block;
-  }
-
-  .Equipos-Contra-Incendios-Inicio {
-    display: flex;
-    flex-direction: column; /* Apilamos el contenido y la imagen */
-    align-items: center; /* Centramos los elementos */
-}
-.Abs-Inicio {
-    width: 100%; /* Asegura que ocupe todo el ancho de la pantalla en móviles */
-    padding: 15px;
-}
-
-.Abs-Inicio:hover {
-    transform: scale(1.03); /* Menos zoom para pantallas pequeñas */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra más suave */
-}
-
-.Abs-Inicio h3 {
-    font-size: 18px; /* Tamaño más pequeño para móviles */
-}
-
-.Abs-Inicio h1 {
-    font-size: 24px; /* Tamaño más pequeño para móviles */
-}
-
-.Abs-Inicio p {
-    font-size: 16px; /* Tamaño más pequeño para móviles */
-}
-
-.Abs-Cotiza a {
-  margin-left: 5px;
-  margin-right: 5px;
-  font-size: 13px;
-}
-
-.imgInicio img {
-  width: 100%;  /* Imagen a 100% del contenedor */
-  height: auto;
-}
-
-
-  /*MEJORES SERVICIOSSS */
-
-  .Abs-Servicios {
-    flex-direction: column; /* Cambia a una columna */
-    align-items: center; /* Centra las tarjetas horizontalmente */
-  }
-
-  .Abs-Recarga {
-    width: 85%; /* Ocupa el 90% del ancho de la pantalla */
-    max-width: 400px; /* Tamaño máximo fijo */
-    margin: 10px auto; /* Espaciado entre las tarjetas y centrado */
-    border-radius: 10px; /* Mantén los bordes redondeados */
-    padding: 15px; /* Espacio interno */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
-    height: auto;
-  }
-
-  .Abs-Recarga img {
-    width: 100px; /* Tamaño más pequeño para móviles */
-    height: 130px; /* Mantiene proporción */
-    margin-bottom: 15px; /* Espacio entre la imagen y el texto */
-  }
-
-  .Parrafo-Servicio-Mantenimiento {
-    text-align: center; /* Centra el texto */
-  }
-
-  .Parrafo-Servicio-Mantenimiento h3 {
-    font-size: 18px; /* Tamaño del título */
-    margin: 10px 0;
-  }
-
-  .Parrafo-Servicio-Mantenimiento label {
-    font-size: 14px; /* Ajusta el tamaño del texto */
-    line-height: 1.4; /* Mejora la legibilidad */
-  }
-
-  .Abs-Equipos-Contra-Incendios-Mantenimiento-Venta-Instalacion h2 {
-    font-size: 1.6rem;
-    padding: 0.5rem;
-  }
-
-  .Abs-Contenido-Venta-Instalacion {
-    flex-direction: column; /* Apila los elementos verticalmente */
-    gap: 20px; /* Reduce el espacio entre los elementos */
-  }
-
-  .Abs-Manenimiento-Venta-Instalacion {
-    width: 100%; /* Asegura que ocupe todo el ancho */
-  }
-
-  .imgMantenimiento-Venta-Instalacion img {
-    width: 100%; /* Asegura que la imagen se adapte al contenedor */
-    height: auto; /* Mantén la proporción de la imagen */
-  }
-
-  .Abs-Recarga {
-    flex-direction: column; /* Apila los elementos verticalmente */
-    padding: 10px; /* Reduce el espacio interior */
-    margin: 10px 0; /* Reduce el margen */
-    width: 85%;
-  }
-
-  .Abs-Recarga img {
-    width: 100%; /* Imagen al ancho completo */
-    margin-bottom: 10px; /* Espacio inferior entre la imagen y el contenido */
-    padding: 1rem;
-  }
-
-  .Equipos-Contra-Incendios-Inicio {
-    flex-direction: column; /* Apila la imagen y el contenido */
-    padding: 15px;
-    gap: 15px; /* Reduce el espacio entre elementos */
-  }
-
-  .Abs-Manenimiento-Venta-Instalacion h3{
-    font-size: 1.6rem;
+  .silpa-header__menu-item {
     text-align: center;
   }
 
-  .Abs-Manenimiento-Venta-Instalacion p{
-    text-align: justify;
-    font-size: 1rem;
+  .silpa-header__menu-toggle {
+    display: block;
   }
-  .Abs-Manenimiento-Venta-Instalacion .Elegir-Abs{
+
+  .silpa-header__nav.active {
+    display: flex;
+  }
+
+  .content-wave {
+    height: 18vh;
+    /* Ajusta la altura de la ola */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    /* Asegura que no haya desbordes visibles */
+  }
+
+  .titulo-servicios {
+    font-size: 2em;
+    font-weight: bold;
+    padding-top: 3px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px rgb(0, 0, 0);
+  }
+
+  .SILPA-servicio-back p {
+    font-size: 0.9rem;
+    text-align: justify;
+    color: #555;
+    margin-bottom: 0;
+  }
+
+  .SILPA-servicio-links {
+    display: block;
+    align-items: center;
+    text-align: center;
+  }
+
+  .SILPA-servicio-links a {
+    width: 80%;
+    margin: 5px;
+  }
+
+  .SILPA-servicios-grid {
+    gap: 10px;
+  }
+
+  .SILPA-servicio-card {
+    height: 240px;
+    width: 170px;
+  }
+}
+
+@media (max-width: 480px) {
+  .silpa-trabajo-description {
+    text-align: justify;
+  }
+}
+
+@media (min-width: 1400px) {
+
+  .contenido-banner h2 {
+    font-size: 1.6em;
+    text-align: center;
+  }
+
+  .contenido-banner p {
+    text-align: center;
+    font-size: 1.6em;
+  }
+
+  .boton-contacto {
+    font-size: 1.5em;
+  }
+}
+
+
+@media (min-width: 1920px) {
+  .SILPA-servicio-card {
+    width: 280px;
+    /* Aumenta el ancho */
+    height: 300px;
+    /* Aumenta la altura */
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .silpa-trabajo-title {
+    font-size: 2.8rem;
+    margin-bottom: 0;
+  }
+
+  .silpa-trabajo-description {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .silpa-card-title {
     font-size: 1.5rem;
   }
 
-  .Abs-Homologacion{
-    flex-direction: column;
+  .silpa-card-description {
+    font-size: 1.3rem;
   }
 
-  .Abs-Homologacion label{
+  .silpa-trabajo-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+
+  .SILPA-categoria-titulo{
+    font-size: 2rem;
+  }
+
+  .SILPA-servicio-front h3 {
+    font-size: 1.2rem;
+  }
+
+  .SILPA-servicio-card {
+    width: 230px;
+    /* Aumenta el ancho */
+    height: 235px;
+    /* Aumenta la altura */
+  }
+}
+
+
+
+@media (min-width: 1900px) {
+
+  .SILPA-servicio-card {
+    width: 320px;
+    /* Aumenta el ancho */
+    height: 345px;
+    /* Aumenta la altura */
+  }
+
+  .SILPA-servicio-front h3 {
     font-size: 1.4rem;
   }
 
-  .Abs-Homologacion img {
-    width: 80%; /* Reduce el tamaño de la imagen */
+}
+
+@media (min-width: 2050px) {
+
+  .SILPA-servicio-card {
+    width: 370px;
+    /* Aumenta el ancho */
+    height: 450px;
+    /* Aumenta la altura */
   }
 
-  .Abs-Lineas-de-Negocio h2 {
-    font-size: 1.6rem;
-    padding: 0.5rem;
+  .SILPA-servicio-front h3 {
+    font-size: 1.8rem;
   }
-
 }

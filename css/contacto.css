@@ -1,0 +1,166 @@
+  #contacto {
+    padding: 40px;
+    background-color: #f4f4f4;
+  }
+
+  .sectionContacto {
+    background-image: url('../img/fondoAmbiental.webp');
+    background-size: cover;
+  }
+
+  .sectionContacto h2 {
+    text-shadow: 1px 1px 4px rgb(15 33 15 / 75%);
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  /* Contenedor principal con margen y espacio */
+  .contacto-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    /* Espacio entre columnas */
+    max-width: 900px;
+    /* Ancho máximo */
+    margin: 0 auto;
+    /* Centrar */
+    padding: 20px;
+  }
+
+  /* Card del formulario */
+  .formulario-card {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    min-width: 320px;
+  }
+
+  /* Estilo del formulario */
+  .formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .formulario-contacto button {
+    background: #A1E41C;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .formulario-contacto button:hover {
+    background: #0A7C25;
+  }
+
+  /* Cards de información */
+  .info-contacto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .card-contacto {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px dashed #0a0a0a;
+    /* Borde de rayitas */
+    border-width: 2px 2px 2px 2px;
+  }
+
+  .card-contacto label {
+    font-weight: bold;
+  }
+
+  .card-contacto h4 {
+    margin-bottom: 5px;
+    color: #0A7C25;
+    font-size: 1.5em;
+  }
+
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .contacto-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media (min-width: 1440px) {
+
+    .sectionContacto h2 {
+      font-size: 3rem;
+    }
+
+    .contacto-container {
+      max-width: 1300px;
+    }
+
+    .formulario-card {
+      min-width: 400px;
+    }
+
+    .formulario-contacto input,
+    .formulario-contacto textarea {
+      width: 100%;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .formulario-contacto button {
+      background: #A1E41C;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .formulario-contacto button:hover {
+      background: #0A7C25;
+    }
+
+
+    .card-contacto {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      border: 2px dashed #0a0a0a;
+      /* Borde de rayitas */
+      border-width: 2px 2px 2px 2px;
+    }
+
+    .card-contacto label {
+      font-size: 1.3rem;
+    }
+
+    .card-contacto p {
+      font-size: 1.2rem;
+    }
+
+    .card-contacto h4 {
+      font-size: 1.8rem;
+    }
+
+  }

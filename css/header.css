@@ -1,0 +1,211 @@
+/* VARIABLES DE COLOR */
+:root {
+    --color-primary: #9fb821; /* Azul oscuro (SILPA letras grandes) */
+    --color-secondary: #378aa9; /* Verde (logos pequeños) */ 
+    --color-accent: #348ba8; /* Azul línea grande */
+    --color-light: #9ec35f; /* Verde claro línea pequeña */
+    --color-dark: #162632; /* Azul muy oscuro (soluciones...) */
+    --color-white: #fff; /* Blanco */
+  }
+  
+  /* RESET BÁSICO */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-white);
+    color: var(--color-dark);
+  }
+  
+  body, html {
+    overflow-x: hidden; /* Prevenir el scroll horizontal */
+  }
+  
+  /* HEADER */
+  .silpa-header {
+    background-color: white;
+    color: #fff;
+    padding: 10px 0;
+  }
+
+
+  
+  .silpa-header__container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  
+  .silpa-header__logo img {
+    background-color: #ffffff;
+    width: 280px;
+    height: 80px;
+  }
+  
+  /* NAVEGACIÓN */
+  .silpa-header__nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .silpa-header__menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+  }
+  
+  .silpa-header__menu-item a {
+    font-size: 1.1em;
+    color: var(--color-dark);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .silpa-header__menu-item a:hover {
+    color: #3498db; /* Puedes elegir un azul más brillante */
+  }
+  
+  /* BOTONES */
+  .silpa-btn {
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .silpa-btn--primary {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    margin-right: 25px;
+  }
+  
+  .silpa-btn--primary:hover {
+    background-color: #007a99;
+  }
+  
+  .silpa-btn--secondary {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+  }
+  
+  .silpa-btn--secondary:hover {
+    background-color: #8fb858;
+  }
+  
+  /* MENU RESPONSIVO */
+.silpa-header__menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+.silpa-header__close-btn {
+  display: none; /* Ocultarlo por defecto */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--color-dark);
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+/* Fondo oscuro que aparece detrás del modal */
+.silpa-header__overlay {
+  display: none; /* Asegurarnos que esté oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+  z-index: 999; /* Aseguramos que esté debajo del menú pero encima del contenido */
+}
+
+/* Al activar la clase "active", el menú será visible y también el overlay */
+.silpa-header__nav.active + .silpa-header__overlay {
+  display: block;
+}
+
+/* Estilo del menú para dispositivos pequeños (móviles) */
+/* MENU RESPONSIVO */
+@media (max-width: 768px) {
+  .silpa-header__nav {
+    display: none; /* Ocultamos el menú por defecto */
+    flex-direction: column;
+    position: fixed; /* Fijamos el menú al centro */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajustamos para que se centre en ambos ejes */
+    width: 80%; /* Ajusta el ancho */
+    max-width: 400px; /* Limitamos el ancho máximo */
+    height: 345px;
+    border-radius: 35px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Aseguramos que esté encima del overlay */
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+    opacity: 0; /* Ocultamos el menú inicialmente */
+    visibility: hidden; /* Lo ocultamos */
+    background-color: #368fad;
+    border: 2px solid black;
+  }
+
+  .silpa-header__menu-item a:hover {
+    color: var(--color-primary); 
+    font-weight: bold;
+    border-bottom: 2px solid black;
+  }
+
+
+  .silpa-header__close-btn {
+    display: block; /* Mostramos el botón de cerrar */
+  }
+
+  .silpa-header__menu {
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .silpa-header__menu-item a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .silpa-header__menu-toggle {
+    display: block; /* Mostrar el botón de hamburguesa */
+  }
+
+  /* Al activar la clase "active", el menú será visible */
+  .silpa-header__nav.active {
+    display: flex;
+    opacity: 1; /* Mostramos el menú */
+    visibility: visible; /* Lo hacemos visible */
+    transition: opacity 0.3s ease;
+  }
+
+  .silpa-header__overlay {
+    display: block; /* Mostrar el fondo oscuro cuando el menú esté activo */
+  }
+}
