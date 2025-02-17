@@ -1,0 +1,536 @@
+/* Ajustes generales */
+
+.sectionNacionales {
+   height: auto;
+   display: flex;
+   justify-content: center;
+   background-color: whitesmoke;
+   width: 100%;
+}
+
+.contenedorExtNacionales {
+   display: flex;
+   max-width: 1000px;
+   align-items: stretch;
+   width: 100%;
+   gap: 30px;
+   flex-wrap: wrap;
+   padding: 10px;
+   /* Permite que los elementos se ajusten mejor en pantallas pequeñas */
+}
+
+.slogan {
+   margin-top: 5px;
+}
+
+.contenedorImagenProducto {
+   background-color: white;
+   border-radius: 25px;
+   flex: 1;
+   box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.4);
+   max-width: 430px;
+}
+
+.contenedorImagenProducto img {
+   padding: 15px;
+   width: 100%;
+   max-width: 500px;
+   height: auto;
+   display: block;
+}
+
+.contenedorDescripcionProducto {
+   border-radius: 25px;
+   padding: 20px;
+   border: 2px dotted black;
+   flex: 1;
+   max-width: 600px;
+   box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.contenedorDescripcionProducto h2 {
+   color: #d40203;
+   margin-bottom: 10px;
+}
+
+.contenedorDescripcionProducto .parrafoProducto {
+   text-align: justify;
+}
+
+.contenedorDescripcionProducto span {
+   color: #d40203;
+   font-weight: bold;
+}
+
+.contenedorCapacidades {
+   margin: 15px 0px;
+}
+
+.contenedorCapacidades h4 {
+   font-weight: bold;
+   margin: 15px 0px;
+   color: #3b3535;
+}
+
+.contenedorCapacidadNum {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.contenedorDescargas {
+   display: flex;
+   justify-content: space-evenly;
+   /* Distribuye el espacio entre los elementos */
+   gap: 5px;
+   /* Espacio entre los enlaces */
+}
+
+.cuadrosCapacidad span {
+   background-color: #d32f2f;
+   color: white;
+   padding: 8px 12px;
+   border-radius: 5px;
+   font-weight: bold;
+   display: inline-block;
+   min-width: 50px;
+   text-align: center;
+}
+
+/* Estilo de Ficha de Extintores */
+.FichaExtintores {
+   width: fit-content;
+   margin: 0 auto;
+   text-align: center;
+   display: flex;
+   justify-content: space-between;
+   gap: 15px;
+}
+
+/* Botón de descarga */
+.botonDescarga {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 5px;
+   color: white;
+   padding: 10px 10px;
+   text-decoration: none;
+   border-radius: 5px;
+   font-weight: bold;
+   transition: background 0.3s;
+   text-align: center;
+}
+
+.botonDescarga img {
+   transition: transform 0.3s;
+}
+
+.botonDescarga:hover img {
+   transform: scale(1.1);
+}
+
+.botonDescarga span {
+   font-size: 14px;
+}
+
+.botonDescarga:hover span {
+   transform: scale(1.1);
+}
+
+.botonWhatsapp {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 5px;
+   color: white;
+   padding: 10px 10px;
+   text-decoration: none;
+   border-radius: 5px;
+   font-weight: bold;
+   transition: background 0.3s;
+   text-align: center;
+}
+
+.botonWhatsapp span {
+   font-size: 14px;
+}
+
+.contenedorIzquierda {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+   gap: 10px;
+   text-align: center;
+}
+
+/* IMPORTADOS */
+.slider-container-importado {
+   position: relative;
+   height: auto;
+   width: 100%;
+   /* Esto hace que el slider ocupe el 100% del ancho del contenedor */
+   max-width: 800px;
+   /* Ajusta el max-width según tu preferencia */
+   margin: auto;
+   /* Centra el slider */
+   overflow: hidden;
+   /* Oculta el contenido fuera de los límites del contenedor */
+}
+
+.slider-importado {
+   display: flex;
+   transition: transform 0.5s ease;
+   height: auto;
+   /* Agrega una transición suave cuando se cambia la imagen */
+}
+
+.contenedorImagenProducto-importado {
+   width: 100%;
+   /* Asegura que cada imagen ocupe el 100% del contenedor */
+   flex-shrink: 0;
+   /* Evita que las imágenes se compriman */
+   height: auto;
+}
+
+.contenedorImagenProducto-importado img {
+   padding: 20px;
+}
+
+.slider-image-importada {
+   width: 100%;
+   /* Hace que las imágenes ocupen el 100% del contenedor */
+   display: block;
+   height: auto;
+}
+
+button {
+   position: absolute;
+   top: 50%;
+   background-color: rgba(0, 0, 0, 0.5);
+   color: white;
+   border: none;
+   padding: 10px;
+   cursor: pointer;
+   font-size: 24px;
+   z-index: 1;
+   transform: translateY(-50%);
+}
+
+button.prev-importado {
+   left: 10px;
+}
+
+button.next-importado {
+   right: 10px;
+}
+
+button:hover {
+   background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilo para el título debajo del slider */
+.titulo-slider {
+   text-align: center;
+}
+
+.titulo-slider h2 {
+   align-items: center;
+   font-size: 24px;
+   font-weight: bold;
+   color: #333;
+   margin-bottom: 35px;
+   text-transform: uppercase;
+   text-shadow: 1px 1px 4px rgb(167, 167, 167);
+}
+
+.Marca:hover {
+   transform: scale(1.1);
+}
+
+.MarcasContamos {
+   text-align: center;
+   margin-top: 10px;
+   margin-bottom: 8px;
+}
+
+.MarcasContamos h4 {
+   font-size: 24px;
+   font-weight: bold;
+   color: #333;
+   margin-bottom: 10px;
+}
+
+.Marcas {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+}
+
+.Marca {
+   text-align: center;
+   max-width: 150px;
+}
+
+.MarcaImagenDACI {
+   width: 100%;
+   max-width: 100px;
+   height: auto;
+   border-radius: 25px;
+}
+
+
+/* Responsividad */
+
+.daci-componentes {
+   text-align: center;
+}
+
+.daci-componentes h2 {
+   margin-top: 5px;
+   margin-bottom: 10px;
+}
+
+.contenedor-columnas {
+   display: flex;
+   justify-content: space-between;
+   gap: 20px;
+}
+
+.columna {
+   width: 45%;
+   /* Controla el ancho de las columnas */
+}
+
+.columna ul {
+   list-style-type: none;
+   padding: 0;
+   font-weight: bold;
+   text-align: start;
+}
+
+.columna li {
+   margin-bottom: 10px;
+}
+
+.Marca:hover{
+   transform: scale(1.1);;
+}
+
+.MarcasContamos {
+   text-align: center;
+   margin-top: 10px;
+   margin-bottom: 8px;
+}
+
+.MarcasContamos h4 {
+   font-size: 24px;
+   font-weight: bold;
+   color: #333;
+}
+
+.Marcas {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+}
+
+.Marca {
+   text-align: center;
+   max-width: 150px;
+}
+
+.MarcaImagen {
+   width: 100%;
+   max-width: 100px;
+   height: auto;
+   border-radius: 18px;
+}
+
+.Marca:hover {
+   transform: scale(1.1);
+   ;
+}
+
+.ContenedorMarcasDACI {
+   padding: 20px;
+   background-color: whitesmoke;
+}
+
+.ContenedorDACI {
+   border: 1px solid black;
+   text-align: center;
+   border-radius: 25px;
+   padding: 15px;
+}
+
+.ContenedorDACI h4 {
+   font-size: 24px;
+   font-weight: bold;
+   color: #333;
+   margin-bottom: 5px;
+}
+
+.MarcasDACI {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   gap: 15px;
+}
+
+
+.VentaElegirnos{
+   margin-top: 5px;
+   margin-bottom: 8px;
+}
+
+.VentaElegirnos h4{
+   text-align: center;
+   color: #d40203;
+}
+
+.ParrafoElegir span {
+   color: black;
+   margin-top: 5px;
+   display: inline-block;
+   text-align: justify;
+   font-weight: 100;
+}
+
+.ParrafoElegir strong{
+   font-weight: bold;
+   color: black;
+}
+
+/* Para tablets (pantallas menores a 900px) */
+@media (max-width: 900px) {
+   .sectionNacionales {
+      height: auto;
+   }
+
+   .FichaExtintores {
+      flex-direction: column;
+      /* Cambia la dirección de los elementos a columna */
+      align-items: center;
+      /* Centra los elementos */
+      gap: 15px;
+      /* Ajusta el espacio entre los elementos */
+      width: 100%;
+      /* Asegura que ocupe el ancho completo */
+   }
+
+   .contenedorExtNacionales {
+      gap: 20px;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+   }
+
+   .contenedorImagenProducto {
+      order: -1;
+   }
+
+   .contenedorCapacidadNum {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .contenedorIzquierda {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+   }
+}
+
+/* Para celulares (pantallas menores a 600px) */
+@media (max-width: 600px) {
+   .sectionNacionales {
+      height: auto;
+   }
+
+   .FichaExtintores {
+      flex-direction: column;
+      /* Cambia la dirección de los elementos a columna */
+      align-items: center;
+      /* Centra los elementos */
+      gap: 15px;
+      /* Ajusta el espacio entre los elementos */
+   }
+
+   .contenedorExtNacionales {
+      gap: 15px;
+      padding: 10px;
+   }
+
+   .contenedorDescripcionProducto h2 {
+      font-size: 20px;
+   }
+
+   .contenedorDescripcionProducto .parrafoProducto {
+      font-size: 14px;
+   }
+
+   .cuadrosCapacidad span {
+      padding: 6px 10px;
+      font-size: 14px;
+   }
+
+   .contenedorIzquierda {
+      padding: 15px;
+      gap: 10px;
+   }
+
+   /* Asegura que los botones no se alineen en fila en pantallas pequeñas */
+   .contenedorIzquierda a {
+      width: 100%;
+      /* Los enlaces ocupan toda la línea */
+      text-align: center;
+      /* Centra el texto del enlace */
+   }
+
+   /* Ajuste para el botón de descarga */
+   .botonDescarga {
+      padding: 8px 8px;
+   }
+
+   /* Ajuste para el ícono */
+   .botonDescarga img {
+      width: 35px;
+   }
+}
+
+/* Para pantallas más grandes (por ejemplo, pantallas de escritorio grandes) */
+@media (min-width: 1380px) {
+   .sectionNacionales {
+      height: auto;
+      padding-top: 30px;
+   }
+
+   .contenedorExtNacionales {
+      gap: 50px;
+      max-width: 1300px;
+      width: 100%;
+   }
+
+   .contenedorImagenProducto img {
+      max-width: 700px;
+      /* Imágenes más grandes en pantallas grandes */
+   }
+
+   .contenedorDescripcionProducto {
+      padding: 30px;
+      width: 100%;
+      max-width: 1500px;
+   }
+
+   .contenedorDescripcionProducto h2 {
+      font-size: 2.2rem;
+      /* Títulos más grandes */
+   }
+
+   .contenedorDescripcionProducto .parrafoProducto {
+      font-size: 1.2rem;
+      /* Texto más grande */
+   }
+}

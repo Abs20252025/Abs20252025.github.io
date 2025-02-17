@@ -1,0 +1,236 @@
+body header {
+    width: 100%;
+    position: relative;
+    z-index: 100000;
+}
+
+header {
+    left: 0;
+    width: 100%;
+    background-color: rgb(163, 16, 16);
+    color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100000;
+    transition: top 0.3s ease-in-out;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 65px;
+    width: auto;
+    display: block;
+    margin-left: 30px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.menu>li {
+    position: relative;
+    margin: 0 10px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.arrow-icon, .phone-icon {
+    filter: invert(13%) sepia(81%) saturate(7056%) hue-rotate(359deg) brightness(99%) contrast(112%);
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.menu .submenu {
+    display: none;
+    position: absolute;
+    background-color: #f4f4f4;
+    color: black;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.menu .submenu .submenu {
+    display: none;
+    top: 0;
+    left: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu>li:hover>.submenu,
+.submenu>li:hover>.submenu {
+    display: block;
+}
+
+.menu>li:hover>.menu-item .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.menu .submenu li {
+    position: relative;
+}
+
+.menu .submenu a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu .submenu a:hover {
+    background-color: #ddd;
+}
+
+.toggle-menu {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.contact-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.contact-cta a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact-cta a:hover {
+    background-color: #e60000;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.contact-text {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar {
+        padding: 10px;
+    }
+    .menu {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #cc0000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .toggle-menu {
+        display: block;
+    }
+
+    .menu>li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+        display: none;
+    }
+
+    .dropdown:hover .submenu {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 50px;
+    }
+
+    .menu-item {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .contact-cta {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+/* ICONO WSP CUBRE TODO EL BODY*/
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    /* Ajusta la distancia desde la parte inferior */
+    right: 20px;
+    /* Ajusta la distancia desde la parte derecha */
+    width: 60px;
+    /* Ajusta el tamaño del ícono */
+    height: 60px;
+    /* Ajusta el tamaño del ícono */
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+  }
+  
+  .whatsapp-icon:hover {
+    transform: scale(1.5);
+  }

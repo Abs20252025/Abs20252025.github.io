@@ -1,0 +1,219 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+.sectionServicio {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: whitesmoke;
+}
+
+.contenedorServicio {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    background: #fffffffb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Estilos para la imagen */
+.contenedorImagenServicio {
+    position: relative;
+    flex: 1;
+    min-width: 300px;
+    max-width: 40%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.contenedorImagenServicio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.titulo-slider {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+/* Estilos para la descripción */
+.contenedorDescripcionServicio {
+    flex: 1;
+    max-width: 60%;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.contenedorDescripcionServicio h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.parrafoServicio {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.parrafoServicio span{
+    color: #d40203;
+    font-weight: bold;
+}
+
+.contenedorMetodologia h4 {
+    font-size: 1.3rem;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.contenedorMetodo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contenedorMetodo .li {
+    list-style: none;
+    font-size: 1.1rem;
+    color: #444;
+    padding-left: 20px;
+    position: relative;
+}
+
+.contenedorMetodo .li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: #d40203;
+    font-weight: bold;
+}
+
+.slogan {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.slogan span {
+    color: #d40203;
+}
+
+/* Inicialmente ocultamos los elementos */
+.contenedorImagenServicio img,
+.contenedorDescripcionServicio h1,
+.parrafoServicio,
+.contenedorMetodologia,
+.slogan,
+.contenedorMetodo .li,
+.titulo-slider{
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 1.8s ease-out;
+}
+
+/* Cuando se activa la animación */
+.contenedorImagenServicio img.show,
+.contenedorDescripcionServicio h1.show,
+.parrafoServicio.show,
+.contenedorMetodologia.show,
+.slogan.show,
+.contenedorMetodo .li.show, .titulo-slider{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ajuste para la imagen (desliza desde la izquierda) */
+.contenedorImagenServicio img {
+    transform: translateX(-500px);
+}
+
+.contenedorImagenServicio img.show {
+    transform: translateX(0);
+}
+
+/* La descripción inicia oculta y se mueve desde la derecha */
+.contenedorDescripcionServicio {
+    opacity: 0;
+    transform: translateX(500px);
+    transition: opacity 0.8s ease-out, transform 1.8s ease-out;
+}
+
+/* Cuando se activa la animación */
+.contenedorDescripcionServicio.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Ocultamos el título al inicio y lo movemos un poco hacia arriba */
+.titulo-slider {
+    opacity: 0;
+    transform: translatex(-500px);
+    transition: opacity 0.8s ease-out, transform 1.8s ease-out;
+}
+
+/* Cuando se active la animación */
+.titulo-slider.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .contenedorServicio {
+        flex-direction: column;
+    }
+    .contenedorImagenServicio,
+    .contenedorDescripcionServicio {
+        max-width: 100%;
+    }
+    .contenedorDescripcionServicio {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contenedorDescripcionServicio h1 {
+        font-size: 1.3rem;
+    }
+    .parrafoServicio {
+        font-size: 0.9rem;
+    }
+    .contenedorMetodo .li {
+        font-size: 0.9rem;
+    }
+    .slogan {
+        font-size: 1rem;
+    }
+
+    .contenedorServicio {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        width: 100%;
+        background: #fffffffb;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        max-height: 100%;
+    }
+}

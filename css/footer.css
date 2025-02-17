@@ -1,0 +1,218 @@
+/* Estilos generales para el footer */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+#footer {
+    background-color: black;
+    padding: 20px 0;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Contenedor principal */
+.contenedor-footer-all {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Contenedor de las columnas */
+.contenedor-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Estilos para las columnas */
+.columna1,
+.columna2,
+.columna3 {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Títulos */
+.h2-bienvenida-equipos-incendios,
+.h2-redes-sociales-incendios,
+.h2-contacto-incendios,
+.h2-horarios-servicio-incendios,
+.h2-ubicacion-equipos-incendios {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace; /* Tipo de fuente digital */
+    text-shadow: 0 0 2px #911919, 0 0 5px #a12222, 0 0 10px #b72b2b, 0 0 18px #8f1616;
+    animation: parpadeo-led 1s infinite alternate;
+}
+
+@keyframes parpadeo-led {
+    0%, 100% { text-shadow: 0 0 2px #911919, 0 0 5px #a12222, 0 0 10px #b72b2b, 0 0 18px #8f1616; }
+    50% { text-shadow: 0 0 1px #7d1515, 0 0 4px #931e1e, 0 0 8px #a82626, 0 0 15px #751010; }
+}
+
+/* Texto de descripción */
+.descriptionAbs {
+    font-size: 1rem;
+    color: white;
+    text-align: justify;
+}
+
+/* Centrar el logo en el footer */
+.logo-footer {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente si es necesario */
+    margin-top: 20px; /* Espacio superior opcional */
+}
+
+/* Ajuste del tamaño del logo */
+.absLogoFooter {
+    max-width: 100%; /* Evita que el logo se desborde del contenedor */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+/* Enlaces y logos de redes sociales */
+/* Contenedor de la fila de redes sociales */
+.filaRedes {
+    display: flex;
+    justify-content: center;
+    /* Centra todos los iconos horizontalmente */
+    align-items: center;
+    /* Alinea todos los iconos verticalmente */
+    gap: 35px;
+    /* Espacio entre los iconos */
+}
+
+/* Asegúrate de que todos los iconos tengan el mismo tamaño y se vean bien */
+.logoredes {
+    display: inline-block;
+    transition: transform 0.3s;
+    filter: invert(38%) sepia(79%) saturate(3679%) hue-rotate(335deg) brightness(100%) contrast(92%);
+}
+
+.logoredes:hover {
+    transform: scale(1.1);
+    filter: invert(13%) sepia(81%) saturate(7056%) hue-rotate(359deg) brightness(99%) contrast(112%);
+    /* Efecto de escala cuando el cursor pasa por encima */
+}
+
+/* Contacto */
+.contacto-item {
+    display: flex;
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    margin-bottom: 20px;
+}
+
+/* Espaciado entre el icono y el texto */
+.contacto-item img {
+    margin-right: 10px;
+    /* Espacio entre el icono y el texto */
+}
+
+/* Estilo para el texto de contacto */
+.contacto-item label {
+    font-size: 1rem;
+    color: white;
+    line-height: 1.5;
+    /* Para mejorar la legibilidad */
+}
+
+/* UBICACION */
+.ubicacion-item {
+    display: flex;
+    align-items: center;
+    text-align: center
+}
+
+.ubicacion-item img {
+    margin-right: 10px;
+    /* Espacio entre el icono y el texto */
+    width: 46px;
+    height: 46px;
+}
+
+.ubicacion-item label {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: white;
+    /* Alineación vertical con el icono */
+}
+
+/* Contenedor del iframe para hacerlo responsivo */
+.columna3 iframe {
+    width: 100%;  /* El iframe se adapta al 100% del contenedor */
+    height: 300px; /* Altura fija para el iframe */
+    border: none;  /* Elimina el borde por defecto */
+    max-width: 100%; /* Asegura que el iframe no se expanda más allá de su contenedor */
+}
+
+
+/* Mapa de Google */
+iframe {
+    border: none;
+    margin-top: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra opcional */
+}
+
+/* Media Queries para hacerlo responsive */
+
+/* Pantallas medianas (tabletas) */
+@media (min-width: 600px) {
+
+    .columna1,
+    .columna2,
+    .columna3 {
+        width: 48%;
+        /* Dos columnas por fila */
+    }
+}
+
+/* Pantallas grandes (escritorios y monitores) */
+@media (min-width: 992px) {
+    .columna1,
+    .columna2,
+    .columna3 {
+        width: 33%;
+        /* Tres columnas por fila */
+    }
+}
+
+/* Pantallas más pequeñas (móviles) */
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        /* Cambia a una columna */
+        align-items: center;
+    }
+
+    .contenedor-footer {
+        width: 100%;
+        padding: 0px 5px;
+        /* Para que no se vean demasiado estiradas */
+    }
+
+    .columna1,
+    .columna2,
+    .columna3 {
+        width: 100%;
+    }
+
+    .contacto-item label {
+        font-size: 0.9rem;
+    }
+}

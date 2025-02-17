@@ -1,0 +1,714 @@
+/* General Styles */
+body {
+  font-family: "Roboto Condensed", Sans-serif;
+  margin: 0;
+  padding: 0;
+} 
+
+body header{
+  width: 100%;
+  position: fixed;
+  z-index: 1000000;
+}
+
+header {
+  background-color: #cc0000;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar .logo a {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 65px;
+  width: auto;
+  display: block;
+  margin-left: 30px;
+}
+
+.menu {
+  display: flex; /* Flexbox aplicado aquí para alinear los elementos en fila */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.menu > li {
+  position: relative;
+  margin: 0 10px;
+}
+
+
+.menu-item {
+  display: flex;
+  align-items: center; /* Alinea el texto con el ícono */
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.arrow-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px; /* Espacio entre el texto y el ícono */
+  transition: transform 0.3s ease; /* Para una animación de rotación */
+}
+.phone-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px; /* Espacio entre el texto y el ícono */
+  transition: transform 0.3s ease; /* Para una animación de rotación */
+}
+
+.Abs-Cotiza{
+  margin-top: 14px;
+}
+
+.Abs-Cotiza a {
+  margin-left: 35px;
+  margin-right: 35px;
+  border: 2px solid #cc0000; /* Borde rojo */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 9px;
+  background-color: rgba(204, 0, 0, 0.2); /* Fondo rojo translúcido */
+  color: white; /* Color del texto */
+  text-decoration: none; /* Quitar subrayado del enlace */
+  font-weight: bold; /* Texto más destacado */
+  display: inline-flex; /* Usar flexbox para facilitar la alineación */
+  align-items: center; /* Centrar el contenido dentro del enlace */
+}
+
+.Abs-Cotiza a:hover {
+  background-color: rgb(241, 26, 26);
+  border: 2px solid rgb(241, 26, 26); 
+}
+
+.Abs-Cotiza img {
+  vertical-align: middle; /* Alinear los íconos con el texto */
+  margin-left: 5px; /* Espaciado entre el ícono y el texto */
+}
+
+.Abs-Cotiza small {
+  font-size: 12px; /* Ajusta el tamaño del texto en <small> */
+  vertical-align: middle; /* Asegura que también se alinee correctamente */
+}
+
+
+a{
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+/* Ajustar el teléfono */
+.phone-contact {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinea a la izquierda */
+  margin-right: 20px; /* Añade un margen derecho para separarlo un poco de los otros elementos */
+}
+
+.phone-contact a {
+  text-decoration: none;
+  color: white; /* Establece el color del texto */
+  display: flex;
+  align-items: center;
+}
+
+.phone-icon {
+  width: 30px; /* Tamaño del ícono del teléfono */
+  height: 30px;
+  margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+.phone-text {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centra el texto verticalmente */
+}
+
+.Abs-Cotiza{
+  display: flex;
+}
+
+
+
+
+
+/* Submenú principal */
+.menu .submenu {
+  display: none;
+  position: absolute;
+  background-color: #f4f4f4;
+  color: black;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* Submenú secundario (despliegue hacia la derecha solo en "Extintores") */
+.menu .submenu .submenu {
+  display: none;
+  top: 0;
+  left: 100%; /* Se posiciona a la derecha del submenú principal */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Mostrar submenús al pasar el mouse */
+.menu > li:hover > .submenu {
+  display: block;
+}
+
+.submenu > li:hover > .submenu {
+  display: block;
+}
+
+/* Hover para rotar el ícono de la flecha */
+.menu > li:hover > .menu-item .arrow-icon {
+  transform: rotate(180deg); /* Gira el icono hacia arriba */
+}
+
+/* Alinear los elementos "Capacitaciones", "Blog", "Contacto" */
+.menu > li:last-child {
+  margin-left: auto; /* Esto empuja los últimos elementos hacia la derecha */
+}
+
+/* Opciones del submenú */
+.menu .submenu li {
+  position: relative;
+}
+
+.menu .submenu a {
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.menu .submenu a:hover {
+  background-color: #ddd;
+}
+
+/* Mobile Styles */
+.toggle-menu {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.Abs-Inicio{
+  padding: 10px;
+  width: 480px;
+  border: none; /* Sin borde */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Sombra suave y difusa */
+  border-radius: 10px; /* Bordes redondeados */
+  transition: box-shadow 0.3s ease; /* Efecto suave al pasar el ratón */
+  background: transparent; /* Fondo transparente */ 
+}
+
+.Abs-Inicio:hover {
+  transform: scale(1.05); /* Agranda la tarjeta al pasar el ratón */
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4); /* Sombra más notoria */
+}
+
+.Abs-Inicio h3 {
+  font-size: 20px;
+  color: whitesmoke;
+  margin-bottom: 10px; /* Espacio debajo del h3 */
+}
+
+.Abs-Inicio h1 {
+  font-size: 30px;
+  color: whitesmoke;
+  margin-bottom: 20px; /* Espacio debajo del h1 */
+}
+
+.Abs-Inicio p {
+  font-size: 20px;
+  color: whitesmoke;
+  margin-bottom: 0; /* Sin espacio adicional debajo del párrafo */
+}
+
+.Equipos-Contra-Incendios-Inicio {
+  background-image: url('../img/fondoExtintores.webp'); /*e tu imagen */
+  background-size: cover; /* Escala la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  display: flex; /* Para centrar el contenido */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  position: relative; /* Necesario para el overlay */
+  gap: 55px;
+  padding: 30px;
+  height: 100%;
+}
+
+.Equipos-Contra-Incendios-Inicio::before {
+  content: ''; /* Pseudo-elemento vacío */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+  z-index: 1; /* Coloca el overlay detrás del contenido */
+}
+
+.Equipos-Contra-Incendios-Inicio > * {
+  position: relative; /* Coloca el contenido encima del overlay */
+  z-index: 2;
+  color: white; /* Texto blanco para destacar sobre el fondo oscuro */
+}
+
+
+.Abs-Servicios-Mantenimiento-Sistemas-Contra-Incendios {
+  background-color: #d40203; /* Fondo rojo */
+  border-top: 3px solid #c14545; /* Borde superior */
+  position: relative; /* Necesario para el filtro */
+  height: 100%;
+}
+
+.Abs-Servicios-Mantenimiento-Sistemas-Contra-Incendios::after {
+  content: ''; /* Hace que se cree un elemento vacío */
+  position: absolute;
+  top: 100%; /* Lo coloca justo debajo del contenedor */
+  left: 0;
+  width: 100%;
+  height: 20px; /* Ajusta la altura del filtro según lo que necesites */
+  background-color: black; /* Filtro negro */
+  opacity: 0.5; /* Nivel de transparencia */
+}
+
+.Abs-Servicios-Mantenimiento-Sistemas-Contra-Incendios h2{
+  width: 100%;
+  color: white;
+  font-size: 32px;
+  line-height: 38px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  text-align: center;
+  border-bottom: 3px solid #c14545;
+  font-family:'Times New Roman', Times, serif;
+  background-color: black;
+}
+
+.Abs-Servicios {
+  display: flex;
+  justify-content: center; /* Centra los elementos en la pantalla */
+}
+
+.Abs-Recarga{
+    display: flex;
+    border-radius: 20px;
+    border: 3px solid #c14545;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.36);
+    gap: 10px; /* Espacio entre la imagen y el contenido */
+    align-items: center; /* Centra la imagen y el texto verticalmente */
+    margin-left: 12px;
+    margin-right: 12px;
+    width: 100%;  /* Imagen a 100% del contenedor */
+    height: auto;
+    padding: 16px 23px;
+}
+
+.Abs-Recarga img{
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.36);
+  padding: 1rem;
+}
+
+.Abs-Recarga img:hover{
+  background-color: #ff0000;
+}
+
+
+
+.Abs-Recarga .Parrafo-Servicio-Mantenimiento {
+  color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.Parrafo-Servicio-Mantenimiento h3{
+  margin-bottom: 15px;
+}
+.Parrafo-Servicio-Mantenimiento label{
+  font-size: 19px;
+  line-height: 1.2;
+}
+
+.Abs-Equipos-Contra-Incendios-Mantenimiento-Venta-Instalacion {
+  background-color: whitesmoke; /* Fondo rojo */
+  border-top: 3px solid #c14545; /* Borde superior */
+  position: relative; /* Necesario para el filtro */
+  display: flex;
+  flex-direction: column; /* Apila los elementos verticalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+  height: auto;
+}
+
+.Abs-Equipos-Contra-Incendios-Mantenimiento-Venta-Instalacion h2 {
+  color: white;
+  font-size: 32px;
+  line-height: 38px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  text-align: center; /* Centra el texto */
+  border-bottom: 3px solid #c14545;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: black;
+  width: 100%; /* Asegura que el h2 ocupe todo el ancho */
+}
+
+.Abs-Contenido-Venta-Instalacion{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 3rem;
+  width: 100%;
+}
+
+.Abs-Contenido-Venta-Instalacion{
+  width: 100%;
+}
+
+.imgMantenimiento-Venta-Instalacion{
+  height: auto;
+}
+
+.Abs-Manenimiento-Venta-Instalacion{
+  width: 580px;
+}
+
+.Abs-Manenimiento-Venta-Instalacion h3{
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 28px;
+  color: #d42626;
+}
+
+.Abs-Manenimiento-Venta-Instalacion{
+  text-align: justify;
+}
+
+.Abs-Manenimiento-Venta-Instalacion .Elegir-Abs{
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.Abs-Beneficios span {
+  margin-top: 10px;
+  display: inline-block;
+  text-align: justify;
+  font-size: 0.9rem;
+}
+
+.Abs-Homologacion {
+  margin-top: 15px;
+  color: #d42626;
+  display: flex;
+  align-items: center;  /* Alinea verticalmente */
+  justify-content: center;  /* Alinea horizontalmente */
+  font-weight: bold;
+}
+.Abs-Homologacion img{
+  border-radius: 15px;
+  padding: 5px 10px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 62%;
+  height: auto;
+}
+
+.Abs-Homologacion label {
+  margin-right: 10px; /* Espacio entre el label y la imagen */
+}
+
+/* Contenedor general */
+.Abs-Lineas-de-Negocio {
+  background-color: rgb(56, 52, 52);
+  border-top: 3px solid #c14545;
+  text-align: center;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.Abs-Lineas-de-Negocio h2 {
+  color: white;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  background-color: black;
+  padding: 15px 0;
+  margin-bottom: 10px;
+}
+
+/* Contenedor del slider */
+.Abs-Slider-Container {
+  position: relative;
+  height: auto;
+  width: 70%;
+  margin: 0 auto;
+  overflow: hidden; /* Oculta las diapositivas que están fuera del área visible */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Diapositivas */
+.Abs-Slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Animación suave */
+  width: 100%;
+}
+
+.slide {
+  flex: 0 0 100%; /* Cada slide ocupa el 100% del contenedor */
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.slide p {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+}
+
+/* Botones de navegación */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+  z-index: 10;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.slider-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.full-screen {
+  height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+
+@media (max-width: 768px) {
+  .menu {
+      flex-direction: column;
+      display: none;
+      width: 100%;
+      background: #cc0000;
+  }
+
+  .menu > li {
+      text-align: center;
+      margin: 0;
+  }
+
+  .menu > li .submenu {
+      position: static;
+      box-shadow: none;
+  }
+
+  .menu.active {
+      display: flex;
+  }
+
+  .toggle-menu {
+      display: block;
+  }
+
+  .Equipos-Contra-Incendios-Inicio {
+    display: flex;
+    flex-direction: column; /* Apilamos el contenido y la imagen */
+    align-items: center; /* Centramos los elementos */
+}
+.Abs-Inicio {
+    width: 100%; /* Asegura que ocupe todo el ancho de la pantalla en móviles */
+    padding: 15px;
+}
+
+.Abs-Inicio:hover {
+    transform: scale(1.03); /* Menos zoom para pantallas pequeñas */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra más suave */
+}
+
+.Abs-Inicio h3 {
+    font-size: 18px; /* Tamaño más pequeño para móviles */
+}
+
+.Abs-Inicio h1 {
+    font-size: 24px; /* Tamaño más pequeño para móviles */
+}
+
+.Abs-Inicio p {
+    font-size: 16px; /* Tamaño más pequeño para móviles */
+}
+
+.Abs-Cotiza a {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 13px;
+}
+
+.imgInicio img {
+  width: 100%;  /* Imagen a 100% del contenedor */
+  height: auto;
+}
+
+
+  /*MEJORES SERVICIOSSS */
+
+  .Abs-Servicios {
+    flex-direction: column; /* Cambia a una columna */
+    align-items: center; /* Centra las tarjetas horizontalmente */
+  }
+
+  .Abs-Recarga {
+    width: 85%; /* Ocupa el 90% del ancho de la pantalla */
+    max-width: 400px; /* Tamaño máximo fijo */
+    margin: 10px auto; /* Espaciado entre las tarjetas y centrado */
+    border-radius: 10px; /* Mantén los bordes redondeados */
+    padding: 15px; /* Espacio interno */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    height: auto;
+  }
+
+  .Abs-Recarga img {
+    width: 100px; /* Tamaño más pequeño para móviles */
+    height: 130px; /* Mantiene proporción */
+    margin-bottom: 15px; /* Espacio entre la imagen y el texto */
+  }
+
+  .Parrafo-Servicio-Mantenimiento {
+    text-align: center; /* Centra el texto */
+  }
+
+  .Parrafo-Servicio-Mantenimiento h3 {
+    font-size: 18px; /* Tamaño del título */
+    margin: 10px 0;
+  }
+
+  .Parrafo-Servicio-Mantenimiento label {
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    line-height: 1.4; /* Mejora la legibilidad */
+  }
+
+  .Abs-Equipos-Contra-Incendios-Mantenimiento-Venta-Instalacion h2 {
+    font-size: 1.6rem;
+    padding: 0.5rem;
+  }
+
+  .Abs-Contenido-Venta-Instalacion {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    gap: 20px; /* Reduce el espacio entre los elementos */
+  }
+
+  .Abs-Manenimiento-Venta-Instalacion {
+    width: 100%; /* Asegura que ocupe todo el ancho */
+  }
+
+  .imgMantenimiento-Venta-Instalacion img {
+    width: 100%; /* Asegura que la imagen se adapte al contenedor */
+    height: auto; /* Mantén la proporción de la imagen */
+  }
+
+  .Abs-Recarga {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    padding: 10px; /* Reduce el espacio interior */
+    margin: 10px 0; /* Reduce el margen */
+    width: 85%;
+  }
+
+  .Abs-Recarga img {
+    width: 100%; /* Imagen al ancho completo */
+    margin-bottom: 10px; /* Espacio inferior entre la imagen y el contenido */
+    padding: 1rem;
+  }
+
+  .Equipos-Contra-Incendios-Inicio {
+    flex-direction: column; /* Apila la imagen y el contenido */
+    padding: 15px;
+    gap: 15px; /* Reduce el espacio entre elementos */
+  }
+
+  .Abs-Manenimiento-Venta-Instalacion h3{
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .Abs-Manenimiento-Venta-Instalacion p{
+    text-align: justify;
+    font-size: 1rem;
+  }
+  .Abs-Manenimiento-Venta-Instalacion .Elegir-Abs{
+    font-size: 1.5rem;
+  }
+
+  .Abs-Homologacion{
+    flex-direction: column;
+  }
+
+  .Abs-Homologacion label{
+    font-size: 1.4rem;
+  }
+
+  .Abs-Homologacion img {
+    width: 80%; /* Reduce el tamaño de la imagen */
+  }
+
+  .Abs-Lineas-de-Negocio h2 {
+    font-size: 1.6rem;
+    padding: 0.5rem;
+  }
+
+}

@@ -1,0 +1,469 @@
+/* General Styles */
+
+body {
+  font-family: "Roboto Condensed", Sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.Abs-Inicio {
+  padding: 10px;
+  width: 480px;
+  border: none;
+  /* Sin borde */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  /* Sombra suave y difusa */
+  border-radius: 10px;
+  /* Bordes redondeados */
+  transition: box-shadow 0.3s ease;
+  /* Efecto suave al pasar el ratón */
+  background: transparent;
+  /* Fondo transparente */
+}
+
+.Abs-Inicio:hover {
+  transform: scale(1.05);
+  /* Agranda la tarjeta al pasar el ratón */
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4);
+  /* Sombra más notoria */
+}
+
+.Abs-Inicio h3 {
+  font-size: 20px;
+  color: whitesmoke;
+  margin-bottom: 10px;
+  /* Espacio debajo del h3 */
+}
+
+.Abs-Inicio h1 {
+  font-size: 30px;
+  color: whitesmoke;
+  margin-bottom: 20px;
+  /* Espacio debajo del h1 */
+}
+
+.Abs-Inicio p {
+  font-size: 20px;
+  color: whitesmoke;
+  margin-bottom: 0;
+  /* Sin espacio adicional debajo del párrafo */
+}
+
+.Equipos-Contra-Incendios-Inicio {
+  background-image: url('../img/fondoExtintores.webp');
+  /*e tu imagen */
+  background-size: cover;
+  /* Escala la imagen para cubrir todo el contenedor */
+  background-position: center;
+  /* Centra la imagen */
+  display: flex;
+  /* Para centrar el contenido */
+  justify-content: center;
+  /* Centrar horizontalmente */
+  align-items: center;
+  /* Centrar verticalmente */
+  position: relative;
+  /* Necesario para el overlay */
+  gap: 55px;
+  padding: 30px;
+  height: 100%;
+}
+
+.Equipos-Contra-Incendios-Inicio::before {
+  content: '';
+  /* Pseudo-elemento vacío */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fondo negro semitransparente */
+  z-index: 1;
+  /* Coloca el overlay detrás del contenido */
+}
+
+.Equipos-Contra-Incendios-Inicio>* {
+  position: relative;
+  /* Coloca el contenido encima del overlay */
+  z-index: 2;
+  color: white;
+  /* Texto blanco para destacar sobre el fondo oscuro */
+}
+
+/* LINEAS DE NEGOCIO */
+.Abs-Lineas-de-Negocio {
+  background-color: rgb(56, 52, 52);
+  border-top: 3px solid #c14545;
+  text-align: center;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.Abs-Lineas-de-Negocio h2 {
+  color: white;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  background-color: black;
+  padding: 15px 0;
+  margin-bottom: 10px;
+}
+
+/* Contenedor del slider */
+.Abs-Slider-Container {
+  position: relative;
+  height: auto;
+  width: 70%;
+  margin: 0 auto;
+  overflow: hidden;
+  /* Oculta las diapositivas que están fuera del área visible */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/*FIN DE SECTION ELIGENOS */
+
+
+
+/*FAQ */
+.faq-container {
+  text-align: center;
+  padding: 20px;
+  background: url(https://www.transparenttextures.com/patterns/white-wall.png);
+  background-size: cover;
+  background-color: #f8f8f8;
+}
+
+.faq-container h2 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-shadow: 0 0 3px #0e0b0b, 0 0 7px #0a0404, 0 0 15px #0a0909, 0 0 25px #0a0505;
+  color: red;
+  font-size: 2rem;
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.3s;
+  animation: parpadeo-elegir 1s infinite alternate;
+}
+
+@keyframes glow-sombra {
+
+  0%,
+  100% {
+    text-shadow: 0 0 3px #990000, 0 0 6px #cc0000;
+  }
+
+  50% {
+    text-shadow: 0 0 5px #ff3333, 0 0 10px #ff6666;
+  }
+}
+
+.faq-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Lado izquierdo: Preguntas */
+.faq {
+  flex: 1;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-icon {
+  font-size: 1.5em;
+}
+
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+  padding: 0 15px;
+  /* Mantiene padding horizontal */
+  box-sizing: border-box;
+}
+
+.faq-item.active .faq-answer {
+  opacity: 1;
+  padding: 15px;
+  /* Se agrega padding solo al expandirse */
+}
+
+.lista-extintores ul {
+  list-style-type: none;
+  /* Evita viñetas */
+  padding: 0;
+  margin: 0;
+}
+
+.lista-extintores li {
+  margin-bottom: 8px;
+  padding: 8px;
+  background: #f8f8f8;
+  /* Suave fondo */
+  border-radius: 5px;
+}
+
+
+.faq-answer p {
+  margin: 0;
+  text-align: justify;
+}
+
+/* Lado derecho: Imagen */
+.faq-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.faq-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.faq-image img:hover {
+  transform: scale(1.05);
+}
+
+.lista-extintores ul {
+  text-align: start;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .faq-content {
+    flex-direction: column;
+  }
+
+  .faq-image {
+    order: -1;
+    margin-bottom: 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .Equipos-Contra-Incendios-Inicio {
+    display: flex;
+    flex-direction: column;
+    /* Apilamos el contenido y la imagen */
+    align-items: center;
+    /* Centramos los elementos */
+  }
+
+  .Abs-Inicio {
+    width: 100%;
+    /* Asegura que ocupe todo el ancho de la pantalla en móviles */
+    padding: 15px;
+  }
+
+  .Abs-Inicio:hover {
+    transform: scale(1.03);
+    /* Menos zoom para pantallas pequeñas */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    /* Sombra más suave */
+  }
+
+  .Abs-Inicio h3 {
+    font-size: 18px;
+    /* Tamaño más pequeño para móviles */
+  }
+
+  .Abs-Inicio h1 {
+    font-size: 24px;
+    /* Tamaño más pequeño para móviles */
+  }
+
+  .Abs-Inicio p {
+    font-size: 16px;
+    /* Tamaño más pequeño para móviles */
+  }
+
+  .Abs-Cotiza a {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 13px;
+  }
+
+  .imgInicio img {
+    width: 100%;
+    /* Imagen a 100% del contenedor */
+    height: auto;
+  }
+
+
+  /*MEJORES SERVICIOSSS */
+
+  .Abs-Servicios {
+    flex-direction: column;
+    /* Cambia a una columna */
+    align-items: center;
+    /* Centra las tarjetas horizontalmente */
+  }
+
+  .Abs-Recarga {
+    width: 85%;
+    /* Ocupa el 90% del ancho de la pantalla */
+    max-width: 400px;
+    /* Tamaño máximo fijo */
+    margin: 10px auto;
+    /* Espaciado entre las tarjetas y centrado */
+    border-radius: 10px;
+    /* Mantén los bordes redondeados */
+    padding: 15px;
+    /* Espacio interno */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra para destacar */
+    height: auto;
+  }
+
+  .Abs-Recarga img {
+    width: 100px;
+    /* Tamaño más pequeño para móviles */
+    height: 130px;
+    /* Mantiene proporción */
+    margin-bottom: 15px;
+    /* Espacio entre la imagen y el texto */
+  }
+
+  .Parrafo-Servicio-Mantenimiento {
+    text-align: center;
+    /* Centra el texto */
+  }
+
+  .Parrafo-Servicio-Mantenimiento h3 {
+    font-size: 18px;
+    /* Tamaño del título */
+    margin: 10px 0;
+  }
+
+  .Parrafo-Servicio-Mantenimiento label {
+    font-size: 14px;
+    /* Ajusta el tamaño del texto */
+    line-height: 1.4;
+    /* Mejora la legibilidad */
+  }
+
+  .Abs-Equipos-Contra-Incendios-Mantenimiento-Venta-Instalacion h2 {
+    font-size: 1.6rem;
+    padding: 0.5rem;
+  }
+
+  .Abs-Contenido-Venta-Instalacion {
+    flex-direction: column;
+    /* Apila los elementos verticalmente */
+    gap: 20px;
+    /* Reduce el espacio entre los elementos */
+  }
+
+  .Abs-Manenimiento-Venta-Instalacion {
+    width: 100%;
+    /* Asegura que ocupe todo el ancho */
+  }
+
+  .imgMantenimiento-Venta-Instalacion img {
+    width: 100%;
+    /* Asegura que la imagen se adapte al contenedor */
+    height: auto;
+    /* Mantén la proporción de la imagen */
+  }
+
+  .Abs-Recarga {
+    flex-direction: column;
+    /* Apila los elementos verticalmente */
+    padding: 10px;
+    /* Reduce el espacio interior */
+    margin: 10px 0;
+    /* Reduce el margen */
+    width: 85%;
+  }
+
+  .Abs-Recarga img {
+    width: 100%;
+    /* Imagen al ancho completo */
+    margin-bottom: 10px;
+    /* Espacio inferior entre la imagen y el contenido */
+    padding: 1rem;
+  }
+
+  .Equipos-Contra-Incendios-Inicio {
+    flex-direction: column;
+    /* Apila la imagen y el contenido */
+    padding: 15px;
+    gap: 15px;
+    /* Reduce el espacio entre elementos */
+  }
+
+  .Abs-Manenimiento-Venta-Instalacion h3 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .Abs-Manenimiento-Venta-Instalacion p {
+    text-align: justify;
+    font-size: 1rem;
+  }
+
+  .Abs-Manenimiento-Venta-Instalacion .Elegir-Abs {
+    font-size: 1.5rem;
+  }
+
+  .Abs-Homologacion {
+    flex-direction: column;
+  }
+
+  .Abs-Homologacion label {
+    font-size: 1.4rem;
+  }
+
+  .Abs-Homologacion img {
+    width: 80%;
+    /* Reduce el tamaño de la imagen */
+  }
+
+  .Abs-Lineas-de-Negocio h2 {
+    font-size: 1.6rem;
+    padding: 0.5rem;
+  }
+
+}
+
+@media (max-width: 1100px) {
+  .contenedor-servicios {
+    height: auto;
+  }
+
+  #contenido {
+    height: auto;
+  }
+
+}
