@@ -1,3 +1,7 @@
+body{
+    margin: 0;
+    padding: 0;
+}
 .contenedorDescripcionAbs {
     display: flex;
     gap: 20px;
@@ -18,7 +22,6 @@
     font-weight: bold;
     color: white;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
     text-shadow: 0 0 2px #911919, 0 0 5px #a12222, 0 0 10px #b72b2b, 0 0 18px #8f1616;
     animation: parpadeo-led 1s infinite alternate;
 }
@@ -73,7 +76,6 @@
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
     text-shadow: 0 0 2px #c2baba, 0 0 5px #d3b6b6, 0 0 10px #ecebeb, 0 0 18px #f5e4e4;
     animation: parpadeo-ledMision 1s infinite alternate;
 }
