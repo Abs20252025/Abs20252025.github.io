@@ -6,6 +6,7 @@
    justify-content: center;
    background-color: whitesmoke;
    width: 100%;
+   min-height: 560px;
 }
 
 .contenedorExtNacionales {

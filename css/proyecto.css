@@ -8,6 +8,7 @@
     justify-content: center;
     padding: 10px 20px;
     background-color: whitesmoke;
+    min-height: 560px;
 }
 
 .contenedorServicio {
@@ -46,7 +47,7 @@
     color: #fff;
     text-align: center;
     padding: 10px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 /* Estilos para la descripción */
@@ -175,6 +176,47 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+/*DESCARGA PROCEDIMIENTO DE TRABAJO */
+.contenedorDescargas {
+    display: flex;
+    gap: 15px; /* Espaciado entre los botones */
+    flex-wrap: wrap; /* Permite que los botones se ajusten si hay poco espacio */
+    justify-content: center;
+}
+
+.contenedorFichaMantenimiento h4{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+
+.botonDescarga {
+    display: flex;
+    flex-direction: column; /* Pone el icono arriba y el texto abajo */
+    align-items: center; /* Centra el contenido */
+    text-decoration: none;
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f8f8f8; /* Color de fondo ligero */
+    transition: background 0.3s;
+}
+
+.botonDescarga:hover {
+    background-color: #e0e0e0; /* Cambio de color al pasar el mouse */
+}
+
+.botonDescarga img {
+    margin-bottom: 5px; /* Espacio entre el icono y el texto */
+    width: 35px;
+}
+
 
 
 /* Responsividad */

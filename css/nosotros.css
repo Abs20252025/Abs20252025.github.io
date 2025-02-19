@@ -1,0 +1,225 @@
+.contenedorDescripcionAbs {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    min-height: 560px;
+    background-color: #272727;
+}
+
+.contenedorAbs {
+    flex: 1;
+}
+
+.TituloNosotros h1{
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0 0 2px #911919, 0 0 5px #a12222, 0 0 10px #b72b2b, 0 0 18px #8f1616;
+    animation: parpadeo-led 1s infinite alternate;
+}
+
+.ParrafoNosotros p{
+    text-align: justify;
+    line-height: 1.4;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.contenedorImagenesAbs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fila {
+    display: flex;
+    gap: 10px;
+}
+
+.fila img {
+    width: calc(50% - 5px);
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.fila.grande img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+
+.contenedorMisionVision {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.filaMisionVision {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.filaMisionVision h2{
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0 0 2px #c2baba, 0 0 5px #d3b6b6, 0 0 10px #ecebeb, 0 0 18px #f5e4e4;
+    animation: parpadeo-ledMision 1s infinite alternate;
+}
+
+@keyframes parpadeo-ledMision {
+    0%, 100% { text-shadow: 0 0 2px #747070, 0 0 5px #f8f4f4, 0 0 10px #d1c4c4, 0 0 18px #f1e2e2; }
+    50% { text-shadow: 0 0 1px #9c9999, 0 0 4px #ecd5d5, 0 0 8px #998e8e, 0 0 15px #d1cdcd; }
+}
+
+.Mision,
+.Vision {
+    flex: 1;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.contenedorValores {
+    width: 100%;
+}
+
+.Valores {
+    padding: 20px;
+    background-color: #ddd;
+    text-align: center;
+}
+
+.contenedorCards {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 200px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    fill: #C62828;
+    width: 85px;
+    /* Tamaño del logo */
+    height: 85px;
+    margin-bottom: 10px;
+    filter: invert(22%) sepia(75%) saturate(5000%) hue-rotate(356deg) brightness(85%) contrast(105%);
+}
+
+
+.card h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Estilos generales */
+.contenedorDescripcionAbs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 📌 Diseño en pantallas grandes (PC) */
+@media (min-width: 1024px) {
+    .contenedorDescripcionAbs {
+        flex-direction: row;
+        min-height: 560px;
+    }
+
+    .filaMisionVision {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* 📌 Diseño en tablets (pantallas medianas) */
+@media (max-width: 1023px) {
+    .contenedorDescripcionAbs {
+        flex-direction: column;
+    }
+
+    .filaMisionVision {
+        flex-direction: column;
+    }
+
+    .contenedorImagenesAbs {
+        flex-direction: column;
+    }
+
+    .contenedorImagenesAbs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fila {
+        flex-direction: column;
+    }
+
+    .fila img, .fila.grande img {
+        width: 100%;
+    }
+
+}
+
+/* 📌 Diseño en móviles (pantallas pequeñas) */
+@media (max-width: 768px) {
+    .contenedorDescripcionAbs, 
+    .filaMisionVision, 
+    .contenedorValores {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contenedorImagenesAbs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fila {
+        flex-direction: column;
+    }
+
+    .fila img, .fila.grande img {
+        width: 100%;
+    }
+
+    .contenedorCards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 300px;
+    }
+}

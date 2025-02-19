@@ -10,6 +10,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.querySelectorAll(".dropdown .arrow-button").forEach(button => {
+  button.addEventListener("click", (e) => {
+      e.stopPropagation(); // Evita que se active el enlace principal
+      let submenu = button.nextElementSibling;
+      submenu.classList.toggle("active");
+  });
+});
+
+
+
 /* SERVICIOOOOOOOS */
 document.addEventListener("DOMContentLoaded", function () {
   const servicios = [

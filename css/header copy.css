@@ -35,6 +35,7 @@ header {
     margin-left: 30px;
 }
 
+
 .menu {
     display: flex;
     flex-wrap: wrap;
@@ -47,8 +48,6 @@ header {
 .menu>li {
     position: relative;
     margin: 0 10px;
-    display: flex;
-    align-items: center;
 }
 
 .menu-item {
@@ -67,20 +66,19 @@ header {
     transition: transform 0.3s ease;
 }
 
-
-
 .menu .submenu {
     display: none;
     position: absolute;
     background-color: #f4f4f4;
     color: black;
     list-style: none;
-    margin: 0;
+    margin: 0; 
+    top: 100%; /* Asegura que el submenú se coloque justo debajo del elemento padre */
+    left: 0; /* Mantiene el submenú alineado con el enlace padre */
     padding: 0;
     min-width: 200px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 10;
-    top: 35px;
 }
 
 .menu .submenu .submenu {
@@ -101,8 +99,6 @@ header {
 
 .menu .submenu li {
     position: relative;
-    display: flex;
-    align-items: center;
 }
 
 .menu .submenu a {
@@ -110,7 +106,6 @@ header {
     padding: 10px 15px;
     text-decoration: none;
     display: block;
-    width: 100%;
 }
 
 .menu .submenu a:hover {
@@ -158,21 +153,19 @@ header {
     font-weight: bold;
 }
 
-.arrow-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    margin-left: 8px;
+.dropdown {
     display: flex;
     align-items: center;
-    justify-content: center;
+    position: relative;
 }
 
-.arrow-icon {
-    width: 12px;
-    height: auto;
+
+
+.dropdown-toggle {
+    background: none;
+    border: none;
 }
+
 
 @media screen and (max-width: 1024px) {
     .navbar {
@@ -191,7 +184,7 @@ header {
         top: 60px;
         left: 0;
         width: 100%;
-        background-color: #a31010;
+        background-color: #cc0000;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         padding: 10px 0;
     }
@@ -218,15 +211,6 @@ header {
     .dropdown:hover .submenu {
         display: flex;
     }
-
-    .menu .submenu .submenu {
-        display: none;
-        top: 35px; 
-        left: 0; 
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-   
 }
 
 @media (max-width: 480px) {
@@ -243,6 +227,10 @@ header {
         flex-direction: column;
     }
 }
+
+
+
+
 
 
 /* ICONO WSP CUBRE TODO EL BODY*/
