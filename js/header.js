@@ -44,3 +44,52 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const menuItems = document.querySelectorAll(".menu > li, .menu .submenu > li");
+
+    menuItems.forEach(item => {
+        const submenu = item.querySelector(".submenu");
+
+        if (submenu) {
+            // Evento para mostrar el submenú al hacer clic
+            item.addEventListener("click", (event) => {
+                event.stopPropagation(); // Evita que el evento se propague al documento
+                closeOtherSubmenus(item); // Cierra otros submenús antes de abrir uno nuevo
+                submenu.style.display = "block";
+            });
+
+            // Evento para mantener el submenú abierto si el mouse está sobre él
+            item.addEventListener("mouseenter", () => {
+                submenu.style.display = "block";
+            });
+
+            item.addEventListener("mouseleave", () => {
+                submenu.style.display = "none";
+            });
+        }
+    });
+
+    // Cerrar submenús si el usuario hace clic fuera
+    document.addEventListener("click", () => {
+        closeAllSubmenus();
+    });
+
+    function closeOtherSubmenus(currentItem) {
+        document.querySelectorAll(".menu > li, .menu .submenu > li").forEach(item => {
+            if (item !== currentItem) {
+                const submenu = item.querySelector(".submenu");
+                if (submenu) {
+                    submenu.style.display = "none";
+                }
+            }
+        });
+    }
+
+    function closeAllSubmenus() {
+        document.querySelectorAll(".submenu").forEach(submenu => {
+            submenu.style.display = "none";
+        });
+    }
+});
+
+

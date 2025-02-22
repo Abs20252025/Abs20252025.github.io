@@ -38,10 +38,12 @@ body {
 /* Cambiar la imagen de fondo de cada slide */
 .slide:nth-child(1) {
   background-image: url('../img/PortadaInicio.webp');
+  background-size: 100% 100%;
 }
 
 .slide:nth-child(7) {
-  background-image: url('../img/PortadaInicio.webp');
+  background-image: url('../img/PortadaFin.jpg');
+  background-size: 100% 100%;
 }
 
 
@@ -194,6 +196,13 @@ body {
   align-items: center;
 }
 
+.row {
+  width: 100%; /* Asegura que el div ocupe todo el ancho */
+  display: flex;
+  justify-content: center;
+}
+
+
 /* Imágenes del slide */
 .row-image {
   pointer-events: none; /* Evita que bloqueen los clics */
@@ -201,7 +210,6 @@ body {
   width: 100%;
   position: absolute;
   height: 50%;
-  object-fit: cover;
   opacity: 0;
   transition: transform 1s ease-out, opacity 1s ease-out;
 }
@@ -362,7 +370,7 @@ body {
   color: #fff;
   padding: 20px;
   text-align: center;
-  height: 100vh;
+  height: auto;
   overflow: hidden;
   box-sizing: border-box;
 }

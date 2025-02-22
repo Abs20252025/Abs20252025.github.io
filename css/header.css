@@ -22,7 +22,6 @@ header {
 }
 
 .navbar .logo a {
-    font-size: 1.5rem;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -46,7 +45,7 @@ header {
 
 .menu>li {
     position: relative;
-    margin: 0 10px;
+    margin: 0 5px;
     display: flex;
     align-items: center;
 }
@@ -69,7 +68,7 @@ header {
 
 
 .menu a{
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 
@@ -110,6 +109,7 @@ header {
 }
 
 .menu .submenu a {
+    font-size: 1rem;    
     color: black;
     padding: 10px 15px;
     text-decoration: none;

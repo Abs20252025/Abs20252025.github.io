@@ -6,7 +6,7 @@
    justify-content: center;
    background-color: whitesmoke;
    width: 100%;
-   min-height: 560px;
+   min-height: 500px;
 }
 
 .contenedorExtNacionales {
@@ -42,7 +42,7 @@
 
 .contenedorDescripcionProducto {
    border-radius: 25px;
-   padding: 20px;
+   padding: 10px;
    border: 2px dotted black;
    flex: 1;
    max-width: 600px;
@@ -241,7 +241,7 @@ button:hover {
    font-size: 24px;
    font-weight: bold;
    color: #333;
-   margin-bottom: 35px;
+   margin-bottom: 5px;
    text-transform: uppercase;
    text-shadow: 1px 1px 4px rgb(167, 167, 167);
 }

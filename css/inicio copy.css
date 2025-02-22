@@ -8,22 +8,22 @@ body {
 .inicio-abs {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
   background: black;
 }
 
-/* Estilo para cada slide */
+
+
 .slider {
   width: 100%;
-  height: 100vh; /* Mantiene la altura de la pantalla */
+  /* Mantiene la altura de la pantalla */
+  height: calc(100vh - 85px); /* Resta la altura del header */
   display: flex;
 }
 
 .slide {
   min-width: 100%;
-  height: 100vh;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,10 +38,12 @@ body {
 /* Cambiar la imagen de fondo de cada slide */
 .slide:nth-child(1) {
   background-image: url('../img/PortadaInicio.webp');
+  background-size: 100% 100%;
 }
 
 .slide:nth-child(7) {
-  background-image: url('../img/PortadaInicio.webp');
+  background-image: url('../img/PortadaFin.jpg');
+  background-size: 100% 100%;
 }
 
 
@@ -119,7 +121,7 @@ body {
   font-weight: bold;
   margin-right: 10px;
   text-align: center;
-  animation: slideInUp 1s ease-out 2.5s forwards;
+  animation: slideInUp 1s ease-out 2s forwards;
 }
 
 .slide-content .btn-primary {
@@ -178,55 +180,70 @@ body {
 }
 
 /* SLIDE 2: ANIMACIÓN DE IMÁGENES */
-.row-images {
+/* Ocultar imágenes antes de la animación */
+
+
+.slide .row-images{
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+.row {
+  width: 100%;
+  height: 50%;
   display: flex;
-  justify-content: space-between;
-  width: 80%;
-  max-width: 1200px;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  justify-content: center;
+  align-items: center;
 }
 
+.row {
+  width: 100%; /* Asegura que el div ocupe todo el ancho */
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Imágenes del slide */
 .row-image {
-  width: 45%;
-  max-width: 500px;
+  pointer-events: none; /* Evita que bloqueen los clics */
+  z-index: 5;
+  width: 100%;
+  position: absolute;
+  height: 50%;
   opacity: 0;
   transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
-/* Imágenes que entran desde los lados */
-.slide-left {
-  transform: translateX(-100%);
-}
-
-.slide-right {
+/* 🔹 Posiciones iniciales corregidas */
+.row .slide-right {
   transform: translateX(100%);
+  opacity: 0;
 }
 
-/* Cuando el slide esté activo */
-.active .slide-content {
-  opacity: 1;
-  transform: translateY(0);
+.row .slide-left {
+  transform: translateX(-100%);
+  opacity: 0;
 }
 
-.active .row-images {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.active .slide-left {
+/* 🔹 Cuando el slide está activo */
+.slide.active .row .slide-right,
+.slide.active .row .slide-left {
   opacity: 1;
   transform: translateX(0);
 }
 
-.active .slide-right {
-  opacity: 1;
-  transform: translateX(0);
+/* 🔹 Animaciones de salida */
+.slide.exiting .row .slide-right {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
-
-
+.slide.exiting .row .slide-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
 
 /* SERVICIO NUEVOOOOOO*/
 
@@ -239,7 +256,7 @@ body {
   color: white;
 }
 
-h2 {
+.contenedor-servicios h2 {
   font-size: 2.4rem;
   text-shadow:
     0 0 2px #ff9999,
@@ -353,7 +370,7 @@ h2 {
   color: #fff;
   padding: 20px;
   text-align: center;
-  height: 100vh;
+  height: auto;
   overflow: hidden;
   box-sizing: border-box;
 }

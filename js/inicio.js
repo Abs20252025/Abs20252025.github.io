@@ -10,89 +10,99 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.querySelectorAll(".dropdown .arrow-button").forEach(button => {
+document.querySelectorAll(".dropdown .arrow-button").forEach((button) => {
   button.addEventListener("click", (e) => {
-      e.stopPropagation(); // Evita que se active el enlace principal
-      let submenu = button.nextElementSibling;
-      submenu.classList.toggle("active");
+    e.stopPropagation(); // Evita que se active el enlace principal
+    let submenu = button.nextElementSibling;
+    submenu.classList.toggle("active");
   });
 });
-
-
 
 /* SERVICIOOOOOOOS */
 document.addEventListener("DOMContentLoaded", function () {
   const servicios = [
     {
       nombre: "Extintores",
+      descripcion: " Venta, inspección, recarga y certificación de extintores según normativas.",
       imagen: "img/01-ext.jpg",
       enlaces: ["Venta", "Mantenimiento y Recarga"],
     },
     {
       nombre: "Sistema D.A.C.I.",
+      descripcion: " Instalación, mantenimiento y proyectos de sistema de detección de alarma contra incendios.",
       imagen: "img/03-daci.jpg",
       enlaces: ["Venta e Instalación", "Proyecto", "Mantenimiento"],
     },
     {
       nombre: "Sistema Red A.C.I.",
+      descripcion: " Diseño, instalación y mantenimiento de redes de agua contra incendios.",
       imagen: "img/02-bci.jpg",
-      enlaces: ["Venta e Instalación","Proyecto","Mantenimiento"],
+      enlaces: ["Venta e Instalación", "Proyecto", "Mantenimiento"],
     },
     {
       nombre: "Bomba Contra Incendios",
       imagen: "img/02-bci.jpg",
-      enlaces: ["Venta e Instalación","Mantenimiento"],
+      enlaces: ["Venta e Instalación", "Mantenimiento"],
     },
     {
       nombre: "Gabinetes y Mangueras",
       imagen: "img/05-gabi-mangue.jpg",
-      enlaces: ["Venta e Instalación","Mantenimiento"],
+      enlaces: ["Venta e Instalación", "Mantenimiento"],
     },
     {
       nombre: "Sistema Rociadores",
       imagen: "img/03-daci.jpg",
-      enlaces: ["Venta e Instalación","Mantenimiento"],
+      enlaces: ["Venta e Instalación", "Mantenimiento"],
     },
     {
       nombre: "Puertas Cortafuego",
+      descripcion:"Venta, instalación y mantenimiento de puertas cortafuego certificadas para contener el fuego.",
       imagen: "img/06-puertas-cortafuego.jpg",
-      enlaces: ["Venta e Instalación","Mantenimiento"],
+      enlaces: ["Venta e Instalación", "Mantenimiento"],
     },
     {
       nombre: "Presurización de Escaleras",
+      descripcion:"Venta, instalación y mantenimiento de sistemas para mantener escaleras libres de humo en caso de incendio.",
       imagen: "img/011-presurizacion.jpg",
-      enlaces: ["Venta e Instalación","Mantenimiento"],
+      enlaces: ["Venta e Instalación", "Mantenimiento"],
     },
     {
       nombre: "Bomba Presión Constante",
+      descripcion:" Venta, instalación y mantenimiento de equipos para garantizar un suministro constante de agua.",
       imagen: "img/01-ext.jpg",
-      enlaces: ["Venta e Instalación","Mantenimiento"],
+      enlaces: ["Venta e Instalación", "Mantenimiento"],
     },
     {
       nombre: "Luces de Emergencia",
+      descripcion:"Venta, instalación y mantenimiento de iluminación de seguridad para evacuaciones.",
       imagen: "img/04-le.jpg",
-      enlaces: ["Venta e Instalación","Mantenimiento"],
+      enlaces: ["Venta e Instalación", "Mantenimiento"],
     },
     {
       nombre: "Pozo a Tierra",
+      descripcion:"Venta, instalación y mantenimiento de pozos a tierra para protección eléctrica.",
       imagen: "img/09-pozo-a-tierra.jpg",
-      enlaces: ["Venta e Instalación","Mantenimiento"],
+      enlaces: ["Venta e Instalación", "Mantenimiento"],
     },
     {
       nombre: "Tablero Eléctrico",
+      descripcion:"Venta, Instalación y Mantenimiento de tableros eléctricos para seguridad en industrias, empresas y edificios corporativos.",
       imagen: "img/08-sistemas-electricos.jpg",
-      enlaces: ["Venta e Instalación","Mantenimiento"],
-    },,
+      enlaces: ["Venta e Instalación", "Mantenimiento"],
+    },
+    ,
     {
       nombre: "Asesoría",
+      descripcion:"Consultoría en normativas, ITSEN y soluciones integrales en seguridad contra incendios.",
       imagen: "img/03-daci.jpg",
       enlaces: ["Conocer Más"],
     },
     {
       nombre: "Señaléticas",
+      descripcion:"Venta e instalación de señalización de seguridad para evacuaciones rápidas.",
       imagen: "img/07-senales-seguridad.jpg",
       enlaces: ["Venta e Instalación"],
-    }
+    },
   ];
 
   const contenedor = document.getElementById("gridServicios");
@@ -107,6 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   <img src="${servicio.imagen}" alt="${servicio.nombre}">
               </div>
               <div class="card-back">
+                  <p>${servicio.descripcion}</p>
                   <div class="links">
                       ${servicio.enlaces
                         .map((link) => `<a href="#">${link}</a>`)
@@ -119,7 +130,6 @@ document.addEventListener("DOMContentLoaded", function () {
     contenedor.appendChild(card);
   });
 });
-
 
 //ANIMACION BANNER
 
@@ -144,7 +154,6 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", mostrarBanner);
   mostrarBanner(); // Ejecutar al cargar la página
 });
-
 
 //DESPLEGABLE PREGUNTAS
 document.querySelectorAll(".faq-question").forEach((button) => {
@@ -194,8 +203,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
   observer.observe(document.querySelector("#contenido"));
 });
-
-
-
-
-
