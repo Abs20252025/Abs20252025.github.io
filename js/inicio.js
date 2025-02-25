@@ -23,86 +23,147 @@ document.addEventListener("DOMContentLoaded", function () {
   const servicios = [
     {
       nombre: "Extintores",
-      descripcion: " Venta, inspección, recarga y certificación de extintores según normativas.",
+      descripcion:
+        " Venta, inspección, recarga y certificación de extintores según normativas.",
       imagen: "img/01-ext.jpg",
-      enlaces: ["Venta", "Mantenimiento y Recarga"],
+      enlaces: [
+        { texto: "Venta", url: "/extintores.html" },
+        {
+          texto: "Mantenimiento y Recarga",
+          url: "/recarga-extintores.html",
+        },
+      ],
     },
     {
       nombre: "Sistema D.A.C.I.",
-      descripcion: " Instalación, mantenimiento y proyectos de sistema de detección de alarma contra incendios.",
+      descripcion:
+        " Instalación, mantenimiento y proyectos de sistema de detección de alarma contra incendios.",
       imagen: "img/03-daci.jpg",
-      enlaces: ["Venta e Instalación", "Proyecto", "Mantenimiento"],
+      enlaces: [
+        {
+          texto: "Venta e Instalación",
+          url: "/sistema-deteccion-alarma-contra-incendios.html",
+        },
+        { texto: "Proyecto", url: "/proyecto-daci.html" },
+        { texto: "Mantenimiento", url: "mantenimiento-sistema-daci.html" },
+      ],
     },
     {
       nombre: "Sistema Red A.C.I.",
-      descripcion: " Diseño, instalación y mantenimiento de redes de agua contra incendios.",
+      descripcion:
+        "Diseño, instalación y mantenimiento de redes de agua contra incendios.",
       imagen: "img/02-bci.jpg",
-      enlaces: ["Venta e Instalación", "Proyecto", "Mantenimiento"],
+      enlaces: [
+        { texto: "Venta e Instalación", url: "/bomba-de-agua-contra-incendios.html" },
+        { texto: "Proyecto", url: "/proyecto-sistema-red-aci.html" },
+        { texto: "Mantenimiento", url: "/mantenimiento-bomba-de-agua-contra-incendios.html" },
+      ],
     },
     {
       nombre: "Bomba Contra Incendios",
+      descripcion:
+        "Venta, instalación y mantenimiento de bombas contra incendios para sistemas de alta presión.",
       imagen: "img/02-bci.jpg",
-      enlaces: ["Venta e Instalación", "Mantenimiento"],
+      enlaces: [
+        { texto: "Venta e Instalación", url: "/bomba-de-agua-contra-incendios.html" },
+        { texto: "Mantenimiento", url: "/mantenimiento-bomba-de-agua-contra-incendios.html" },
+      ],
     },
     {
       nombre: "Gabinetes y Mangueras",
+      descripcion:
+        "Venta, instalación y mantenimiento en gabinetes y mangueras para protección contra incendios.",
       imagen: "img/05-gabi-mangue.jpg",
-      enlaces: ["Venta e Instalación", "Mantenimiento"],
+      enlaces: [
+        { texto: "Venta e Instalación", url: "/gabinetes-contra-incendios.html" },
+        { texto: "Mantenimiento", url: "/mantenimiento-rociadores-y-manguera-contra-incendios.html" },
+      ],
     },
     {
       nombre: "Sistema Rociadores",
+      descripcion:
+        "Venta, instalación y mantenimiento de sistema de rociadores contra incendios.",
       imagen: "img/03-daci.jpg",
-      enlaces: ["Venta e Instalación", "Mantenimiento"],
+      enlaces: [
+        { texto: "Venta e Instalación", url: "/sistema-de-rociadores.html" },
+        { texto: "Mantenimiento", url: "/mantenimiento-rociadores-y-manguera-contra-incendios.html" },
+      ],
     },
     {
       nombre: "Puertas Cortafuego",
-      descripcion:"Venta, instalación y mantenimiento de puertas cortafuego certificadas para contener el fuego.",
+      descripcion:
+        "Venta, instalación y mantenimiento de puertas cortafuego certificadas para contener el fuego.",
       imagen: "img/06-puertas-cortafuego.jpg",
-      enlaces: ["Venta e Instalación", "Mantenimiento"],
+      enlaces: [
+        { texto: "Venta e Instalación", url: "/puertas-cortafuego.html" },
+        { texto: "Mantenimiento", url: "/mantenimiento-puertas-cortafuego.html" },
+      ],
     },
     {
       nombre: "Presurización de Escaleras",
-      descripcion:"Venta, instalación y mantenimiento de sistemas para mantener escaleras libres de humo en caso de incendio.",
+      descripcion:
+        "Venta, instalación y mantenimiento de sistemas para mantener escaleras libres de humo en caso de incendio.",
       imagen: "img/011-presurizacion.jpg",
-      enlaces: ["Venta e Instalación", "Mantenimiento"],
+      enlaces: [
+        { texto: "Venta e Instalación", url: "/presurizacion-de-escaleras.html" },
+        { texto: "Mantenimiento", url: "/mantenimiento-de-presurizacion-de-escaleras.html" },
+      ],
     },
     {
       nombre: "Bomba Presión Constante",
-      descripcion:" Venta, instalación y mantenimiento de equipos para garantizar un suministro constante de agua.",
+      descripcion:
+        "Venta, instalación y mantenimiento de equipos para garantizar un suministro constante de agua.",
       imagen: "img/01-ext.jpg",
-      enlaces: ["Venta e Instalación", "Mantenimiento"],
+      enlaces: [
+        { texto: "Venta e Instalación", url: "/bomba-de-agua-presion-constante.html" },
+        { texto: "Mantenimiento", url: "/mantenimiento-bomba-presion-constante.html" },
+      ],
     },
     {
       nombre: "Luces de Emergencia",
-      descripcion:"Venta, instalación y mantenimiento de iluminación de seguridad para evacuaciones.",
+      descripcion:
+        "Venta, instalación y mantenimiento de iluminación de seguridad para evacuaciones.",
       imagen: "img/04-le.jpg",
-      enlaces: ["Venta e Instalación", "Mantenimiento"],
+      enlaces: [
+        { texto: "Venta e Instalación", url: "/luces-de-emergencia.html" },
+        { texto: "Mantenimiento", url: "/mantenimiento-luces-emergencias.html" },
+      ],
     },
     {
       nombre: "Pozo a Tierra",
-      descripcion:"Venta, instalación y mantenimiento de pozos a tierra para protección eléctrica.",
+      descripcion:
+        "Venta, instalación y mantenimiento de pozos a tierra para protección eléctrica.",
       imagen: "img/09-pozo-a-tierra.jpg",
-      enlaces: ["Venta e Instalación", "Mantenimiento"],
+      enlaces: [
+        { texto: "Venta e Instalación", url: "/pozos-a-tierra.html" },
+        { texto: "Mantenimiento", url: "/mantenimiento-pozo-a-tierra.html" },
+      ],
     },
     {
       nombre: "Tablero Eléctrico",
-      descripcion:"Venta, Instalación y Mantenimiento de tableros eléctricos para seguridad en industrias, empresas y edificios corporativos.",
+      descripcion:
+        "Venta, instalación y mantenimiento de tableros eléctricos para seguridad en industrias, empresas y edificios corporativos.",
       imagen: "img/08-sistemas-electricos.jpg",
-      enlaces: ["Venta e Instalación", "Mantenimiento"],
+      
+      enlaces: [
+        { texto: "Venta e Instalación", url: "/tableros-electricos.html" },
+        { texto: "Mantenimiento", url: "/mantenimiento-de-tableros-electricos.html" },
+      ],
     },
-    ,
     {
       nombre: "Asesoría",
-      descripcion:"Consultoría en normativas, ITSEN y soluciones integrales en seguridad contra incendios.",
-      imagen: "img/03-daci.jpg",
-      enlaces: ["Conocer Más"],
+      descripcion:
+        "Consultoría en normativas, ITSEN y soluciones integrales en seguridad contra incendios.",
+      imagen: "img/certificacion-itse.webp",
+      enlaces: [{ texto: "Conocer Más", url: "/certificacion-itse.html" }],
     },
     {
       nombre: "Señaléticas",
-      descripcion:"Venta e instalación de señalización de seguridad para evacuaciones rápidas.",
+      descripcion:
+        "Venta e instalación de señalización de seguridad para evacuaciones rápidas.",
       imagen: "img/07-senales-seguridad.jpg",
-      enlaces: ["Venta e Instalación"],
-    },
+      enlaces: [{ texto: "Venta e Instalación", url: "/senalizacion-de-seguridad.html" }],
+    },  
   ];
 
   const contenedor = document.getElementById("gridServicios");
@@ -120,7 +181,9 @@ document.addEventListener("DOMContentLoaded", function () {
                   <p>${servicio.descripcion}</p>
                   <div class="links">
                       ${servicio.enlaces
-                        .map((link) => `<a href="#">${link}</a>`)
+                        .map(
+                          (link) => `<a href="${link.url}">${link.texto}</a>`
+                        )
                         .join("")}
                   </div>
               </div>

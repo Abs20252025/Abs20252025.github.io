@@ -11,7 +11,7 @@
 
 .contenedorExtNacionales {
    display: flex;
-   max-width: 1000px;
+   max-width: 1100px;
    align-items: stretch;
    width: 100%;
    gap: 30px;
@@ -36,7 +36,7 @@
    padding: 15px;
    width: 100%;
    max-width: 500px;
-   height: auto;
+   height: 88%;
    display: block;
 }
 
@@ -51,6 +51,11 @@
 
 .contenedorDescripcionProducto h2 {
    color: #d40203;
+   margin-bottom: 10px;
+}
+
+.contenedorDescripcionProducto h1 {
+   color: black;
    margin-bottom: 10px;
 }
 

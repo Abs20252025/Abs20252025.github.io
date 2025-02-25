@@ -15,6 +15,14 @@
   text-transform: uppercase;
 }
 
+.sectionContacto h1 {
+  text-shadow: 1px 1px 4px rgb(15 33 15 / 75%);
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 /* Contenedor principal con margen y espacio */
 .contacto-container {
   display: flex;
@@ -117,6 +125,10 @@
 @media (min-width: 1440px) {
 
   .sectionContacto h2 {
+    font-size: 3rem;
+  }
+
+  .sectionContacto h1 {
     font-size: 3rem;
   }
 
