@@ -58,7 +58,8 @@ header {
     padding: 10px 15px;
 }
 
-.arrow-icon, .phone-icon {
+.arrow-icon,
+.phone-icon {
     filter: invert(13%) sepia(81%) saturate(7056%) hue-rotate(359deg) brightness(99%) contrast(112%);
     width: 16px;
     height: 16px;
@@ -67,7 +68,7 @@ header {
 }
 
 
-.menu a{
+.menu a {
     font-size: 1.1rem;
 }
 
@@ -109,7 +110,7 @@ header {
 }
 
 .menu .submenu a {
-    font-size: 1rem;    
+    font-size: 1rem;
     color: black;
     padding: 10px 15px;
     text-decoration: none;
@@ -182,6 +183,7 @@ header {
     .navbar {
         padding: 10px;
     }
+
     .menu {
         gap: 10px;
     }
@@ -224,12 +226,12 @@ header {
 
     .menu .submenu .submenu {
         display: none;
-        top: 35px; 
-        left: 0; 
+        top: 35px;
+        left: 0;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-   
+
 }
 
 @media (max-width: 480px) {
@@ -248,21 +250,77 @@ header {
 }
 
 
-/* ICONO WSP CUBRE TODO EL BODY*/
+/* ICONO WSP FIJO EN LA ESQUINA */
 .whatsapp-icon {
     position: fixed;
-    bottom: 20px;
-    /* Ajusta la distancia desde la parte inferior */
+    bottom: 30px;
     right: 20px;
-    /* Ajusta la distancia desde la parte derecha */
     width: 60px;
-    /* Ajusta el tamaño del ícono */
     height: 60px;
-    /* Ajusta el tamaño del ícono */
     z-index: 1000;
-    /* Asegura que esté por encima de otros elementos */
-  }
-  
-  .whatsapp-icon:hover {
+    transition: transform 0.3s ease-in-out;
+    animation: rotar-vibracion 4.5s infinite ease-in-out;
+    /* 1.5s animación + 3s pausa */
+    animation-delay: 3s;
+    /* Espera 3 segundos antes de iniciar la primera vez */
+}
+
+/* Aumenta el tamaño al pasar el mouse */
+.whatsapp-icon:hover {
     transform: scale(1.5);
-  }
+    animation: none;
+    /* Detiene la animación al hacer hover */
+}
+
+/* Animación más rápida con pausa incluida */
+@keyframes rotar-vibracion {
+
+    0%,
+    100% {
+        transform: rotate(0deg) translateY(0) scale(1);
+    }
+
+    10% {
+        transform: rotate(-20deg) translateY(-6px) scale(1.1);
+    }
+
+    20% {
+        transform: rotate(20deg) translateY(6px) scale(1.1);
+    }
+
+    30% {
+        transform: rotate(-20deg) translateY(-6px) scale(1.1);
+    }
+
+    40% {
+        transform: rotate(20deg) translateY(6px) scale(1.1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    /* Efecto de latido */
+    60% {
+        transform: rotate(-10deg) translateY(-3px) scale(1.1);
+    }
+
+    70% {
+        transform: rotate(10deg) translateY(3px) scale(1.1);
+    }
+
+    80% {
+        transform: rotate(-10deg) translateY(-3px) scale(1.1);
+    }
+
+    90% {
+        transform: rotate(10deg) translateY(3px) scale(1.1);
+    }
+
+    95%,
+    100% {
+        transform: none;
+    }
+
+    /* Pausa de 3 segundos */
+}
