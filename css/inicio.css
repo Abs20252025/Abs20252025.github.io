@@ -41,7 +41,7 @@ body {
   background-size: 100% 100%;
 }
 
-.slide:nth-child(7) {
+.slide:nth-child(5) {
   background-image: url('../img/PortadaFin.jpg');
   background-size: 100% 100%;
 }
@@ -113,6 +113,7 @@ body {
 
 .inicio-abs.animated .slide-content .btn-primary,
 .inicio-abs.animated .slide-content .btn-secondary {
+  margin-bottom: 10px;
   opacity: 0;
   display: inline-block;
   padding: 10px 20px;
@@ -125,21 +126,21 @@ body {
 }
 
 .slide-content .btn-primary {
-  background-color: var(--color-accent);
   color: white;
+  background-color: #990a00;
 }
 
 .slide-content .btn-primary:hover {
-  background-color: #007a99;
+  background-color: #c42014;
 }
 
 .slide-content .btn-secondary {
-  background-color: var(--color-light);
+  background-color: #990a00;
   color: var(--color-dark);
 }
 
 .slide-content .btn-secondary:hover {
-  background-color: #8fb858;
+  background-color: #c42014;
 }
 
 /* Animaciones de entrada */
@@ -332,6 +333,10 @@ body {
   justify-content: center;
   gap: 10px;
   transform: rotateY(180deg);
+}
+
+.card-back p{
+  padding: 0px 5px;
 }
 
 
@@ -677,6 +682,20 @@ body {
   transform: scale(1.1);
 }
 
+@media (max-width: 480px) {
+
+  .slide:nth-child(1) {
+    background-image: url('../img/BannerMovilInicio.png');
+    background-size: cover
+  }
+  
+  .slide:nth-child(5) {
+    background-image: url('../img/PortadaFin.jpg');
+    background-size: cover
+  }
+  
+}
+
 /* Estilos responsivos para pantallas más pequeñas */
 @media (max-width: 768px) {
   .banner-contacto {
@@ -694,6 +713,8 @@ body {
   .contenido-banner {
     text-align: left;
   }
+
+  
 }
 
 /* RESPONSIVIDAD */
