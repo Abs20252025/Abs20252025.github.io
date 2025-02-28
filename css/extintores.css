@@ -75,7 +75,7 @@
 
 .contenedorCapacidades h4 {
    font-weight: bold;
-   margin: 15px 0px;
+   margin: 5px 0px;
    color: #3b3535;
 }
 
@@ -121,7 +121,7 @@
    align-items: center;
    gap: 5px;
    color: white;
-   padding: 10px 10px;
+   padding: 5px 10px;
    text-decoration: none;
    border-radius: 5px;
    font-weight: bold;

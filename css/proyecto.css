@@ -261,3 +261,161 @@
         max-height: 100%;
     }
 }
+
+
+
+.sectionProyectos {
+    padding: 20px 5%;
+    background-color: #f9f9f9;
+}
+
+.contenedorProyectos {
+    text-align: center;
+}
+
+.contenedorProyectos h1 {
+    font-size: 2.5em;
+    color: #D32F2F;
+    margin-bottom: 10px;
+}
+
+.descripcionProyectos {
+    text-align: justify;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.descripcionProyectos span {
+    color: #d40203;
+    font-weight: bold;
+}
+
+.contenedorBeneficios {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.contenedorBeneficios h2 {
+    color: #D32F2F;
+}
+
+.contenedorBeneficios ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contenedorBeneficios li {
+    font-size: 1.1em;
+    margin: 10px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.contenedorBeneficios li::before {
+    content: "✔";
+    color: #D32F2F;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* PROYECTOS EN FILA */
+.contenedorProyectosFila {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.contenedorProyecto {
+    width: 48%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contenedorImagenProyecto img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.titulo-slider {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    margin-top: -50px;
+    font-weight: bold;
+}
+
+.btnVerMas, .btnContacto {
+    display: inline-block;
+    background: #D32F2F;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btnVerMas:hover, .btnContacto:hover {
+    background: #B71C1C;
+}
+
+.contenedorProceso {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.procesoPasos {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.paso {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 23%;
+    text-align: center;
+}
+
+.contenedorLlamadoAccion {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contenedorProyectosFila {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedorProyecto {
+        width: 100%;
+    }
+
+    .procesoPasos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paso {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
