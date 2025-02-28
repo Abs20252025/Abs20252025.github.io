@@ -30,6 +30,7 @@
    flex: 1;
    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.4);
    max-width: 430px;
+   overflow: hidden;
 }
 
 .contenedorImagenProducto img {
