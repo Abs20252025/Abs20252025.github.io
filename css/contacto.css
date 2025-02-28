@@ -1,5 +1,5 @@
 #contacto {
-  padding: 10px 40px;
+  padding: 10px 15px;
   background-color: #f4f4f4;
 }
 
@@ -122,6 +122,7 @@
   }
 
   .info-contacto {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -130,7 +131,6 @@
   .card-contacto {
     width: 100%;
     /* Ajusta cada card al ancho del contenedor */
-    max-width: 400px;
     margin-bottom: 15px;
   }
 
