@@ -263,60 +263,90 @@
 }
 
 
-
-.sectionProyectos {
-    padding: 20px 5%;
-    background-color: #f9f9f9;
-}
+/* PROYECTO CSS GENERAL DE LA WEB*/
 
 .contenedorProyectos {
+    border-radius: 25px;
     text-align: center;
 }
 
 .contenedorProyectos h1 {
-    font-size: 2.5em;
-    color: #D32F2F;
+    text-shadow: 0 0 3px #0e0b0b, 0 0 2px #0a0404, 0 0 5px #0a0909, 0 0 25px #0a0505;
+    font-size: 2rem;
+    color: #FF5722;
+    margin-bottom: 5px;
+}
+
+
+.tituloProyectos{
+    text-shadow: 0 0 3px #0e0b0b, 0 0 7px #0a0404, 0 0 15px #0a0909, 0 0 25px #0a0505;
+    animation: parpadeo-elegir 1s infinite alternate;
+    color: white;
+    font-size: 2rem;
     margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
-.descripcionProyectos {
-    text-align: justify;
-    font-size: 1.2em;
-    margin-bottom: 40px;
-    line-height: 1.6;
+@keyframes parpadeo-elegir{
+    0%, 100% {
+        text-shadow: 0 0 3px #0e0b0b, 0 0 7px #0a0404, 0 0 15px #0a0909, 0 0 25px #0a0505;
+    }
+    50% {
+        text-shadow: 0 0 5px #1a1111, 0 0 10px #140707, 0 0 20px #120a0a, 0 0 30px #1e0808;
+    }
 }
 
-.descripcionProyectos span {
-    color: #d40203;
-    font-weight: bold;
+/* BENEFICIOS DE PROYECTO */
+
+.ContenidoBeneficiosProyecto {
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    min-height: 100vh;
+    background-color: rgb(145, 140, 140);
 }
 
-.contenedorBeneficios {
+.contenedorBeneficiosProyecto {
     background: #fff;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
+    width: 100%;
+    height: auto;
     text-align: left;
+    margin-bottom: 15px;
 }
 
-.contenedorBeneficios h2 {
+.contenedorBeneficiosProyecto h2 {
     color: #D32F2F;
+    text-align: center;
 }
 
-.contenedorBeneficios ul {
+/* Contenedor principal con la lista y la imagen */
+.beneficiosProyecto {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.contenedorBeneficiosProyecto ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    flex: 1;    
 }
 
-.contenedorBeneficios li {
+.contenedorBeneficiosProyecto li {
     font-size: 1.1em;
-    margin: 10px 0;
+    margin: 35px 0 35px 15px;
     position: relative;
     padding-left: 25px;
 }
 
-.contenedorBeneficios li::before {
+.contenedorBeneficiosProyecto li::before {
     content: "✔";
     color: #D32F2F;
     position: absolute;
@@ -324,10 +354,106 @@
     font-weight: bold;
 }
 
+/* Imagen a la derecha */
+.imagenBeneficioProyecto {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagenBeneficioProyecto img {
+    border-radius: 20px;
+    width: 50%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Diseño Responsivo */
+@media (max-width: 768px) {
+    .beneficiosProyecto {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .imagenBeneficioProyecto {
+        width: 100%;
+    }
+}
+
+
+/* PASO DE PROYECTO*/
+/* Contenedor del Proceso */
+.contenedorProceso {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+}
+
+.contenedorProceso h2{
+    color: #D32F2F;
+    margin-bottom: 10px;
+}
+
+.procesoPasos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.paso {
+    flex: 1 1 calc(50% - 20px); /* Hace que haya dos pasos por fila */
+    background-color: #b12424;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.paso h3{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.paso p{
+    color: white;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .beneficiosProyecto {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .imagenBeneficioProyecto {
+        width: 100%;
+    }
+
+    .procesoPasos {
+        flex-direction: column;
+    }
+
+    .paso {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
 /* PROYECTOS EN FILA */
 .contenedorProyectosFila {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
     max-width: 1200px;
     width: 100%;
@@ -336,28 +462,41 @@
 }
 
 .contenedorProyecto {
-    width: 48%;
-    background: #fff;
-    padding: 20px;
+    display: flex;  /* Hace que el contenido se acomode en columna */
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    justify-content: center; /* Distribuye los elementos */
+    width: 42%;
+    background: #494646;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.contenedorImagenProyecto img {
-    width: 50%;
-    border-radius: 10px;
+.contenedorDescripcionProyecto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.titulo-slider {
-    background: rgba(0, 0, 0, 0.7);
+.contenedorDescripcionProyecto h2 {
+    text-shadow: 0 0 3px #0e0b0b, 0 0 2px #0a0404, 0 0 5px #0a0909, 0 0 25px #0a0505;
+    animation: parpadeo-elegir 1s infinite alternate;
     color: white;
-    padding: 10px;
-    margin-top: -50px;
-    font-weight: bold;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 5px;
+}
+
+.ProyectoColumnasLineas {
+    min-height: 100vh;
+    padding: 10px 10px;
+    background-color: #5c5b5b;
 }
 
 .btnVerMas, .btnContacto {
+    width: fit-content;
+    margin:  0 auto;
     display: inline-block;
     background: #D32F2F;
     color: white;
@@ -366,37 +505,16 @@
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s ease;
+    align-items: end;
+    justify-content: end;
+
 }
 
 .btnVerMas:hover, .btnContacto:hover {
     background: #B71C1C;
 }
 
-.contenedorProceso {
-    text-align: left;
-    margin-top: 50px;
-}
 
-.procesoPasos {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.paso {
-    background: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 23%;
-    text-align: center;
-}
-
-.contenedorLlamadoAccion {
-    text-align: center;
-    margin-top: 40px;
-}
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -418,4 +536,63 @@
         width: 90%;
         margin-bottom: 20px;
     }
+
+    .contenedorDescripcionProyecto h2 {
+        width: 100%;
+    }
+}
+
+
+.descripcionProyecto {
+    font-size: 1rem;
+    color: white;
+    margin: 10px 0;
+    text-align: center;
+}
+
+
+/* PROYECTO SLIDER*/
+
+.sliderProyecto {
+    position: relative;
+    width: 70%;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+.sliderProyecto-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 200%;
+}
+
+.sliderProyecto-container img {
+    width: 50%;
+    flex: 1;
+}
+
+.prevProyecto, .nextProyecto {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prevProyecto { left: 10px; }
+.nextProyecto { right: 10px; }
+
+
+.sectionExtintores {
+    min-height: 100vh;
+    background-color: #5c5b5b;
+}
+
+.ExtintoresColumnasLineas{
+    background-color: #5c5b5b;
 }

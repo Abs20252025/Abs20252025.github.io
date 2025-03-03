@@ -36,11 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
       nombre: "Sistema Red A.C.I.",
       descripcion:
         "Diseño, instalación y mantenimiento de redes de agua contra incendios.",
-      imagen: "img/02-bci.jpg",
+      imagen: "",
       enlaces: [
-        { texto: "Venta e Instalación", url: "/bomba-de-agua-contra-incendios.html" },
         { texto: "Proyecto", url: "/proyecto-sistema-red-aci.html" },
-        { texto: "Mantenimiento", url: "/mantenimiento-bomba-de-agua-contra-incendios.html" },
       ],
     },
     {
@@ -67,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nombre: "Sistema Rociadores",
       descripcion:
         "Venta, instalación y mantenimiento de sistema de rociadores contra incendios.",
-      imagen: "img/03-daci.jpg",
+      imagen: "",
       enlaces: [
         { texto: "Venta e Instalación", url: "/sistema-de-rociadores.html" },
         { texto: "Mantenimiento", url: "/mantenimiento-rociadores-y-manguera-contra-incendios.html" },
@@ -97,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nombre: "Bomba Presión Constante",
       descripcion:
         "Venta, instalación y mantenimiento de equipos para garantizar un suministro constante de agua.",
-      imagen: "img/01-ext.jpg",
+      imagen: "",
       enlaces: [
         { texto: "Venta e Instalación", url: "/bomba-de-agua-presion-constante.html" },
         { texto: "Mantenimiento", url: "/mantenimiento-bomba-presion-constante.html" },

@@ -14,120 +14,153 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
         <link rel="stylesheet" href="css/mantenimientos.css">
         <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/inicio.css">
         <link rel="stylesheet" href="css/footer.css">
     </head>
     <body>
-        <header>
-            <nav class="navbar">
-                <div class="logo">
-                    <a href="/">
-                        <img src="img/abs-logo.webp"
-                            alt="ABS Equipos y Sistemas Contra Incendios"
-                            width="100px" height="80px" />
-                    </a>
+        <section id="inicio" class="inicio-abs">
+            <header>
+                <nav class="navbar">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="img/abs-logo.webp"
+                                alt="ABS Equipos y Sistemas Contra Incendios"
+                                width="100px" height="80px" />
+                        </a>
+                    </div>
+                    <button class="toggle-menu" aria-label="Abrir menú">
+                        ☰
+                    </button>
+                    <ul class="menu">
+                        <li><a class="menu-item" href="/">Inicio</a></li>
+                        <li><a class="menu-item"
+                                href="nosotros.html">Nosotros</a></li>
+                        <li class="dropdown">
+                            <a href="mantenimientos.html"
+                                class="menu-item">Mantenimientos</a>
+                            <button class="arrow-button"
+                                aria-label="Abrir submenú">
+                                <img src="svg/flechaAbajo.svg"
+                                    alt="Abrir submenú" class="arrow-icon">
+                            </button>
+                            <ul class="submenu">
+                                <li><a href="recarga-extintores.html">Recarga de
+                                        Extintores</a></li>
+                                <li><a
+                                        href="mantenimiento-sistema-daci.html">Mantenimiento
+                                        Sistema Detección y Alarma</a></li>
+                                <li><a
+                                        href="mantenimiento-bomba-de-agua-contra-incendios.html">Mantenimiento
+                                        Bomba de Agua Contra Incendios</a></li>
+                                <li><a
+                                        href="mantenimiento-bomba-presion-constante.html">Mantenimiento
+                                        Bombas de Agua Presión
+                                        Constante</a></li>
+                                <li><a
+                                        href="mantenimiento-luces-emergencias.html">Mantenimiento
+                                        Luces de Emergencia</a></li>
+                                <li><a
+                                        href="mantenimiento-rociadores-y-manguera-contra-incendios.html">Mantenimiento
+                                        de Rociadores y Mangueras Contra
+                                        Incendios</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="proyectos.html"
+                                class="menu-item">Proyectos</a>
+                            <button class="arrow-button"
+                                aria-label="Abrir submenú">
+                                <img src="svg/flechaAbajo.svg"
+                                    alt="Abrir submenú" class="arrow-icon">
+                            </button>
+                            <ul class="submenu">
+                                <li><a href="proyecto-daci.html">Sistema
+                                        DACI</a></li>
+                                <li><a
+                                        href="proyecto-sistema-red-aci.html">Sistema
+                                        ACI</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="productos.html"
+                                class="menu-item">Productos</a>
+                            <button class="arrow-button"
+                                aria-label="Abrir submenú">
+                                <img src="svg/flechaAbajo.svg"
+                                    alt="Abrir submenú" class="arrow-icon">
+                            </button>
+                            <ul class="submenu">
+                                <li><a href="extintores.html">Extintores</a>
+                                    <button class="arrow-button"
+                                        aria-label="Abrir submenú">
+                                        <img src="svg/flechaAbajo.svg"
+                                            alt="Abrir submenú"
+                                            class="arrow-icon">
+                                    </button>
+                                    <ul class="submenu">
+                                        <li><a
+                                                href="extintores-nacionales.html">Nacionales</a></li>
+                                        <li><a
+                                                href="extintores-importados.html">Importados</a></li>
+                                    </ul>
+                                </li>
+                                <li><a
+                                        href="sistema-deteccion-alarma-contra-incendios.html">Alarma
+                                        Contra Incendios</a></li>
+                                <li><a
+                                        href="bomba-de-agua-contra-incendios.html">Bombas
+                                        de Agua Contra Incendios</a></li>
+                                <li><a
+                                        href="bomba-de-agua-presion-constante.html">Bombas
+                                        de Agua de Presión Constante</a></li>
+                                <li><a href="puertas-cortafuego.html">Puertas
+                                        Cortafuego</a></li>
+                                <li><a
+                                        href="mangueras-contra-incendios.html">Manguera
+                                        Contra Incendios</a></li>
+                                <li><a href="luces-de-emergencia.html">Luces de
+                                        Emergencia</a></li>
+                                <li><a
+                                        href="gabinetes-contra-incendios.html">Gabinetes
+                                        Contra Incendios</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="menu-item" href="blog.html">Blog</a></li>
+                        <li><a class="menu-item"
+                                href="contacto.html">Contacto</a></li>
+                    </ul>
+                    <div class="contact-cta">
+                        <a href="contacto.html">
+                            <img src="svg/whatsapp.svg" alt="Contacto"
+                                class="contact-icon">
+                            <div class="contact-text">&nbsp;CONTÁCTANOS</div>
+                        </a>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="slider">
+                <div class="slide">
+                    <div class="slide-content">
+                        <h1>MANTENIMIENTOS DE ABS</h1>
+                        <p>Brindamos servicios de mantenimiento a equipos contra
+                            incendios, asegurando su óptimo funcionamiento y
+                            cumplimiento con normativas nacionales e
+                            internacionales.<br>
+                            Seguridad y garantía en soluciones
+                            integrales🔥🛡️🛠️.
+                        </p>
+
+                        <a href="#MantenimientoLineaNegocio"
+                            class="btn-primary">Ver
+                            Mantenimientos</a>
+                        <a href="contacto.html" class="btn-secondary">Solicitar
+                            cotización</a>
+                    </div>
                 </div>
-                <button class="toggle-menu" aria-label="Abrir menú">
-                    ☰
-                </button>
-                <ul class="menu">
-                    <li><a class="menu-item" href="/">Inicio</a></li>
-                    <li><a class="menu-item"
-                            href="nosotros.html">Nosotros</a></li>
-                    <li class="dropdown">
-                        <a href="mantenimientos.html" class="menu-item">Mantenimientos</a>
-                        <button class="arrow-button" aria-label="Abrir submenú">
-                            <img src="svg/flechaAbajo.svg" alt="Abrir submenú"
-                                class="arrow-icon">
-                        </button>
-                        <ul class="submenu">
-                            <li><a href="recarga-extintores.html">Recarga de
-                                    Extintores</a></li>
-                            <li><a
-                                    href="mantenimiento-sistema-daci.html">Mantenimiento
-                                    Sistema Detección y Alarma</a></li>
-                            <li><a
-                                    href="mantenimiento-bomba-de-agua-contra-incendios.html">Mantenimiento
-                                    Bomba de Agua Contra Incendios</a></li>
-                            <li><a
-                                    href="mantenimiento-bomba-presion-constante.html">Mantenimiento
-                                    Bombas de Agua Presión Constante</a></li>
-                            <li><a
-                                    href="mantenimiento-luces-emergencias.html">Mantenimiento
-                                    Luces de Emergencia</a></li>
-                            <li><a
-                                    href="mantenimiento-rociadores-y-manguera-contra-incendios.html">Mantenimiento
-                                    de Rociadores y Mangueras Contra
-                                    Incendios</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="menu-item">Proyectos</a>
-                        <button class="arrow-button" aria-label="Abrir submenú">
-                            <img src="svg/flechaAbajo.svg" alt="Abrir submenú"
-                                class="arrow-icon">
-                        </button>
-                        <ul class="submenu">
-                            <li><a href="proyecto-daci.html">Sistema
-                                    DACI</a></li>
-                            <li><a href="proyecto-sistema-red-aci.html">Sistema
-                                    ACI</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="menu-item">Productos</a>
-                        <button class="arrow-button" aria-label="Abrir submenú">
-                            <img src="svg/flechaAbajo.svg" alt="Abrir submenú"
-                                class="arrow-icon">
-                        </button>
-                        <ul class="submenu">
-                            <li><a href="#">Extintores</a>
-                                <button class="arrow-button"
-                                    aria-label="Abrir submenú">
-                                    <img src="svg/flechaAbajo.svg"
-                                        alt="Abrir submenú" class="arrow-icon">
-                                </button>
-                                <ul class="submenu">
-                                    <li><a
-                                            href="extintores-nacionales.html">Nacionales</a></li>
-                                    <li><a
-                                            href="extintores-importados.html">Importados</a></li>
-                                </ul>
-                            </li>
-                            <li><a
-                                    href="sistema-deteccion-alarma-contra-incendios.html">Alarma
-                                    Contra Incendios</a></li>
-                            <li><a
-                                    href="bomba-de-agua-contra-incendios.html">Bombas
-                                    de Agua Contra Incendios</a></li>
-                            <li><a
-                                    href="bomba-de-agua-presion-constante.html">Bombas
-                                    de Agua de Presión Constante</a></li>
-                            <li><a href="puertas-cortafuego.html">Puertas
-                                    Cortafuego</a></li>
-                            <li><a
-                                    href="mangueras-contra-incendios.html">Manguera
-                                    Contra Incendios</a></li>
-                            <li><a href="luces-de-emergencia.html">Luces de
-                                    Emergencia</a></li>
-                            <li><a
-                                    href="gabinetes-contra-incendios.html">Gabinetes
-                                    Contra Incendios</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="menu-item" href="blog.html">Blog</a></li>
-                    <li><a class="menu-item"
-                            href="contacto.html">Contacto</a></li>
-                </ul>
-                <div class="contact-cta">
-                    <a href="contacto.html">
-                        <img src="svg/whatsapp.svg" alt="Contacto"
-                            class="contact-icon">
-                        <div class="contact-text">&nbsp;CONTÁCTANOS</div>
-                    </a>
-                </div>
-            </nav>
-        </header>
-        <div class="container">
+            </div>
+        </section>
+        <div class="container" id="MantenimientoLineaNegocio">
             <h1>Servicios de Mantenimiento</h1>
             <section id="mantenimiento-extintores" class="card">
                 <img src="img/01-ext.jpg" alt="Extintores">
@@ -136,18 +169,24 @@
                     <p>Inspección, recarga y certificación de extintores según
                         normativas.</p>
                     <a href="recarga-extintores.html">MANTENIMIENTO</a>
-                    <a href="extintores-nacionales.html">VENTA EXT. NACIONALES</a>
-                    <a href="extintores-importados.html">VENTA EXT. IMPORTADOS</a>
+                    <a href="extintores-nacionales.html">VENTA EXT.
+                        NACIONALES</a>
+                    <a href="extintores-importados.html">VENTA EXT.
+                        IMPORTADOS</a>
                 </div>
             </section>
             <section id="mantenimiento-daci" class="card">
-                <img src="img/03-daci.jpg" alt="Sistemas de Detección y Alarma">
+                <img src="img/03-daci.jpg"
+                    alt="Sistemas de Detección y Alarma Contra Incendios">
                 <div class="card-content">
                     <h2>Mantenimiento, Venta y Proyecto de Sistemas de Detección
                         y Alarma</h2>
                     <p>Revisión de sensores, alarmas y tableros para garantizar
                         su funcionamiento.</p>
-                    <a href="#">Solicitar Cotización</a>
+                    <a href="mantenimiento-sistema-daci.html">MANTENIMIENTO</a>
+                    <a
+                        href="sistema-deteccion-alarma-contra-incendios.html">VENTA</a>
+                    <a href="proyecto-daci.html">PROYECTO</a>
                 </div>
             </section>
             <section id="mantenimiento-bombas" class="card">
@@ -156,7 +195,97 @@
                     <h2>Mantenimiento y Venta de Bombas Contra Incendios</h2>
                     <p>Pruebas hidráulicas, ajuste de presión y mantenimiento
                         preventivo.</p>
-                    <a href="#">Solicitar Cotización</a>
+                    <a
+                        href="mantenimiento-bomba-de-agua-contra-incendios.html">MANTENIMIENTO</a>
+                    <a href="bomba-de-agua-contra-incendios.html">VENTA</a>
+                </div>
+            </section>
+            <section id="mantenimiento-bombas" class="card">
+                <img src="img/" alt="Bombas Presión Constante">
+                <div class="card-content">
+                    <h2>Mantenimiento y Venta de Bombas Presión Constante</h2>
+                    <p>Servicio integral para garantizar el rendimiento óptimo y
+                        la eficiencia de las bombas de presión constante.</p>
+                    <a
+                        href="mantenimiento-bomba-presion-constante.html">MANTENIMIENTO</a>
+                    <a href="bomba-de-agua-presion-constante.html">VENTA</a>
+                </div>
+            </section>
+            <section id="mantenimiento-bombas" class="card">
+                <img src alt="Sistema de Rociadores">
+                <div class="card-content">
+                    <h2>Mantenimiento y Venta de Sistema de Rociadores y
+                        Mangueras Contra Incendios</h2>
+                    <p>Inspección, limpieza y pruebas para asegurar el correcto
+                        funcionamiento del sistema ante emergencias.</p>
+                    <a
+                        href="mantenimiento-rociadores-y-manguera-contra-incendios.html">MANTENIMIENTO</a>
+                    <a
+                        href="sistema-de-rociadores.html">VENTA</a>
+                </div>
+            </section>
+            <section id="mantenimiento-bombas" class="card">
+                <img src="img/06-puertas-cortafuego.jpg"
+                    alt="Puertas Cortafuegos">
+                <div class="card-content">
+                    <h2>Mantenimiento y Venta de Puertas Cortafuego</h2>
+                    <p>Evaluación, reparación y certificación de puertas
+                        cortafuego para mantener su resistencia y seguridad.</p>
+                    <a
+                        href="mantenimiento-puertas-cortafuego.html">MANTENIMIENTO</a>
+                    <a
+                        href="puertas-cortafuego.html">VENTA</a>
+                </div>
+            </section>
+            <section id="mantenimiento-bombas" class="card">
+                <img src="img/011-presurizacion.jpg"
+                    alt="Presurización de Escaleras">
+                <div class="card-content">
+                    <h2>Mantenimiento y Venta de Presurización de Escaleras</h2>
+                    <p>Verificación y ajuste del sistema para garantizar una
+                        evacuación segura en caso de incendio.</p>
+                    <a
+                        href="mantenimiento-de-presurizacion-de-escaleras.html">MANTENIMIENTO</a>
+                    <a
+                        href="presurizacion-de-escaleras.html">VENTA</a>
+                </div>
+            </section>
+            <section id="mantenimiento-bombas" class="card">
+                <img src="img/04-le.jpg" alt="Luces de Emergencia">
+                <div class="card-content">
+                    <h2>Mantenimiento y Venta de Luces de Emergencia</h2>
+                    <p>Revisión, recarga y pruebas para asegurar una iluminación
+                        confiable en situaciones críticas.</p>
+                    <a
+                        href="mantenimiento-luces-emergencias.html">MANTENIMIENTO</a>
+                    <a
+                        href="luces-de-emergencia.html">VENTA</a>
+                </div>
+            </section>
+            <section id="mantenimiento-bombas" class="card">
+                <img src="img/09-pozo-a-tierra.jpg"
+                    alt="Pozo a Tierra">
+                <div class="card-content">
+                    <h2>Mantenimiento y Venta de Pozo a Tierra</h2>
+                    <p>Medición de resistividad, corrección y mantenimiento para
+                        una óptima descarga a tierra.
+                    </p>
+                    <a href="mantenimiento-pozo-a-tierra.html">MANTENIMIENTO</a>
+                    <a href="pozos-a-tierra.html">VENTA</a>
+                </div>
+            </section>
+            <section id="mantenimiento-bombas" class="card">
+                <img src="img/08-sistemas-electricos.jpg"
+                    alt="Sistema de Tableros Eléctricos">
+                <div class="card-content">
+                    <h2>Mantenimiento y Venta de Sistemas de Tableros
+                        Eléctricos</h2>
+                    <p>Inspección, ajuste y pruebas para garantizar un
+                        suministro eléctrico seguro y eficiente.</p>
+                    <a
+                        href="mantenimiento-de-tableros-electricos.html">MANTENIMIENTO</a>
+                    <a
+                        href="tableros-electricos.html">VENTA</a>
                 </div>
             </section>
         </div>
@@ -307,6 +436,7 @@
             <img src="img/logo_whatsapp.webp" alt="WhatsApp"
                 class="whatsapp-icon">
         </a>
+        <script src="js/slider.js"></script>
         <script src="js/header.js"></script>
     </body>
 </html>

@@ -1,10 +1,37 @@
+/* ANIMACIÓN AL ENTRAR */
+/* Estado inicial (fuera de pantalla) */
+.contenedorImagenProducto, .contenedorDescripcionProducto {
+   opacity: 0;
+   transform: translateX(-300px); /* Viene desde más lejos */
+   transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+/* La descripción vendrá desde la derecha */
+.contenedorDescripcionProducto {
+   transform: translateX(300px);
+}
+
+/* Cuando el elemento entra en pantalla */
+.mostrar {
+   opacity: 1;
+   transform: translateX(0);
+}
+
+
+
+
 /* Ajustes generales */
+
+body {
+   overflow-x: hidden; /* Oculta el scroll horizontal */
+}
+
 
 .sectionNacionales {
    height: auto;
    display: flex;
    justify-content: center;
-   background-color: whitesmoke;
+   background-color: #5c5b5b;
    width: 100%;
    min-height: 500px;
 }
@@ -44,8 +71,9 @@
 .contenedorDescripcionProducto {
    border-radius: 25px;
    padding: 10px;
-   border: 2px dotted black;
+   border: 2px solid black;
    flex: 1;
+   background-color: whitesmoke;
    max-width: 600px;
    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.4);
 }
@@ -362,11 +390,12 @@ button:hover {
 
 .ContenedorMarcasDACI {
    padding: 20px;
-   background-color: whitesmoke;
+   background-color: #5c5b5b;
 }
 
 .ContenedorDACI {
-   border: 1px solid black;
+   background-color: whitesmoke;
+   border: 2px solid black;
    text-align: center;
    border-radius: 25px;
    padding: 15px;
