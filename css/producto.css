@@ -39,6 +39,7 @@
     overflow: hidden;
     position: relative;
     width: 100%;
+    cursor: pointer;
 }
 
 .slider {
@@ -62,7 +63,6 @@
 /* Las slides ahora fluyen sin espacios vacíos */
 .slide {
     min-width: 250px;
-    cursor: pointer;
     text-align: center;
     display: inline-block;
 }
@@ -73,5 +73,21 @@
 }
 
 .highlight {
-    border: 3px solid red;
+    border: 2px solid red;
+    border-radius: 15px;
+    padding: 2px;
+}
+
+
+@media (max-width: 480px) {
+    .productosGeneral h1 {
+        text-shadow: 0 0 3px #0e0b0b, 0 0 2px #0a0404, 0 0 5px #0a0909, 0 0 25px #0a0505;
+        font-size: 1.5rem;
+        width: 90%;
+        color: #FF5722;
+        margin-bottom: 5px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
 }

@@ -50,37 +50,52 @@ let lineasNegocio = {
   ],
 };
 
+// Definir las URLs de cada línea de negocio
+let urlsLineasNegocio = {
+  extintoresSlider: "extintores.html",
+  deteccionSlider: "sistema-deteccion-alarma-contra-incendios.html",
+};
+
 function cargarProductos() {
-    for (let sliderId in lineasNegocio) {
-        let slider = document.getElementById(sliderId);
-        slider.innerHTML = ""; // Limpiar slider antes de añadir elementos
+  for (let sliderId in lineasNegocio) {
+    let sliderContainer = document.getElementById(sliderId); // Contenedor del slider
+    sliderContainer.innerHTML = ""; // Limpiar antes de agregar productos
 
-        let sliderWrapper = document.createElement("div");
-        sliderWrapper.classList.add("slider-wrapper");
+    let sliderWrapper = document.createElement("div");
+    sliderWrapper.classList.add("slider-wrapper");
 
-        // 🔥 Duplicar los productos para hacer el carrusel infinito
-        let productosDuplicados = [...lineasNegocio[sliderId], ...lineasNegocio[sliderId]];
+    // 🔥 Duplicar los productos para hacer el carrusel infinito
+    let productosDuplicados = [
+      ...lineasNegocio[sliderId],
+      ...lineasNegocio[sliderId],
+    ];
 
-        productosDuplicados.forEach((producto) => {
-            let slide = document.createElement("div");
-            slide.classList.add("slide");
-            slide.setAttribute("data-name", producto.name);
-            slide.innerHTML = `
-                <img src="${producto.img}" alt="${producto.title} width="140" height="140" loading="lazy" ">
-                <p>${producto.title}</p>
-            `;
-            sliderWrapper.appendChild(slide);
-        });
+    productosDuplicados.forEach((producto) => {
+      let slide = document.createElement("div");
+      slide.classList.add("slide");
+      slide.setAttribute("data-name", producto.name);
 
-        slider.appendChild(sliderWrapper);
-    }
+      slide.innerHTML = `
+                  <img src="${producto.img}" alt="${producto.title}" loading="lazy">
+                  <p>${producto.title}</p>
+              `;
+
+      sliderWrapper.appendChild(slide);
+    });
+
+    sliderContainer.appendChild(sliderWrapper);
+
+    // 🔹 Hacer que todo el slider sea clickeable y redirija a su página correspondiente
+    sliderContainer.addEventListener("click", function () {
+      let url = urlsLineasNegocio[sliderId];
+      if (url) {
+        window.location.href = url; // 🔥 Redirigir a la línea de negocio
+      }
+    });
+  }
 }
 
-
-
 document.addEventListener("DOMContentLoaded", cargarProductos);
-
-
 
 function searchProduct() {
   let searchText = document
@@ -88,17 +103,20 @@ function searchProduct() {
     .value.trim()
     .toLowerCase();
 
-  // Dividir palabras de búsqueda en un array
   let searchWords = searchText.split(/\s+/).filter((word) => word !== "");
 
-  let container = document.querySelector(".productosGeneral"); // Contenedor de líneas de negocio
-  let sections = []; // Guardará las secciones ordenadas
-
+  let container = document.querySelector(".productosGeneral");
   let sliders = document.querySelectorAll(".slider-container");
 
+  let sections = [];
+  let needsReordering = false;
+
   sliders.forEach((sliderContainer) => {
-    let titulo = sliderContainer.previousElementSibling; // El <h2> de la línea de negocio
+    let titulo = sliderContainer.previousElementSibling;
     let slider = sliderContainer.querySelector(".slider");
+
+    if (!slider) return; // 🔹 Verifica que exista el slider
+
     let slides = slider.querySelectorAll(".slide");
 
     let foundSlide = false;
@@ -107,6 +125,8 @@ function searchProduct() {
       .includes(searchText);
 
     slides.forEach((slide) => slide.classList.remove("highlight"));
+
+    let firstMatchingSlide = null;
 
     if (searchWords.length > 0) {
       slides.forEach((slide) => {
@@ -118,34 +138,66 @@ function searchProduct() {
         if (matchProducto) {
           slide.classList.add("highlight");
           foundSlide = true;
+          if (!firstMatchingSlide) {
+            firstMatchingSlide = slide;
+          }
         }
       });
     }
 
-    // Agregar la sección al array con prioridad
-    sections.push({
-      titulo,
-      sliderContainer,
-      prioridad: foundSlide || matchLineaNegocio ? 1 : 2, // Prioridad 1 si coincide, 2 si no
-    });
+    let prioridad = foundSlide || matchLineaNegocio ? 1 : 2;
 
-    // Si hay coincidencias, detener animación
-    if (foundSlide) {
-      slider.style.animation = "none";
-      slider.scrollLeft = slides[0].offsetLeft - 50;
-    } else {
-      slider.style.animation = "scrollSlider 20s linear infinite";
+    sections.push({ titulo, sliderContainer, prioridad });
+
+    if (foundSlide && firstMatchingSlide) {
+      let slideIndex = Array.from(slides).indexOf(firstMatchingSlide);
+      let slideWidth = firstMatchingSlide.offsetWidth;
+      let scrollPosition = slideIndex * slideWidth;
+
+      setTimeout(() => {
+        slider.scrollTo({
+          left: scrollPosition,
+          behavior: "smooth",
+        });
+      }, 100);
     }
   });
 
-  // Ordenar: primero los que coinciden, luego el resto
-  sections.sort((a, b) => a.prioridad - b.prioridad);
+  let sortedSections = [...sections].sort((a, b) => a.prioridad - b.prioridad);
 
-  // Reordenar en el HTML
-  sections.forEach(({ titulo, sliderContainer }) => {
-    container.appendChild(titulo);
-    container.appendChild(sliderContainer);
+  if (
+    !sections.every(
+      (sec, index) =>
+        sec.sliderContainer === sortedSections[index].sliderContainer
+    )
+  ) {
+    needsReordering = true;
+  }
+
+  if (needsReordering) {
+    sortedSections.forEach(({ titulo, sliderContainer }) => {
+      container.appendChild(titulo);
+      container.appendChild(sliderContainer);
+
+      // 🔥 Asegurar que el CSS sigue aplicándose después de mover los elementos
+      setTimeout(() => {
+        sliderContainer.classList.add("reload-css"); // 🔹 Clase para forzar la recarga de estilos
+      }, 50);
+    });
+  }
+
+  document.querySelectorAll(".productosContainerGeneral h2").forEach((titulo) => {
+    titulo.style.cssText = `
+      text-shadow: 1px 1px 4px rgb(15 33 15 / 75%);
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: whitesmoke;
+      text-align: center;
+      text-transform: uppercase;
+    `;
   });
+  
+
 }
 
 document.addEventListener("DOMContentLoaded", cargarProductos);
