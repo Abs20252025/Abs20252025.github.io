@@ -66,7 +66,7 @@ function cargarProductos() {
             slide.classList.add("slide");
             slide.setAttribute("data-name", producto.name);
             slide.innerHTML = `
-                <img src="${producto.img}" alt="${producto.title}">
+                <img src="${producto.img}" alt="${producto.title} loading="lazy"">
                 <p>${producto.title}</p>
             `;
             sliderWrapper.appendChild(slide);
