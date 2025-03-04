@@ -86,7 +86,7 @@ function cargarProductos() {
       slide.setAttribute("data-name", producto.name);
 
       slide.innerHTML = `
-                  <img src="${producto.img}" alt="${producto.title}" loading="lazy"  width="140" height="140">
+                  <img src="${producto.img}" alt="${producto.title}" loading="lazy" width="140" height="140">
                   <p>${producto.title}</p>
               `;
 
@@ -196,8 +196,10 @@ function searchProduct() {
     });
   }
 
-  document.querySelectorAll(".productosContainerGeneral h2").forEach((titulo) => {
-    titulo.style.cssText = `
+  document
+    .querySelectorAll(".productosContainerGeneral h2")
+    .forEach((titulo) => {
+      titulo.style.cssText = `
       text-shadow: 1px 1px 4px rgb(15 33 15 / 75%);
       font-weight: bold;
       font-size: 1.5rem;
@@ -205,9 +207,7 @@ function searchProduct() {
       text-align: center;
       text-transform: uppercase;
     `;
-  });
-  
-
+    });
 }
 
 document.addEventListener("DOMContentLoaded", cargarProductos);
