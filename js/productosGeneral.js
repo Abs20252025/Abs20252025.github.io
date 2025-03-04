@@ -86,7 +86,7 @@ function cargarProductos() {
       slide.setAttribute("data-name", producto.name);
 
       slide.innerHTML = `
-                  <img src="${producto.img}" alt="${producto.title}" loading="lazy">
+                  <img src="${producto.img}" alt="${producto.title}" loading="lazy"  width="140" height="140">
                   <p>${producto.title}</p>
               `;
 
