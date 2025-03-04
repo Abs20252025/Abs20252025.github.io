@@ -1,5 +1,5 @@
 #contacto {
-  padding: 10px 15px;
+  padding: 10px 5px;
   background-color: #f4f4f4;
 }
 
@@ -108,7 +108,7 @@
 }
 
 .card-contacto p {
-  font-size: 1.02rem;
+  font-size: 1rem;
   margin-top: 5px;
   margin-bottom: 8px;
 }
