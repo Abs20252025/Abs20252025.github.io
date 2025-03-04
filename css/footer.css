@@ -82,6 +82,7 @@ footer {
 .absLogoFooter {
     max-width: 100%; /* Evita que el logo se desborde del contenedor */
     height: auto; /* Mantiene la proporción del logo */
+    aspect-ratio: 185 / 125;
 }
 
 /* Enlaces y logos de redes sociales */

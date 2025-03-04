@@ -31,7 +31,7 @@ body{
     line-height: 1.4;
     color: white;
     font-size: 1.2rem;
-    background-color: #504e4e;
+    background-color: #272727;
     padding: 10px;
     border-radius: 15px;
     color: white;
@@ -72,15 +72,17 @@ body{
     display: flex;
     gap: 20px;
     padding: 20px;
-    background: #7f7e7e;
+    background: url(https://www.transparenttextures.com/patterns/white-wall.png);
+    background-size: cover;
+    background-color: #f8f8f8;
 }
 
 .filaMisionVision h2{
     font-size: 1.8rem;
-    font-weight: bold;
+    color: red;
     text-transform: uppercase;
+    text-shadow: 0 0 3px #0e0b0b, 0 0 7px #0a0404, 0 0 15px #0a0909, 0 0 25px #0a0505;
     text-align: center;
-    text-shadow: 0 0 2px #c2baba, 0 0 5px #d3b6b6, 0 0 10px #ecebeb, 0 0 18px #f5e4e4;
     animation: parpadeo-ledMision 1s infinite alternate;
     margin-bottom: 10px;
 }
@@ -96,7 +98,6 @@ body{
     padding: 20px;
     border-radius: 10px;
     border: 2px solid black;
-    background-color: rgba(155, 140, 140, 0.699);
 }
 
 .Mision p,
@@ -117,15 +118,27 @@ body{
 
 .Valores {
     padding: 20px;
-    background-color: #7f7e7e;
+    background-color: #272727;
     text-align: center;
     justify-content: center;
 }
 
+.Valores h2{
+    color: #FF5722;
+    text-transform: uppercase;
+}
+
 .Valores p{
+    color: white;
+    text-align: center;
     margin: 0 auto;
     width: 80%;
     margin-top: 10px;
+}
+
+.Valores span{
+    font-weight: bold;
+    color: red;
 }
 
 .contenedorCards {
@@ -161,8 +174,8 @@ body{
 }
 
 .card p {
-    font-size: 14px;
-    color: #555;
+    font-size: 1rem;
+    color: #181717;
 }
 
 /* Estilos generales */

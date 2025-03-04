@@ -265,7 +265,7 @@
                                     <img class="absLogoFooter"
                                         src="img/abs-logo.webp"
                                         alt="Logo de ABS Equipos Contra Incendios"
-                                        width="185px" height="125px">
+                                        width="185" height="125">
                                 </a>
                             </div>
 
@@ -446,7 +446,21 @@
                 // Guarda el índice actual
                 slider.setAttribute('data-index', currentIndex);
             }
+            document.addEventListener("DOMContentLoaded", function () {
+            const proyectos = document.querySelectorAll(".contenedorProyecto");
 
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            proyectos.forEach(proyecto => {
+                observer.observe(proyecto);
+            });
+        });
 
         </script>
     </body>

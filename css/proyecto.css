@@ -3,11 +3,31 @@
     box-sizing: border-box;
 }
 
+/* ANIMACION */
+
+.contenedorProyecto {
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateX(-100%); /* Inicia fuera de la pantalla a la izquierda */
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.contenedorProyecto:nth-child(even) {
+    transform: translateX(100%); /* Proyectos pares se mueven desde la derecha */
+}
+
+.contenedorProyecto.visible {
+    opacity: 1;
+    transform: translateX(0); /* Se posiciona en su lugar */
+}
+
+
+/* CODIGO GENERAL*/
+
 .sectionServicio {
     display: flex;
     justify-content: center;
     padding: 10px 20px;
-    background-color: whitesmoke;
+    background-color: #5c5b5b;
     min-height: 520px;
 }
 
