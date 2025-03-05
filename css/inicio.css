@@ -761,3 +761,144 @@ body {
 
 
 }
+
+/*FAQ */
+.faq-container {
+  text-align: center;
+  padding: 20px;
+  background: url(https://www.transparenttextures.com/patterns/white-wall.png);
+  background-size: cover;
+  background-color: #f8f8f8;
+}
+
+.faq-container h2 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-shadow: 0 0 3px #0e0b0b, 0 0 7px #0a0404, 0 0 15px #0a0909, 0 0 25px #0a0505;
+  color: red;
+  font-size: 2rem;
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.3s;
+  animation: parpadeo-elegir 1s infinite alternate;
+}
+
+@keyframes glow-sombra {
+
+  0%,
+  100% {
+    text-shadow: 0 0 3px #990000, 0 0 6px #cc0000;
+  }
+
+  50% {
+    text-shadow: 0 0 5px #ff3333, 0 0 10px #ff6666;
+  }
+}
+
+.faq-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Lado izquierdo: Preguntas */
+.faq {
+  flex: 1;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-icon {
+  font-size: 1.5em;
+}
+
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+  padding: 0 15px;
+  /* Mantiene padding horizontal */
+  box-sizing: border-box;
+}
+
+.faq-item.active .faq-answer {
+  opacity: 1;
+  padding: 15px;
+  /* Se agrega padding solo al expandirse */
+}
+
+.lista-extintores ul {
+  list-style-type: none;
+  /* Evita viñetas */
+  padding: 0;
+  margin: 0;
+}
+
+.lista-extintores li {
+  margin-bottom: 8px;
+  padding: 8px;
+  background: #f8f8f8;
+  /* Suave fondo */
+  border-radius: 5px;
+}
+
+
+.faq-answer p {
+  margin: 0;
+  text-align: justify;
+}
+
+/* Lado derecho: Imagen */
+.faq-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.faq-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.faq-image img:hover {
+  transform: scale(1.05);
+}
+
+.lista-extintores ul {
+  text-align: start;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .faq-content {
+    flex-direction: column;
+  }
+
+  .faq-image {
+    order: -1;
+    margin-bottom: 20px;
+  }
+}

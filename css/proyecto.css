@@ -7,18 +7,20 @@
 
 .contenedorProyecto {
     opacity: 0; /* Inicialmente invisible */
-    transform: translateX(-100%); /* Inicia fuera de la pantalla a la izquierda */
-    transition: transform 1s ease-out, opacity 1s ease-out;
+    transform: translateX(-50%); /* Inicia fuera de la pantalla a la izquierda */
+    transition: transform 1s ease-out, opacity 1.2s ease-out;
 }
 
 .contenedorProyecto:nth-child(even) {
-    transform: translateX(100%); /* Proyectos pares se mueven desde la derecha */
+    transform: translateX(50%); /* Proyectos pares se mueven desde la derecha */
 }
 
 .contenedorProyecto.visible {
     opacity: 1;
     transform: translateX(0); /* Se posiciona en su lugar */
 }
+
+
 
 
 /* CODIGO GENERAL*/
@@ -348,9 +350,11 @@
 .beneficiosProyecto {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 20px;
 }
+
+
 
 .contenedorBeneficiosProyecto ul {
     list-style: none;
@@ -385,9 +389,8 @@
 .imagenBeneficioProyecto img {
     border-radius: 20px;
     width: 50%;
-    height: auto;
+    height: 100%;
     max-height: 100%;
-    object-fit: contain;
 }
 
 /* Diseño Responsivo */

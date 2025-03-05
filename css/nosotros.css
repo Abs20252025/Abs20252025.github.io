@@ -32,7 +32,7 @@ body{
     color: white;
     font-size: 1.2rem;
     background-color: #272727;
-    padding: 10px;
+    padding: 10px 25px;
     border-radius: 15px;
     color: white;
 }
@@ -191,7 +191,7 @@ body{
 @media (min-width: 1024px) {
     .contenedorDescripcionAbs {
         flex-direction: row;
-        min-height: 560px;
+        min-height: 525px;
     }
 
     .filaMisionVision {
