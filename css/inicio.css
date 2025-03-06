@@ -688,11 +688,6 @@ body {
 
 @media (max-width: 480px) {
 
-  .slide:nth-child(1) {
-    background-image: url('../img/BannerMovilInicio.png');
-    background-size: cover
-  }
-
   .slide:nth-child(5) {
     background-image: url('../img/PortadaFin.jpg');
     background-size: cover
@@ -731,7 +726,10 @@ body {
     text-align: left;
   }
 
-
+  .slide:nth-child(1) {
+    background-image: url('../img/InicioFondo768.jpg');
+    background-size: 100% 100%
+  }
 }
 
 /* RESPONSIVIDAD */
