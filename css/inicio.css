@@ -13,8 +13,6 @@ body {
   background: black;
 }
 
-
-
 .slider {
   width: 100%;
   /* Mantiene la altura de la pantalla */
@@ -76,6 +74,8 @@ body {
 .inicio-abs.animated .slide-content {
   visibility: visible;
   animation: fadeInText 0.5s ease-in-out 0.5s forwards;
+  background-color: rgba(0, 0, 0, 0.137);
+  border-radius: 10px;
 }
 
 /* Animación para hacer visible el contenido */
@@ -898,5 +898,12 @@ body {
   .faq-image {
     order: -1;
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 414px) {
+  .slide:nth-child(1) {
+    background-image: url('../img/InicioFondo414.jpg');
+    background-size: 100% 100%;
   }
 }
