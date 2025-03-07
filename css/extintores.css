@@ -2,13 +2,13 @@
 /* Estado inicial (fuera de pantalla) */
 .contenedorImagenProducto, .contenedorDescripcionProducto {
    opacity: 0;
-   transform: translateX(-300px); /* Viene desde más lejos */
+   transform: translateX(-230px); /* Viene desde más lejos */
    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 /* La descripción vendrá desde la derecha */
 .contenedorDescripcionProducto {
-   transform: translateX(300px);
+   transform: translateX(230px);
 }
 
 /* Cuando el elemento entra en pantalla */

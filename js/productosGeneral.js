@@ -39,7 +39,7 @@ let lineasNegocio = {
     },
     {
       name: "Detector de Temperatura",
-      img: "detector_temperatura.jpg",
+      img: "img/productos/daci/detector-temperatura.webp",
       title: "Detector de Temperatura",
     },
     {
@@ -56,6 +56,28 @@ let lineasNegocio = {
       name: "Paneles Centrales",
       img: "img/productos/daci/paneles-centrales.webp",
       title: "Paneles Centrales",
+    },
+  ],
+  bciSlider: [
+    {
+      name: "Bomba Contra Incendios",
+      img: "img/productos/bci/bci.jpg",
+      title: "Bomba Contra Incendios",
+    },
+    {
+      name: "Bomba Carcasa Partida",
+      img: "img/productos/bci/carcasa-partida.webp",
+      title: "Bomba Carcasa Partida",
+    },
+    {
+      name: "Bomba Contra Incendios",
+      img: "img/productos/bci/bci1.webp",
+      title: "Bomba Contra Incendios",
+    },
+    {
+      name: "Bomba Jockey ",
+      img: "img/productos/bci/bomba-jockey.png",
+      title: "Bomba Jockey ",
     },
   ],
 };
