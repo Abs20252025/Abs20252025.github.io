@@ -5,9 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const contenedorDescripcion = document.querySelector(".contenedorDescripcionServicio");
     const tituloServicio = document.querySelector(".contenedorDescripcionServicio h1");
     const parrafoServicio = document.querySelector(".contenedorDescripcionServicio .parrafoServicio");
-    const metodologia = document.querySelector(".contenedorMetodologia");
     const listaMetodologia = document.querySelectorAll(".contenedorMetodo .li");
-    const slogan = document.querySelector(".slogan");
 
     const observer = new IntersectionObserver(
         (entries, observer) => {
@@ -18,8 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     contenedorDescripcion.classList.add("show");
                     tituloServicio.classList.add("show");
                     parrafoServicio.classList.add("show");
-                    metodologia.classList.add("show");
-                    slogan.classList.add("show");
 
                     // Aplica la animación en cascada a cada punto de la metodología
                     listaMetodologia.forEach((item, index) => {

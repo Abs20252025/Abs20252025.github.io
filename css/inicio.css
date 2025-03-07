@@ -93,7 +93,7 @@ body {
 .inicio-abs.animated .slide-content h1 {
   color: white;
   opacity: 0;
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 10px;
   font-weight: bold;
   text-transform: uppercase;
@@ -262,7 +262,7 @@ body {
 }
 
 .contenedor-servicios h2 {
-  font-size: 2.4rem;
+  font-size: 2rem;
   text-shadow:
     0 0 2px #ff9999,
     /* Sombra tenue */
@@ -394,7 +394,7 @@ body {
 
 .contenedor h2 {
   animation: aparecerDesdeArriba 1s ease-out forwards;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 20px;
   text-transform: uppercase;
   text-shadow:
@@ -730,6 +730,11 @@ body {
     background-image: url('../img/InicioFondo768.jpg');
     background-size: 100% 100%
   }
+
+  .slide:nth-child(5) {
+    background-image: url('../img/InicioFondo768.jpg');
+    background-size: 100% 100%;
+  }
 }
 
 /* RESPONSIVIDAD */
@@ -901,9 +906,34 @@ body {
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 500px) {
   .slide:nth-child(1) {
     background-image: url('../img/InicioFondo414.jpg');
     background-size: 100% 100%;
   }
+
+  .slide:nth-child(2) {
+    background-image: url('../img/ExtintoresMovil.png');
+    background-size: 100% 100%;
+  }
+
+  .slide:nth-child(3) {
+    background-image: url('../img/ExtintorImportadoMovil.png');
+    background-size: 100% 100%;
+  }
+
+  .slide:nth-child(4) {
+    background-image: url('../img/BannerDaci414.jpg');
+    background-size: 100% 100%;
+  }
+
+  .slide:nth-child(5) {
+    background-image: url('../img/InicioFondoFin414.jpg');
+    background-size: 100% 100%;
+  }
+
+  .row-image {
+    display: none;
+  }
+
 }

@@ -61,7 +61,7 @@ let lineasNegocio = {
   bciSlider: [
     {
       name: "Bomba Contra Incendios",
-      img: "img/productos/bci/bci.jpg",
+      img: "img/productos/bci/bci.webp",
       title: "Bomba Contra Incendios",
     },
     {
@@ -76,7 +76,7 @@ let lineasNegocio = {
     },
     {
       name: "Bomba Jockey ",
-      img: "img/productos/bci/bomba-jockey.png",
+      img: "img/productos/bci/bomba-jockey.webp",
       title: "Bomba Jockey ",
     },
   ],

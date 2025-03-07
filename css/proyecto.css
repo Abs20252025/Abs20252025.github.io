@@ -20,9 +20,6 @@
     transform: translateX(0); /* Se posiciona en su lugar */
 }
 
-
-
-
 /* CODIGO GENERAL*/
 
 .sectionServicio {
@@ -212,7 +209,6 @@
     font-size: 1.3rem;
 }
 
-
 .botonDescarga {
     display: flex;
     flex-direction: column; /* Pone el icono arriba y el texto abajo */
@@ -238,10 +234,6 @@
     margin-bottom: 5px; /* Espacio entre el icono y el texto */
     width: 35px;
 }
-
-
-
-
 
 /* Responsividad */
 @media (max-width: 1024px) {
@@ -284,12 +276,16 @@
     }
 }
 
-
 /* PROYECTO CSS GENERAL DE LA WEB*/
+
+.sectionProyectos{
+    background-color: #5c5b5b;
+}
 
 .contenedorProyectos {
     border-radius: 25px;
     text-align: center;
+    padding: 8px 15px;
 }
 
 .contenedorProyectos h1 {
@@ -298,7 +294,6 @@
     color: #FF5722;
     margin-bottom: 5px;
 }
-
 
 .tituloProyectos{
     text-shadow: 0 0 3px #0e0b0b, 0 0 7px #0a0404, 0 0 15px #0a0909, 0 0 25px #0a0505;
@@ -344,6 +339,7 @@
 .contenedorBeneficiosProyecto h2 {
     color: #D32F2F;
     text-align: center;
+    text-transform: uppercase;
 }
 
 /* Contenedor principal con la lista y la imagen */
@@ -353,8 +349,6 @@
     align-items: stretch;
     gap: 20px;
 }
-
-
 
 .contenedorBeneficiosProyecto ul {
     list-style: none;
@@ -421,6 +415,7 @@
 .contenedorProceso h2{
     color: #D32F2F;
     margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .procesoPasos {

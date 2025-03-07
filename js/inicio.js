@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nombre: "Extintores",
       descripcion:
         " Venta, inspección, recarga y certificación de extintores según normativas.",
-      imagen: "img/01-ext.jpg",
+      imagen: "img/01-ext.webp",
       enlaces: [
         { texto: "Venta", url: "/extintores.html" },
         {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nombre: "Sistema D.A.C.I.",
       descripcion:
         " Instalación, mantenimiento y proyectos de sistema de detección de alarma contra incendios.",
-      imagen: "img/03-daci.jpg",
+      imagen: "img/03-daci.webp",
       enlaces: [
         {
           texto: "Venta e Instalación",
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nombre: "Bomba Contra Incendios",
       descripcion:
         "Venta, instalación y mantenimiento de bombas contra incendios para sistemas de alta presión.",
-      imagen: "img/02-bci.jpg",
+      imagen: "img/02-bci.webp",
       enlaces: [
         { texto: "Venta e Instalación", url: "/bomba-de-agua-contra-incendios.html" },
         { texto: "Mantenimiento", url: "/mantenimiento-bomba-de-agua-contra-incendios.html" },
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nombre: "Gabinetes y Mangueras",
       descripcion:
         "Venta, instalación y mantenimiento en gabinetes y mangueras para protección contra incendios.",
-      imagen: "img/05-gabi-mangue.jpg",
+      imagen: "img/05-gabi-mangue.webp",
       enlaces: [
         { texto: "Venta e Instalación", url: "/gabinetes-contra-incendios.html" },
         { texto: "Mantenimiento", url: "/mantenimiento-rociadores-y-manguera-contra-incendios.html" },
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nombre: "Puertas Cortafuego",
       descripcion:
         "Venta, instalación y mantenimiento de puertas cortafuego certificadas para contener el fuego.",
-      imagen: "img/06-puertas-cortafuego.jpg",
+      imagen: "img/06-puertas-cortafuego.webp",
       enlaces: [
         { texto: "Venta e Instalación", url: "/puertas-cortafuego.html" },
         { texto: "Mantenimiento", url: "/mantenimiento-puertas-cortafuego.html" },
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nombre: "Presurización de Escaleras",
       descripcion:
         "Venta, instalación y mantenimiento de sistemas para mantener escaleras libres de humo en caso de incendio.",
-      imagen: "img/011-presurizacion.jpg",
+      imagen: "img/011-presurizacion.webp",
       enlaces: [
         { texto: "Venta e Instalación", url: "/presurizacion-de-escaleras.html" },
         { texto: "Mantenimiento", url: "/mantenimiento-de-presurizacion-de-escaleras.html" },
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nombre: "Luces de Emergencia",
       descripcion:
         "Venta, instalación y mantenimiento de iluminación de seguridad para evacuaciones.",
-      imagen: "img/04-le.jpg",
+      imagen: "img/04-le.webp",
       enlaces: [
         { texto: "Venta e Instalación", url: "/luces-de-emergencia.html" },
         { texto: "Mantenimiento", url: "/mantenimiento-luces-emergencias.html" },
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nombre: "Pozo a Tierra",
       descripcion:
         "Venta, instalación y mantenimiento de pozos a tierra para protección eléctrica.",
-      imagen: "img/09-pozo-a-tierra.jpg",
+      imagen: "img/09-pozo-a-tierra.webp",
       enlaces: [
         { texto: "Venta e Instalación", url: "/pozos-a-tierra.html" },
         { texto: "Mantenimiento", url: "/mantenimiento-pozo-a-tierra.html" },
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nombre: "Tablero Eléctrico",
       descripcion:
         "Venta, instalación y mantenimiento de tableros eléctricos para seguridad en industrias, empresas y edificios corporativos.",
-      imagen: "img/08-sistemas-electricos.jpg",
+      imagen: "img/08-sistemas-electricos.webp",
       
       enlaces: [
         { texto: "Venta e Instalación", url: "/tableros-electricos.html" },
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nombre: "Señaléticas",
       descripcion:
         "Venta e instalación de señalización de seguridad para evacuaciones rápidas.",
-      imagen: "img/07-senales-seguridad.jpg",
+      imagen: "img/07-senales-seguridad.webp",
       enlaces: [{ texto: "Venta e Instalación", url: "/senalizacion-de-seguridad.html" }],
     },  
   ];
