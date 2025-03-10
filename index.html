@@ -43,6 +43,7 @@
         <!-- Hojas de Estilo -->
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/inicio.css">
+        <link rel="stylesheet" href="css/proyecto.css">
         <link rel="stylesheet" href="css/footer.css">
     
         <!-- JSON-LD para SEO local y servicios -->
@@ -384,6 +385,71 @@
             <h2>NUESTROS SERVICIOS</h2>
             <div id="gridServicios" class="grid-servicios"></div>
         </section>
+        <section class="sectionProyectos">
+            <div class="contenedorProyectos">
+                <div class="ProyectoColumnasLineas" id="ProyectosLineasNegocio">
+                    <h2>BENEFICIOS POST-VENTA</h2>
+                    <div class="contenedorProyectosFila">
+                        <!-- Proyecto DACI -->
+                        <div class="contenedorProyecto">
+                            <div class="contenedorDescripcionProyecto">
+                                <h2>CAPACITACIONES</h2>
+                            </div>
+                            <div class="contenedorImagenProyecto">
+                                <div class="sliderProyecto" id="sliderDACI">
+                                    <div class="sliderProyecto-container">
+                                        <img src="img/Auxilios.jpeg"
+                                            alt="Capacitación Primeros Auxilios">
+                                        <img src="img/Auxilios1.jpeg"
+                                            alt="Capacitación Primeros Auxilios">
+                                    </div>
+                                    <button class="prevProyecto"
+                                        onclick="moveSlideProyecto('sliderDACI', -1)">&#10094;</button>
+                                    <button class="nextProyecto"
+                                        onclick="moveSlideProyecto('sliderDACI', 1)">&#10095;</button>
+                                </div>
+                            </div>
+                            <!-- Descripción breve -->
+                            <p class="descripcionProyecto">
+                                Brindamos capacitaciones en uso de extintores y primeros auxilios, asegurando que tu equipo actúe eficazmente ante emergencias y garantice la seguridad.
+                            </p>
+                            <a href="#" class="btnVerMas">Ver
+                                más</a>
+                        </div>
+
+                        <!-- Proyecto ACI -->
+                        <div class="contenedorProyecto">
+                            <div class="contenedorDescripcionProyecto">
+                                <h2>INSPECCIONES TÉCNICAS</h2>
+                            </div>
+                            <div class="contenedorImagenProyecto">
+                                <div class="sliderProyecto" id="sliderACI">
+                                    <div class="sliderProyecto-container">
+                                        <img src="img/MntoDaci.webp"
+                                            alt="Inspección DACI">
+                                        <img src="img/Mtto-de-sistema-contra-incendios.webp"
+                                            alt="Inspección CACI">
+                                    </div>
+                                    <button class="prevProyecto"
+                                        onclick="moveSlideProyecto('sliderACI', -1)">&#10094;</button>
+                                    <button class="nextProyecto"
+                                        onclick="moveSlideProyecto('sliderACI', 1)">&#10095;</button>
+                                </div>
+                            </div>
+                            <!-- Descripción breve -->
+                            <p class="descripcionProyecto">
+                                Brindamos inspecciones técnicas para garantizar el cumplimiento de normativas y el óptimo estado de los equipos de seguridad.
+                            </p>
+                            <a href="#"
+                                class="btnVerMas">Ver
+                                más</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <section class="faq-container">
             <h2>Preguntas Frecuentes ❓ </h2>
 
@@ -657,5 +723,63 @@
         <script src="js/inicio.js"></script>
         <script src="js/header.js"></script>
         <script src="js/slider.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                iniciarSliders();
+            });
+
+            function iniciarSliders() {
+                let sliders = document.querySelectorAll('.sliderProyecto');
+
+                sliders.forEach(slider => {
+                    let sliderId = slider.getAttribute('id');
+                    let interval = setInterval(() => {
+                        moveSlideProyecto(sliderId, 1);
+                    }, 3000);
+
+                    // Guardamos el intervalo para poder cancelarlo si es necesario
+                    slider.setAttribute('data-interval', interval);
+                });
+            }
+
+            function moveSlideProyecto(sliderId, direction) {
+                let slider = document.getElementById(sliderId);
+                let container = slider.querySelector('.sliderProyecto-container');
+
+                let totalSlides = container.children.length;
+                let currentIndex = parseInt(slider.getAttribute('data-index')) || 0;
+
+                currentIndex += direction;
+
+                if (currentIndex >= totalSlides) {
+                    currentIndex = 0; // Regresa al inicio
+                } else if (currentIndex < 0) {
+                    currentIndex = totalSlides - 1; // Va al último slide
+                }
+
+                // Mueve el slider
+                let percentage = -currentIndex * 50;
+                container.style.transform = `translateX(${percentage}%)`;
+
+                // Guarda el índice actual
+                slider.setAttribute('data-index', currentIndex);
+            }
+            document.addEventListener("DOMContentLoaded", function () {
+            const proyectos = document.querySelectorAll(".contenedorProyecto");
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            proyectos.forEach(proyecto => {
+                observer.observe(proyecto);
+            });
+        });
+
+        </script>
     </body>
 </html>

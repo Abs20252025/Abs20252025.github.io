@@ -295,6 +295,13 @@
     margin-bottom: 5px;
 }
 
+.contenedorProyectos h2 {
+    text-shadow: 0 0 3px #0e0b0b, 0 0 2px #0a0404, 0 0 5px #0a0909, 0 0 25px #0a0505;
+    font-size: 1.8rem;
+    color: #FF5722;
+    margin-bottom: 5px;
+}
+
 .tituloProyectos{
     text-shadow: 0 0 3px #0e0b0b, 0 0 7px #0a0404, 0 0 15px #0a0909, 0 0 25px #0a0505;
     animation: parpadeo-elegir 1s infinite alternate;
