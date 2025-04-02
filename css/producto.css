@@ -11,71 +11,84 @@
     text-align: center;
 }
 
-.productosContainerGeneral h2{
-    text-shadow: 1px 1px 4px rgb(15 33 15 / 75%);
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: whitesmoke;
-    text-align: center;
-    text-transform: uppercase;
+.productos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-
-.search-container {
-    margin: 10px 0;
-    text-align: center;
+.card-servicio {
+    background: #272727;
     border-radius: 10px;
-}
-
-.search-container input {
-    border-radius: 10px;
-    border: none;
-    width: 50%;
-    padding: 10px;
-}
-
-.slider-container {
-    margin: 10px 0;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    cursor: pointer;
-}
-
-.slider {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
     display: flex;
-    gap: 10px;
-    white-space: nowrap;
-    width: max-content;
-    animation: scrollSlider 30s linear infinite;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
 }
 
-/* Duplicamos las imágenes en JS, así que ajustamos la animación */
-@keyframes scrollSlider {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%); /* Solo movemos la mitad */
-    }
+.card-servicio:hover {
+    transform: translateY(-5px);
 }
 
-/* Las slides ahora fluyen sin espacios vacíos */
-.slide {
-    min-width: 250px;
-    text-align: center;
-    display: inline-block;
+.card-servicio h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
 }
 
-.slide img {
-    width: 140px;
+.img-container {
+    width: 100%;
+    height: 250px; /* Ajusta la altura según necesites */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     border-radius: 10px;
 }
 
-.highlight {
-    border: 2px solid red;
+.img-container img {
+    background-color: white;
+    width: 100%;
+    height: 100%;  
+    object-fit: contain; /* Muestra la imagen completa sin recortarla */
+    border: 2px solid black;
     border-radius: 15px;
-    padding: 2px;
+    padding: 8px 0px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #d32f2f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #b71c1c;
+}
+
+@media (max-width: 900px) {
+    .productos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .productos-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 

@@ -16,7 +16,7 @@ body {
 .slider {
   width: 100%;
   /* Mantiene la altura de la pantalla */
-  height: calc(100vh - 85px);
+  height: calc(100vh - 95px);
   /* Resta la altura del header */
   display: flex;
 }
@@ -629,13 +629,12 @@ body {
 
 .contenido-banner.show h2 {
   text-transform: uppercase;
-  text-shadow: 0 0 3px #0e0b0b, 0 0 7px #0a0404, 0 0 15px #0a0909, 0 0 25px #0a0505;
   color: red;
   font-size: 1.5rem;
   opacity: 1;
   transform: translateX(0);
   transition-delay: 0.3s;
-  animation: parpadeo-elegir 1s infinite alternate;
+  font-weight: bold;
 }
 
 .contenido-banner.show p {
@@ -761,8 +760,6 @@ body {
     width: 100%;
     margin-top: 10px;
   }
-
-
 }
 
 /*FAQ */
@@ -777,13 +774,11 @@ body {
 .faq-container h2 {
   margin-bottom: 20px;
   text-transform: uppercase;
-  text-shadow: 0 0 3px #0e0b0b, 0 0 7px #0a0404, 0 0 15px #0a0909, 0 0 25px #0a0505;
   color: red;
   font-size: 2rem;
   opacity: 1;
   transform: translateX(0);
   transition-delay: 0.3s;
-  animation: parpadeo-elegir 1s infinite alternate;
 }
 
 @keyframes glow-sombra {
@@ -834,7 +829,6 @@ body {
   font-size: 1.5em;
 }
 
-
 .faq-answer {
   max-height: 0;
   overflow: hidden;
@@ -865,7 +859,6 @@ body {
   /* Suave fondo */
   border-radius: 5px;
 }
-
 
 .faq-answer p {
   margin: 0;
@@ -904,9 +897,22 @@ body {
     order: -1;
     margin-bottom: 20px;
   }
+
+  .beneficios{
+    padding: 20px;
+  }
 }
 
 @media (max-width: 500px) {
+
+  .slider {
+    width: 100%;
+    /* Mantiene la altura de la pantalla */
+    height: calc(100vh - 84px);
+    /* Resta la altura del header */
+    display: flex;
+  }
+
   .slide:nth-child(1) {
     background-image: url('../img/InicioFondo414.webp');
     background-size: 100% 100%;

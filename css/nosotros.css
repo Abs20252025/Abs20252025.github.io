@@ -270,4 +270,13 @@ body{
     .Valores .card p{
         text-align: center;
     }
+
+    .TituloNosotros h1 {
+        font-size: 1.5rem;
+    }
+
+    .ParrafoNosotros p {
+        font-size: 1rem;
+    }
+
 }

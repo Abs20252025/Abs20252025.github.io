@@ -511,6 +511,7 @@
     text-align: center;
     width: 80%;
     margin-bottom: 5px;
+    font-size: 20px;
 }
 
 .ProyectoColumnasLineas {
@@ -597,6 +598,8 @@
     width: 50%;
     flex: 1;
 }
+
+
 
 .prevProyecto, .nextProyecto {
     position: absolute;

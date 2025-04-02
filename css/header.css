@@ -2,7 +2,6 @@ body header {
     width: 100%;
     position: relative;
     z-index: 100000;
-    
     font-family: Arial, sans-serif;
 }
 
@@ -20,7 +19,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 5px 20px;
 }
 
 .navbar .logo a {
@@ -30,7 +29,7 @@ header {
 }
 
 .logo img {
-    height: 65px;
+    height: 95px;
     width: auto;
     display: block;
     margin-left: 30px;
@@ -158,6 +157,7 @@ header {
 .contact-icon {
     width: 24px;
     height: 24px;
+    filter: invert(100%) sepia(1%) saturate(64%) hue-rotate(123deg) brightness(114%) contrast(100%);
 }
 
 .contact-text {
@@ -253,76 +253,128 @@ header {
 
 
 /* ICONO WSP FIJO EN LA ESQUINA */
-.whatsapp-icon {
+ /* Contenedor fijo del botón de WhatsApp */
+ .whatsapp-container {
     position: fixed;
-    bottom: 30px;
+    bottom: 20px;
     right: 20px;
+    z-index: 1000;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-btn {
     width: 60px;
     height: 60px;
-    z-index: 1000;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out;
     animation: rotar-vibracion 4.5s infinite ease-in-out;
-    /* 1.5s animación + 3s pausa */
-    animation-delay: 3s;
-    /* Espera 3 segundos antes de iniciar la primera vez */
+    animation-delay: 3s; /* Espera 3 segundos antes de iniciar */
 }
 
 /* Aumenta el tamaño al pasar el mouse */
-.whatsapp-icon:hover {
+.whatsapp-btn:hover {
     transform: scale(1.5);
-    animation: none;
-    /* Detiene la animación al hacer hover */
+    animation: none; /* Detiene la animación al hacer hover */
 }
 
-/* Animación más rápida con pausa incluida */
+/* Animación del botón */
 @keyframes rotar-vibracion {
+    0%, 100% { transform: rotate(0deg) translateY(0) scale(1); }
+    10% { transform: rotate(-20deg) translateY(-6px) scale(1.1); }
+    20% { transform: rotate(20deg) translateY(6px) scale(1.1); }
+    30% { transform: rotate(-20deg) translateY(-6px) scale(1.1); }
+    40% { transform: rotate(20deg) translateY(6px) scale(1.1); }
+    50% { transform: scale(1.15); } /* Efecto de latido */
+    60% { transform: rotate(-10deg) translateY(-3px) scale(1.1); }
+    70% { transform: rotate(10deg) translateY(3px) scale(1.1); }
+    80% { transform: rotate(-10deg) translateY(-3px) scale(1.1); }
+    90% { transform: rotate(10deg) translateY(3px) scale(1.1); }
+    95%, 100% { transform: none; } /* Pausa de 3 segundos */
+}
 
-    0%,
-    100% {
-        transform: rotate(0deg) translateY(0) scale(1);
-    }
+.whatsapp-btn img {
+    width: 35px;
+    height: 35px;
+}
 
-    10% {
-        transform: rotate(-20deg) translateY(-6px) scale(1.1);
-    }
+/* Modal flotante (inicialmente oculto) */
+.whatsapp-modal {
+    position: fixed;
+    bottom: 90px; /* Espaciado respecto al botón */
+    right: 20px;
+    width: 260px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    transform: translateY(10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
 
-    20% {
-        transform: rotate(20deg) translateY(6px) scale(1.1);
-    }
+/* Mostrar el modal cuando esté activo */
+.whatsapp-modal.show {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
 
-    30% {
-        transform: rotate(-20deg) translateY(-6px) scale(1.1);
-    }
+/* Título del modal */
+.whatsapp-modal h3 {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
 
-    40% {
-        transform: rotate(20deg) translateY(6px) scale(1.1);
-    }
+/* Línea divisoria */
+.divider {
+    height: 1px;
+    background: #ddd;
+    margin: 8px 0;
+}
 
-    50% {
-        transform: scale(1.15);
-    }
+/* Botones de asesores */
+.whatsapp-modal a {
+    display: flex;
+    align-items: center;
+    background: #5f7467;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
 
-    /* Efecto de latido */
-    60% {
-        transform: rotate(-10deg) translateY(-3px) scale(1.1);
-    }
+.whatsapp-modal a:hover {
+    background: #1ebe5d;
+}
 
-    70% {
-        transform: rotate(10deg) translateY(3px) scale(1.1);
-    }
+/* Icono dentro del botón */
+.whatsapp-modal a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
 
-    80% {
-        transform: rotate(-10deg) translateY(-3px) scale(1.1);
-    }
+/* Botón de cerrar */
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #666;
+}
 
-    90% {
-        transform: rotate(10deg) translateY(3px) scale(1.1);
-    }
-
-    95%,
-    100% {
-        transform: none;
-    }
-
-    /* Pausa de 3 segundos */
+.close-btn:hover {
+    color: #000;
 }
