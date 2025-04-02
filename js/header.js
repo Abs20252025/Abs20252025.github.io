@@ -119,3 +119,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const whatsappBtn = document.getElementById("whatsapp-btn");
+  const whatsappModal = document.getElementById("whatsapp-modal");
+
+  // Alternar el modal al hacer clic en el botón de WhatsApp
+  whatsappBtn.addEventListener("click", function () {
+      whatsappModal.classList.toggle("active");
+  });
+
+  // Cerrar el modal si se hace clic fuera de él
+  document.addEventListener("click", function (event) {
+      if (!whatsappBtn.contains(event.target) && !whatsappModal.contains(event.target)) {
+          whatsappModal.classList.remove("active");
+      }
+  });
+});

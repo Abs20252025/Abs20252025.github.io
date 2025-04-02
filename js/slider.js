@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 1000); // 500ms = tiempo de salida del contenido actual
   
       // **5. Repetir el ciclo**
-      setTimeout(nextSlide, 5000);
+      setTimeout(nextSlide, 9000);
     }
   
     // **Iniciar el primer slide**
@@ -55,6 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 2000);
     }
   
-    setTimeout(nextSlide, 6500); // Espera 6.5s antes del primer cambio
+    setTimeout(nextSlide, 8500); // Espera 6.5s antes del primer cambio
   });
   
