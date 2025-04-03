@@ -69,8 +69,9 @@ body {
 }
 
 .contenedorDescripcionProducto {
+   align-content: center;
    border-radius: 25px;
-   padding: 10px;
+   padding: 22px;
    border: 2px solid black;
    flex: 1;
    background-color: whitesmoke;

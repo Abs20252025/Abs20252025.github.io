@@ -95,6 +95,7 @@
                             <li><a href="../mantenimiento-pozo-a-tierra.html">Mantenimiento Pozo a Tierra</a></li>
                             <li><a href="../mantenimiento-de-tableros-electricos.html">Mantenimiento Tableros Eléctricos</a></li>
                             <li><a href="../mantenimiento-rociadores-y-manguera-contra-incendios.html">Mantenimiento de Rociadores y Mangueras</a></li>
+                            <li><a href="../certificacion-itse.html">Certificación ITSE</a></li>
                         </ul>
                     </li>                        
                     <li class="dropdown">
@@ -105,6 +106,7 @@
                         <ul class="submenu">
                             <li><a href="../proyecto-daci.html">Sistema DACI</a></li>
                             <li><a href="../proyecto-sistema-red-aci.html">Sistema ACI</a></li>
+                            <li><a href="../certificacion-itse.html">Certificación ITSE</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -410,12 +412,43 @@
                 </div>
             </footer>
         </section>
-        <a
-        href="https://wa.me/5117436577?text=¡Hola!%20Acabo%20de%20ver%20su%20blog%20sobre%20mantenimiento%20de%20extintores%20y%20me%20gustaría%20cotizar%20sus%20servicios"
-            target="_blank">
-            <img src="../img/logo_whatsapp.webp" alt="WhatsApp"
-                class="whatsapp-icon">
-        </a>
+        <!-- Botón flotante de WhatsApp -->
+        <div class="whatsapp-container">
+            <div class="whatsapp-btn" onclick="toggleModal()">
+                <img src="../img/logo_whatsapp.webp" alt="WhatsApp">
+            </div>
+        </div>
+
+        <!-- Modal de Contacto -->
+        <div class="whatsapp-modal" id="whatsappModal">
+            <span class="close-btn" onclick="toggleModal()">&times;</span>
+            <h3>Contáctate con una asesora</h3>
+
+            <a href="https://wa.me/51947904962?text=Hola%20Maria%20Elena,%20He%20visitado%20su%20web%20y%20me%20interesa%20conocer%20más%20sobre%20los%20servicios%20que%20ofrecen%20en%20seguridad%20contra%20incendios.%20¿Podrían%20brindarme%20más%20información?" target="_blank">
+                <img src="../img/logo_whatsapp.webp" alt="WhatsApp"> María Elena
+            </a>
+
+            <div class="divider"></div>
+            <a href="https://wa.me/5117436577?text=Hola%20Lizandra,%20He%20visitado%20su%20web%20y%20me%20interesa%20conocer%20más%20sobre%20los%20servicios%20que%20ofrecen%20en%20seguridad%20contra%20incendios.%20¿Podrían%20brindarme%20más%20información?" target="_blank">
+                <img src="../img/logo_whatsapp.webp" alt="WhatsApp"> Lizandra Limas
+            </a>
+        </div>
+        <script>
+            // Alternar la visibilidad del modal
+            function toggleModal() {
+                let modal = document.getElementById("whatsappModal");
+                modal.classList.toggle("show");
+            }
+
+            // Cerrar el modal si se hace clic fuera de él
+            window.onclick = function(event) {
+                let modal = document.getElementById("whatsappModal");
+                let button = document.querySelector(".whatsapp-btn");
+                if (event.target !== modal && event.target !== button && !button.contains(event.target)) {
+                    modal.classList.remove("show");
+                }
+            };
+        </script>
 
         <script>
             document.addEventListener("DOMContentLoaded", function () {

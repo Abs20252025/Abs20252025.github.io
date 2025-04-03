@@ -64,7 +64,6 @@ header {
     filter: invert(13%) sepia(81%) saturate(7056%) hue-rotate(359deg) brightness(99%) contrast(112%);
     width: 16px;
     height: 16px;
-    margin-left: 8px;
     transition: transform 0.3s ease;
 }
 
